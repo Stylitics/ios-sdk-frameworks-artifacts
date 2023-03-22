@@ -1,0 +1,212 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsUI
+import Foundation
+import SafariServices
+import StyliticsData
+@_exported import StyliticsUI
+import Swift
+import UIKit
+import _Concurrency
+public struct ClassicConfig {
+  public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.ClassicConfig.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
+  public struct Widget {
+    public init(borderColor: CoreGraphics.CGColor = CGColor(red: 225/255,
+                                                   green: 225/255,
+                                                   blue: 225/255,
+                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = .white)
+  }
+  public struct TopLabel {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 33/255,
+                                                 green: 33/255,
+                                                 blue: 33/255,
+                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .regular, backgroundColor: UIKit.UIColor = .white, borderColor: CoreGraphics.CGColor = CGColor(red: 142/255,
+                                                   green: 57/255,
+                                                   blue: 227/255,
+                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 2, cornerRadius: CoreGraphics.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 6, paddingHorizontal: CoreGraphics.CGFloat = 16)
+  }
+  public struct BottomLabel {
+    public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 0.129,
+                                                 green: 0.129,
+                                                 blue: 0.129,
+                                                 alpha: 1), showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = .clear, borderColor: CoreGraphics.CGColor = CGColor(red: 0.882,
+                                                   green: 0.882,
+                                                   blue: 0.882,
+                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 0, cornerRadius: CoreGraphics.CGFloat = 0, paddingVertical: CoreGraphics.CGFloat = 0, paddingHorizontal: CoreGraphics.CGFloat = 0)
+  }
+}
+public enum TopLabelPosition {
+  case topLeft
+  case topRight
+  public static func == (a: StyliticsUI.TopLabelPosition, b: StyliticsUI.TopLabelPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ProductListConfig {
+  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemSalePrice: StyliticsUI.ProductListConfig.ItemSalePrice = ItemSalePrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions())
+  public struct ItemName {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                 green: 0.1294,
+                                                 blue: 0.1294,
+                                                 alpha: 1))
+  }
+  public struct ItemSalePrice {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                 green: 0.1294,
+                                                 blue: 0.1294,
+                                                 alpha: 1), slashFontColor: UIKit.UIColor = UIColor(red: 0.4588,
+                                                      green: 0.4588,
+                                                      blue: 0.4588,
+                                                      alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, decimal: Swift.Int = 0)
+  }
+  public struct ShopText {
+    public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                 green: 0.1294,
+                                                 blue: 0.1294,
+                                                 alpha: 1), position: StyliticsUI.ProductListConfig.ShopViewPosition = .left)
+  }
+  public struct ShopButton {
+    public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                 green: 0.1294,
+                                                 blue: 0.1294,
+                                                 alpha: 1), backgroundColor: UIKit.UIColor = UIColor(red: 0.9568,
+                                                       green: 0.9568,
+                                                       blue: 0.9568,
+                                                       alpha: 1), horizontalPadding: CoreGraphics.CGFloat = 16, verticalPadding: CoreGraphics.CGFloat = 8)
+  }
+  public struct SeeMoreOptions {
+    public init(title: Swift.String = Constants.SEE_MORE_OPTIONS_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 12, fontWeight: UIKit.UIFont.Weight = .regular, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                 green: 0.1294,
+                                                 blue: 0.1294,
+                                                 alpha: 1))
+  }
+  public enum ShopViewPosition {
+    case left
+    case right
+    public static func == (a: StyliticsUI.ProductListConfig.ShopViewPosition, b: StyliticsUI.ProductListConfig.ShopViewPosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ShopViewType {
+    case text(_: StyliticsUI.ProductListConfig.ShopText = ShopText())
+    case button(_: StyliticsUI.ProductListConfig.ShopButton = ShopButton())
+  }
+  public enum PriceStrikethrough {
+    case show
+    case hide
+    public static func == (a: StyliticsUI.ProductListConfig.PriceStrikethrough, b: StyliticsUI.ProductListConfig.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public enum ShopTheModelPosition {
+  case topLeft
+  case topRight
+  case bottomLeft
+  case bottomRight
+  public static func == (a: StyliticsUI.ShopTheModelPosition, b: StyliticsUI.ShopTheModelPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class StyliticsUIApis {
+  public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, productListScreenState: StyliticsUI.ProductListScreenState = .enable()) -> UIKit.UIView
+  public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
+  public static func closeProductListScreen()
+  @objc deinit
+}
+public struct ReplacementInfo {
+  public let replacementItem: StyliticsData.ReplacementItem
+  public let position: Swift.Int
+  public init(replacementItem: StyliticsData.ReplacementItem, position: Swift.Int)
+}
+final public class ProductListListener {
+  public init(onOutfitItemClick: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil, onOutfitItemView: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil, onItemSwap: ((Swift.Int, Swift.Int, Swift.Int) -> Swift.Void)? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ProductListContainerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+}
+extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+@_hasMissingDesignatedInitializers final public class Constants {
+  public static let MINIMALIST_TEXT: Swift.String
+  public static let VIEW_DETAIL_TEXT: Swift.String
+  public static let SHOP_TEXT: Swift.String
+  public static let SEE_MORE_OPTIONS_CLOSE_TEXT: Swift.String
+  public static let SEE_MORE_OPTIONS_TEXT: Swift.String
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ClassicDisplayContainerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+public enum ProductListScreenState {
+  case disable
+  case enable(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
+}
+public enum OutfitsTemplate {
+  case classic(classicConfig: StyliticsUI.ClassicConfig = ClassicConfig(), classicListener: StyliticsUI.ClassicListener? = nil, isItemSwapEnabled: Swift.Bool = false)
+}
+public struct OutfitItemInfo {
+  public let outfitItem: StyliticsData.OutfitItem
+  public let position: Swift.Int
+}
+final public class ClassicListener {
+  public init(onClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onItemSwap: ((Swift.Int, Swift.Int, Swift.Int) -> Swift.Void)? = nil)
+  @objc deinit
+}
+public enum ProductListTemplate {
+  case standard(productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener? = nil)
+}
+public struct OutfitInfo {
+  public let outfit: StyliticsData.Outfit
+  public let position: Swift.Int
+}
+public struct ProductListScreenConfig {
+  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), productListTemplate: StyliticsUI.ProductListTemplate = .standard())
+  public struct ItemListHeader {
+    public init(title: Swift.String = "Product List", fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                 green: 0.1294,
+                                                 blue: 0.1294,
+                                                 alpha: 1))
+  }
+}
+public struct ShopTheModel {
+  public init(name: Swift.String = "", position: StyliticsUI.ShopTheModelPosition = .topLeft, width: CoreGraphics.CGFloat = 60, height: CoreGraphics.CGFloat = 60)
+}
+extension StyliticsUI.TopLabelPosition : Swift.Equatable {}
+extension StyliticsUI.TopLabelPosition : Swift.Hashable {}
+extension StyliticsUI.ProductListConfig.ShopViewPosition : Swift.Equatable {}
+extension StyliticsUI.ProductListConfig.ShopViewPosition : Swift.Hashable {}
+extension StyliticsUI.ProductListConfig.PriceStrikethrough : Swift.Equatable {}
+extension StyliticsUI.ProductListConfig.PriceStrikethrough : Swift.Hashable {}
+extension StyliticsUI.ShopTheModelPosition : Swift.Equatable {}
+extension StyliticsUI.ShopTheModelPosition : Swift.Hashable {}

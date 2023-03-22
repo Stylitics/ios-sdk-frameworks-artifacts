@@ -1,0 +1,11 @@
+framework module StyliticsUI {
+  umbrella header "StyliticsUI.h"
+
+  export *
+  module * { export * }
+}
+
+module StyliticsUI.Swift {
+    header "StyliticsUI-Swift.h"
+    requires objc
+}
