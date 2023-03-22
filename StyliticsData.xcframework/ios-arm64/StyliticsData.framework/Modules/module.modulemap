@@ -1,0 +1,11 @@
+framework module StyliticsData {
+  umbrella header "StyliticsData.h"
+
+  export *
+  module * { export * }
+}
+
+module StyliticsData.Swift {
+    header "StyliticsData-Swift.h"
+    requires objc
+}

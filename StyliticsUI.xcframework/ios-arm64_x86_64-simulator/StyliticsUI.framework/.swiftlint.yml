@@ -1,0 +1,11 @@
+excluded:
+  - StyliticsUI/AppDelegate.swift
+  - StyliticsUI/SceneDelegate.swift
+disabled_rules:
+   - force_cast
+   - line_length
+   - function_body_length
+identifier_name:
+    allowed_symbols: "_"
+
+
