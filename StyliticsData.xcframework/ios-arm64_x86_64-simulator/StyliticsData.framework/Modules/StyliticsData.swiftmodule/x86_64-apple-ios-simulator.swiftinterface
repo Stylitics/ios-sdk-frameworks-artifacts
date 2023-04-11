@@ -70,8 +70,9 @@ public struct Outfit {
   public let coverImageUrl: Swift.String?
   public let id: Swift.Int?
   public let accountUsername: Swift.String?
-  public let items: [StyliticsData.OutfitItem]?
+  public var items: [StyliticsData.OutfitItem]?
   public let onModelImage: Swift.Bool?
+  public var requestId: Swift.String
 }
 extension StyliticsData.Outfit : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
@@ -84,7 +85,7 @@ public struct OutfitItem {
   public let category: Swift.String?
   public let tags: [Swift.String]?
   public let largeImageUrl: Swift.String?
-  public let otherClientItemIds: StyliticsData.OtherClientItemIds?
+  public let otherClientItemIds: StyliticsData.DecodableDictionary?
   public let smallImageUrl: Swift.String?
   public let color: Swift.String?
   public let accountId: Swift.Int?
@@ -111,6 +112,7 @@ public struct OutfitItem {
   public let retailerColor: Swift.String?
   public let price: Swift.Double?
   public let pattern: Swift.String?
+  public var requestId: Swift.String
 }
 extension StyliticsData.OutfitItem : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
@@ -124,6 +126,9 @@ final public class StyliticsConfig {
   public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, clientName: Swift.String)
   @objc deinit
 }
+extension Swift.Dictionary {
+  public func merge(_ dict: [Key : Value]?) -> [Key : Value]
+}
 public struct OutfitsResponse {
   public typealias ResponseType = StyliticsData.Outfits
   public let response: Foundation.URLResponse?
@@ -132,6 +137,14 @@ public struct OutfitsResponse {
 }
 public struct PurchasesResponse {
   public var error: Swift.Error?
+}
+@_hasMissingDesignatedInitializers final public class ExperienceConfigManager {
+  @objc deinit
+}
+extension StyliticsData.ExperienceConfigManager {
+  public static var labelStyle: Swift.String? {
+    get
+  }
 }
 public enum NetworkError : Swift.Error {
   case noData
@@ -145,7 +158,7 @@ public struct ReplacementItem {
   public let promotions: [Swift.String]?
   public let category: Swift.String?
   public let largeImageUrl: Swift.String?
-  public let otherClientItemIds: StyliticsData.OtherClientItemIds?
+  public let otherClientItemIds: StyliticsData.DecodableDictionary?
   public let collageDimensions: StyliticsData.CollageDimensions?
   public let smallImageUrl: Swift.String?
   public let productId: Swift.String?
@@ -225,19 +238,10 @@ public enum TrackingApisHost {
   }
 }
 public struct Outfits {
-  public let list: [StyliticsData.Outfit]
+  public var list: [StyliticsData.Outfit]
   public var isMixAndMatchEnabled: Swift.Bool
 }
 extension StyliticsData.Outfits : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct OtherClientItemIds {
-  public let line1Name: Swift.String?
-  public let line2Name: Swift.String?
-  public let shortName: Swift.String?
-  public let productCount: Swift.Int?
-}
-extension StyliticsData.OtherClientItemIds : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
 public enum Event : Swift.String, Swift.CaseIterable {
@@ -283,7 +287,12 @@ public enum EngagementInfo {
   case replacement(outfit: StyliticsData.Outfit, oldOutfitItem: StyliticsData.OutfitItem, newOutfitItem: StyliticsData.OutfitItem)
 }
 public struct EngagementsTrackingInfo {
-  public init(event: StyliticsData.Event, engagementInfo: StyliticsData.EngagementInfo? = nil)
+  public init(event: StyliticsData.Event, engagementInfo: StyliticsData.EngagementInfo)
+}
+public struct DecodableDictionary : Swift.Decodable {
+  public typealias Value = [Swift.String : Any]
+  public let dictionary: StyliticsData.DecodableDictionary.Value?
+  public init(from decoder: Swift.Decoder) throws
 }
 public enum DataApisHost {
   case production

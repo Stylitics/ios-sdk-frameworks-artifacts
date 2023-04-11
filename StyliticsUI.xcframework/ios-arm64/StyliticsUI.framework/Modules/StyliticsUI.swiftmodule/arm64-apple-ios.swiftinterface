@@ -9,21 +9,12 @@ import Swift
 import UIKit
 import _Concurrency
 public struct ClassicConfig {
-  public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.ClassicConfig.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
+  public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
   public struct Widget {
     public init(borderColor: CoreGraphics.CGColor = CGColor(red: 225/255,
                                                    green: 225/255,
                                                    blue: 225/255,
-                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = .white)
-  }
-  public struct TopLabel {
-    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 33/255,
-                                                 green: 33/255,
-                                                 blue: 33/255,
-                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .regular, backgroundColor: UIKit.UIColor = .white, borderColor: CoreGraphics.CGColor = CGColor(red: 142/255,
-                                                   green: 57/255,
-                                                   blue: 227/255,
-                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 2, cornerRadius: CoreGraphics.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 6, paddingHorizontal: CoreGraphics.CGFloat = 16)
+                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = .clear)
   }
   public struct BottomLabel {
     public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 0.129,
@@ -32,7 +23,7 @@ public struct ClassicConfig {
                                                  alpha: 1), showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = .clear, borderColor: CoreGraphics.CGColor = CGColor(red: 0.882,
                                                    green: 0.882,
                                                    blue: 0.882,
-                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 0, cornerRadius: CoreGraphics.CGFloat = 0, paddingVertical: CoreGraphics.CGFloat = 0, paddingHorizontal: CoreGraphics.CGFloat = 0)
+                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 0, cornerRadius: CoreGraphics.CGFloat = 0, paddingVertical: CoreGraphics.CGFloat = 0, paddingHorizontal: CoreGraphics.CGFloat = 0, bottomSpacing: CoreGraphics.CGFloat = 24)
   }
 }
 public enum TopLabelPosition {
@@ -120,6 +111,7 @@ public enum ShopTheModelPosition {
   public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, productListScreenState: StyliticsUI.ProductListScreenState = .enable()) -> UIKit.UIView
   public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
   public static func closeProductListScreen()
+  public static func clearData(for requestId: Swift.String)
   @objc deinit
 }
 public struct ReplacementInfo {
@@ -167,6 +159,64 @@ extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDataSo
 extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDelegateFlowLayout {
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+public struct TopLabel {
+  public init(label1: StyliticsUI.TopLabel.Label1 = Label1(), label2: StyliticsUI.TopLabel.Label2 = Label2(), label3: StyliticsUI.TopLabel.Label3 = Label3(), label4: StyliticsUI.TopLabel.Label4 = Label4(), label5: StyliticsUI.TopLabel.Label5 = Label5(), label6: StyliticsUI.TopLabel.Label6 = Label6(), label7: StyliticsUI.TopLabel.Label7 = Label7())
+  public struct Label1 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 33/255,
+                                                 green: 33/255,
+                                                 blue: 33/255,
+                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .regular, backgroundColor: UIKit.UIColor = .white, borderColor: CoreGraphics.CGColor = CGColor(red: 142/255,
+                                                   green: 57/255,
+                                                   blue: 227/255,
+                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 2, cornerRadius: CoreGraphics.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 6, paddingHorizontal: CoreGraphics.CGFloat = 16)
+  }
+  public struct Label2 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = .white, fontWeight: UIKit.UIFont.Weight = .bold, backgroundColor: UIKit.UIColor = .black, cornerRadius: CoreGraphics.CGFloat = 0, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 6, paddingHorizontal: CoreGraphics.CGFloat = 16, iconAndTitleSpacing: CoreGraphics.CGFloat = 8)
+  }
+  public struct Label3 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontColor: UIKit.UIColor = .black, fontWeight: UIKit.UIFont.Weight = .light, backgroundColor: UIKit.UIColor = .white, cornerRadius: CoreGraphics.CGFloat = 8, shadowColor: UIKit.UIColor = UIColor(red: 0,
+                                                   green: 0,
+                                                   blue: 0,
+                                                   alpha: 0.16), shadowRadius: CoreGraphics.CGFloat = 4, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 8, paddingHorizontal: CoreGraphics.CGFloat = 12)
+  }
+  public struct Label4 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 12, fontColor: UIKit.UIColor = .white, fontWeight: UIKit.UIFont.Weight = .regular, backgroundColorBeforeAnimation: UIKit.UIColor = UIColor(red: 45/255,
+                                                                      green: 74/255,
+                                                                      blue: 85/255,
+                                                                      alpha: 1), backgroundColorAfterAnimation: UIKit.UIColor = UIColor(red: 43/255,
+                                                                     green: 75/255,
+                                                                     blue: 117/255,
+                                                                     alpha: 1), cornerRadius: CoreGraphics.CGFloat = 6, shadowColor: UIKit.UIColor = UIColor(red: 0,
+                                                   green: 0,
+                                                   blue: 0,
+                                                   alpha: 0.16), shadowRadius: CoreGraphics.CGFloat = 4, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 12, paddingHorizontal: CoreGraphics.CGFloat = 12)
+  }
+  public struct Label5 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 71/255,
+                                                 green: 0,
+                                                 blue: 171/255,
+                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .medium, backgroundColor: UIKit.UIColor = UIColor(red: 235/255,
+                                                       green: 236/255,
+                                                       blue: 254/255,
+                                                       alpha: 1), cornerRadius: CoreGraphics.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 8, paddingHorizontal: CoreGraphics.CGFloat = 16)
+  }
+  public struct Label6 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontColor: UIKit.UIColor = UIColor(red: 30/255,
+                                                 green: 30/255,
+                                                 blue: 30/255,
+                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .bold, backgroundColorBeforeAnimation: UIKit.UIColor = .white, backgroundColorAfterAnimation: UIKit.UIColor = .white, cornerRadius: CoreGraphics.CGFloat = 32, shadowColor: UIKit.UIColor = UIColor(red: 0,
+                                                   green: 0,
+                                                   blue: 0,
+                                                   alpha: 0.05), shadowRadius: CoreGraphics.CGFloat = 10, shadowOffset: CoreGraphics.CGSize = CGSize(width: 0,
+                                                  height: 4), position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 12, paddingHorizontal: CoreGraphics.CGFloat = 22)
+  }
+  public struct Label7 {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 30/255,
+                                                 green: 30/255,
+                                                 blue: 30/255,
+                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .medium, position: StyliticsUI.TopLabelPosition = .topLeft, iconAndTitleSpacing: CoreGraphics.CGFloat = 8, iconColor: UIKit.UIColor = .black)
+  }
 }
 public enum ProductListScreenState {
   case disable
