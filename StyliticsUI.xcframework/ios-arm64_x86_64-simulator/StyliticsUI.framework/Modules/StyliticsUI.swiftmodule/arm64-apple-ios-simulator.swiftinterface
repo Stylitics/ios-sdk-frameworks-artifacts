@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsUI
 import Foundation
 import SafariServices
@@ -50,7 +50,7 @@ public struct ProductListConfig {
                                                  alpha: 1), slashFontColor: UIKit.UIColor = UIColor(red: 0.4588,
                                                       green: 0.4588,
                                                       blue: 0.4588,
-                                                      alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, decimal: Swift.Int = 0)
+                                                      alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, decimal: Swift.Int = 2)
   }
   public struct ShopText {
     public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,

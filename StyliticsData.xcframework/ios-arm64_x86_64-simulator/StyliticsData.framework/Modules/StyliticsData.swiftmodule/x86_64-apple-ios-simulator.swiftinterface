@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsData
 import Foundation
 @_exported import StyliticsData
@@ -49,6 +49,7 @@ public struct ReplacementsResponse {
   public let response: Foundation.URLResponse?
   public let data: StyliticsData.ReplacementsResponse.ResponseType?
   public let error: Swift.Error?
+  public init(response: Foundation.URLResponse?, data: StyliticsData.ReplacementsResponse.ResponseType?, error: Swift.Error?)
 }
 public struct Outfit {
   public let lookbookImageUrl: Swift.String?
