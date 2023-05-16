@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ABi0HS7BD3RnhGaLI5BW5bpQ7QU=
+		YbKd09A3wvUg/3ydeo/Xqt/NZBI=
 		</data>
 		<key>Modules/StyliticsData.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/StyliticsData.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WDSMIsjZPuTW/BTKF2li59w8Kqo=
+		+efNxvwTriTx715dO5grdz6OkTo=
 		</data>
 		<key>Modules/StyliticsData.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/StyliticsData.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QiWoiyjaK0BCHKN5jCZ7ggIGnxU=
+		/4l9c9b3pAn/2U+Q/YJsB7ILTYE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S5n8iTUrjw1CsSwUrrTS6ANoW8V2Nm7gdaXMS91iGZM=
+			0iXt6R5/GkLWo0V4rCXHpeA0hMQlK5U5+E1HdoCUUCo=
 			</data>
 		</dict>
 		<key>Modules/StyliticsData.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -111,7 +111,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/derqMTifRTKgFxCWT5adbMZqwdcR2/oVroKbY70Oe0=
+			FbRdR2RroH+WHIJ2ldURz1NVSjGfN23ZnlVAtZ+kOe0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
