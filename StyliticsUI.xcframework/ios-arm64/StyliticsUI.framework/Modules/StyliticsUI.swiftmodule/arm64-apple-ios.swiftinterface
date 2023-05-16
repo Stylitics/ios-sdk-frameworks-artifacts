@@ -36,21 +36,21 @@ public enum TopLabelPosition {
   }
 }
 public struct ProductListConfig {
-  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemSalePrice: StyliticsUI.ProductListConfig.ItemSalePrice = ItemSalePrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions())
+  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.ProductListConfig.ItemPrice = ItemPrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions())
   public struct ItemName {
     public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
                                                  green: 0.1294,
                                                  blue: 0.1294,
                                                  alpha: 1))
   }
-  public struct ItemSalePrice {
-    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                 green: 0.1294,
-                                                 blue: 0.1294,
-                                                 alpha: 1), slashFontColor: UIKit.UIColor = UIColor(red: 0.4588,
-                                                      green: 0.4588,
-                                                      blue: 0.4588,
-                                                      alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, decimal: Swift.Int = 2)
+  public struct ItemPrice {
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, priceFontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                      green: 0.1294,
+                                                      blue: 0.1294,
+                                                      alpha: 1), strikeThroughPriceFontColor: UIKit.UIColor = UIColor(red: 0.4588,
+                                                                   green: 0.4588,
+                                                                   blue: 0.4588,
+                                                                   alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
   }
   public struct ShopText {
     public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
@@ -223,7 +223,7 @@ public enum ProductListScreenState {
   case enable(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
 }
 public enum OutfitsTemplate {
-  case classic(classicConfig: StyliticsUI.ClassicConfig = ClassicConfig(), classicListener: StyliticsUI.ClassicListener? = nil, isItemSwapEnabled: Swift.Bool = false)
+  case classic(classicConfig: StyliticsUI.ClassicConfig = ClassicConfig(), classicListener: StyliticsUI.ClassicListener? = nil, isItemSwapEnabled: Swift.Bool = false, showScrollBar: Swift.Bool = false)
 }
 public struct OutfitItemInfo {
   public let outfitItem: StyliticsData.OutfitItem
@@ -234,7 +234,7 @@ final public class ClassicListener {
   @objc deinit
 }
 public enum ProductListTemplate {
-  case standard(productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener? = nil)
+  case standard(productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener? = nil, showScrollBar: Swift.Bool = false)
 }
 public struct OutfitInfo {
   public let outfit: StyliticsData.Outfit
