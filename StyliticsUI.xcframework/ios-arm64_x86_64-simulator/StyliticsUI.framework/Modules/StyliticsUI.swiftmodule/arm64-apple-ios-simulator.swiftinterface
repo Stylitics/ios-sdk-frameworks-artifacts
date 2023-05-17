@@ -45,9 +45,12 @@ public struct ProductListConfig {
   }
   public struct ItemPrice {
     public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, priceFontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                      green: 0.1294,
-                                                      blue: 0.1294,
-                                                      alpha: 1), strikeThroughPriceFontColor: UIKit.UIColor = UIColor(red: 0.4588,
+                                                       green: 0.1294,
+                                                       blue: 0.1294,
+                                                       alpha: 1), salePriceFontColor: UIKit.UIColor = UIColor(red: 0.1294,
+                                                           green: 0.1294,
+                                                           blue: 0.1294,
+                                                           alpha: 1), strikeThroughPriceFontColor: UIKit.UIColor = UIColor(red: 0.4588,
                                                                    green: 0.4588,
                                                                    blue: 0.4588,
                                                                    alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
