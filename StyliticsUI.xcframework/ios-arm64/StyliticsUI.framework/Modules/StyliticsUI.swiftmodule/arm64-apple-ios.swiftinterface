@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsUI
 import Foundation
 import SafariServices
@@ -11,16 +11,10 @@ import _Concurrency
 public struct ClassicConfig {
   public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
   public struct Widget {
-    public init(borderColor: CoreGraphics.CGColor = CGColor(red: 225/255,
-                                                   green: 225/255,
-                                                   blue: 225/255,
-                                                   alpha: 1), borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = .clear)
+    public init(borderColor: CoreGraphics.CGColor = ClassicConfigColor.classicWidgetBorderColor.toCGColor, borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBackgroundColor.toUIColor)
   }
   public struct BottomLabel {
-    public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 0.129,
-                                                 green: 0.129,
-                                                 blue: 0.129,
-                                                 alpha: 1), showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = .clear, borderColor: CoreGraphics.CGColor = CGColor(red: 0.882,
+    public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelFontColor.toUIColor, showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelBackgroundColor.toUIColor, borderColor: CoreGraphics.CGColor = CGColor(red: 0.882,
                                                    green: 0.882,
                                                    blue: 0.882,
                                                    alpha: 1), borderWeight: CoreGraphics.CGFloat = 0, cornerRadius: CoreGraphics.CGFloat = 0, paddingVertical: CoreGraphics.CGFloat = 0, paddingHorizontal: CoreGraphics.CGFloat = 0, bottomSpacing: CoreGraphics.CGFloat = 24)
@@ -38,43 +32,19 @@ public enum TopLabelPosition {
 public struct ProductListConfig {
   public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.ProductListConfig.ItemPrice = ItemPrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions())
   public struct ItemName {
-    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                 green: 0.1294,
-                                                 blue: 0.1294,
-                                                 alpha: 1))
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemNameFontColor.toUIColor)
   }
   public struct ItemPrice {
-    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, priceFontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                       green: 0.1294,
-                                                       blue: 0.1294,
-                                                       alpha: 1), salePriceFontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                           green: 0.1294,
-                                                           blue: 0.1294,
-                                                           alpha: 1), strikeThroughPriceFontColor: UIKit.UIColor = UIColor(red: 0.4588,
-                                                                   green: 0.4588,
-                                                                   blue: 0.4588,
-                                                                   alpha: 1), style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, priceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemSalePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListStrikeThroughPriceFontColor.toUIColor, style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
   }
   public struct ShopText {
-    public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                 green: 0.1294,
-                                                 blue: 0.1294,
-                                                 alpha: 1), position: StyliticsUI.ProductListConfig.ShopViewPosition = .left)
+    public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListShopTextFontColor.toUIColor, position: StyliticsUI.ProductListConfig.ShopViewPosition = .left)
   }
   public struct ShopButton {
-    public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                 green: 0.1294,
-                                                 blue: 0.1294,
-                                                 alpha: 1), backgroundColor: UIKit.UIColor = UIColor(red: 0.9568,
-                                                       green: 0.9568,
-                                                       blue: 0.9568,
-                                                       alpha: 1), horizontalPadding: CoreGraphics.CGFloat = 16, verticalPadding: CoreGraphics.CGFloat = 8)
+    public init(title: Swift.String = Constants.SHOP_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListShopButtonFontColor.toUIColor, backgroundColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListShopButtonBackgroundColor.toUIColor, horizontalPadding: CoreGraphics.CGFloat = 16, verticalPadding: CoreGraphics.CGFloat = 8)
   }
   public struct SeeMoreOptions {
-    public init(title: Swift.String = Constants.SEE_MORE_OPTIONS_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 12, fontWeight: UIKit.UIFont.Weight = .regular, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                 green: 0.1294,
-                                                 blue: 0.1294,
-                                                 alpha: 1))
+    public init(title: Swift.String = Constants.SEE_MORE_OPTIONS_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 12, fontWeight: UIKit.UIFont.Weight = .regular, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListSeeMoreFontColor.toUIColor)
   }
   public enum ShopViewPosition {
     case left
@@ -116,6 +86,45 @@ public enum ShopTheModelPosition {
   public static func closeProductListScreen()
   public static func clearData(for requestId: Swift.String)
   @objc deinit
+}
+public enum ClassicConfigColor : Swift.String {
+  case classicWidgetBackgroundColor
+  case classicWidgetBorderColor
+  case classicBottomLabelFontColor
+  case classicBottomLabelBackgroundColor
+  public var toUIColor: UIKit.UIColor {
+    get
+  }
+  public var toCGColor: CoreGraphics.CGColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum StandardProductListConfigColor : Swift.String {
+  case standardProductListItemListHeaderTitleFontColor
+  case standardProductListItemNameFontColor
+  case standardProductListItemPriceFontColor
+  case standardProductListItemSalePriceFontColor
+  case standardProductListStrikeThroughPriceFontColor
+  case standardProductListShopTextFontColor
+  case standardProductListShopButtonFontColor
+  case standardProductListSeeMoreFontColor
+  case standardProductListShopButtonBackgroundColor
+  public var toUIColor: UIKit.UIColor {
+    get
+  }
+  public var toCGColor: CoreGraphics.CGColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public struct ReplacementInfo {
   public let replacementItem: StyliticsData.ReplacementItem
@@ -245,11 +254,17 @@ public struct OutfitInfo {
 }
 public struct ProductListScreenConfig {
   public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), productListTemplate: StyliticsUI.ProductListTemplate = .standard())
+  public enum ProductListScreenHeaderAlign {
+    case top
+    case centre
+    public static func == (a: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign, b: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public struct ItemListHeader {
-    public init(title: Swift.String = "Product List", fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = UIColor(red: 0.1294,
-                                                 green: 0.1294,
-                                                 blue: 0.1294,
-                                                 alpha: 1))
+    public init(title: Swift.String = "Product List", productListScreenHeaderAlign: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign = .top, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemListHeaderTitleFontColor.toUIColor)
   }
 }
 public struct ShopTheModel {
@@ -263,3 +278,11 @@ extension StyliticsUI.ProductListConfig.PriceStrikethrough : Swift.Equatable {}
 extension StyliticsUI.ProductListConfig.PriceStrikethrough : Swift.Hashable {}
 extension StyliticsUI.ShopTheModelPosition : Swift.Equatable {}
 extension StyliticsUI.ShopTheModelPosition : Swift.Hashable {}
+extension StyliticsUI.ClassicConfigColor : Swift.Equatable {}
+extension StyliticsUI.ClassicConfigColor : Swift.Hashable {}
+extension StyliticsUI.ClassicConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.StandardProductListConfigColor : Swift.Equatable {}
+extension StyliticsUI.StandardProductListConfigColor : Swift.Hashable {}
+extension StyliticsUI.StandardProductListConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Equatable {}
+extension StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Hashable {}
