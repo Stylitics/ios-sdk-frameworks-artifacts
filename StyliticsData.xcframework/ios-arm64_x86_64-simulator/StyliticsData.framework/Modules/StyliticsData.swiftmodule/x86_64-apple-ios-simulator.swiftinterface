@@ -280,6 +280,8 @@ public struct PurchasedItems {
   public init(currency: Swift.String, orderId: Swift.String? = nil, itemInfoList: [StyliticsData.PurchasedItemInfo])
 }
 public struct PurchasedItemInfo {
+  public init?(itemId: Swift.String?, price: Swift.Double?)
+  public init?(itemId: Swift.String?, price: Swift.Int?)
   public init?(itemId: Swift.Int?, price: Swift.Double?)
 }
 public enum EngagementInfo {

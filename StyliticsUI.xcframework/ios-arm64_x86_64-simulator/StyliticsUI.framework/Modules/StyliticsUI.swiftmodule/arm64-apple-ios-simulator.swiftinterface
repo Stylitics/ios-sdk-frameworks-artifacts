@@ -11,10 +11,10 @@ import _Concurrency
 public struct ClassicConfig {
   public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
   public struct Widget {
-    public init(borderColor: CoreGraphics.CGColor = ClassicConfigColor.classicWidgetBorderColor.toCGColor, borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBackgroundColor.toUIColor)
+    public init(borderColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBorderColor.toUIColor, borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBackgroundColor.toUIColor)
   }
   public struct BottomLabel {
-    public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelFontColor.toUIColor, showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelBackgroundColor.toUIColor, borderColor: CoreGraphics.CGColor = CGColor(red: 0.882,
+    public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelFontColor.toUIColor, showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelBackgroundColor.toUIColor, borderColor: UIKit.UIColor = UIColor(red: 0.882,
                                                    green: 0.882,
                                                    blue: 0.882,
                                                    alpha: 1), borderWeight: CoreGraphics.CGFloat = 0, cornerRadius: CoreGraphics.CGFloat = 0, paddingVertical: CoreGraphics.CGFloat = 0, paddingHorizontal: CoreGraphics.CGFloat = 0, bottomSpacing: CoreGraphics.CGFloat = 24)
@@ -95,9 +95,6 @@ public enum ClassicConfigColor : Swift.String {
   public var toUIColor: UIKit.UIColor {
     get
   }
-  public var toCGColor: CoreGraphics.CGColor {
-    get
-  }
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -115,9 +112,6 @@ public enum StandardProductListConfigColor : Swift.String {
   case standardProductListSeeMoreFontColor
   case standardProductListShopButtonBackgroundColor
   public var toUIColor: UIKit.UIColor {
-    get
-  }
-  public var toCGColor: CoreGraphics.CGColor {
     get
   }
   public init?(rawValue: Swift.String)
@@ -178,7 +172,7 @@ public struct TopLabel {
     public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 33/255,
                                                  green: 33/255,
                                                  blue: 33/255,
-                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .regular, backgroundColor: UIKit.UIColor = .white, borderColor: CoreGraphics.CGColor = CGColor(red: 142/255,
+                                                 alpha: 1), fontWeight: UIKit.UIFont.Weight = .regular, backgroundColor: UIKit.UIColor = .white, borderColor: UIKit.UIColor = UIColor(red: 142/255,
                                                    green: 57/255,
                                                    blue: 227/255,
                                                    alpha: 1), borderWeight: CoreGraphics.CGFloat = 2, cornerRadius: CoreGraphics.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreGraphics.CGFloat = 6, paddingHorizontal: CoreGraphics.CGFloat = 16)
