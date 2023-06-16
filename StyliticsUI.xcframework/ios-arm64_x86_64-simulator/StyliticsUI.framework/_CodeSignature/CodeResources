@@ -10,11 +10,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		5j1Y/xBf2vKJkcYkbFk0pF9Ssf4=
+		+vM9j6Zy//PURh+Erh/suoZLD6U=
 		</data>
 		<key>ClassicCollectionViewCell.nib</key>
 		<data>
-		6wdOUuTanb4567h5i4+wptFUcQw=
+		3UMA65r9DyTkOrMa6A9zo9hmcbQ=
 		</data>
 		<key>ClassicDisplayContainerView.nib</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2yKazNTh7bI3uQfX0vchvJx9J/o=
+		79Dm9/9l8jRB+bJHmf+Ca/mQ01g=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		KDK+hg5bJeqMo0W7KB3b8DoQhMQ=
+		8EHsR0l/kCRm/Yc3Icnjh3QWNUk=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RcPnNjhNXjHLoLTK9zSYJ69xss8=
+		K3FKWThRR3TFzwMa+VjtXWuPEig=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sQAZhN3Lz8v/jWZi4OBbS8pJC04=
+		8fpkTRZ1qZWGGK9jN4XZps4ccAY=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+VqAUn4nLBEp5y2lrUItX0LSbyQ=
+		DamZqDOlEWobpRELj/BEDhFAxiY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -98,7 +98,7 @@
 		</data>
 		<key>ReplacementRowTableViewCell.nib</key>
 		<data>
-		zJpT1n673huu5yBWt3Csgukj5Mg=
+		T+1Dki1+Yn03i/O+laOvwQYhGYY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -114,14 +114,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PGuW+YKJJrE2j8RvHY78yp/uHPs8qua3IPOF/URMyjo=
+			q5Dbc8a1NayurJsSlI666s529Uqf6I7SyEU02peRV44=
 			</data>
 		</dict>
 		<key>ClassicCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RiwPgzsO4FQrS5x+ADJot0EQg56sfUTH/zJf2KfqyIU=
+			W1Ois6aBkYbnGBB5DifqVJNGC5Gzz525ikEN+DdgKeo=
 			</data>
 		</dict>
 		<key>ClassicDisplayContainerView.nib</key>
@@ -177,14 +177,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W1UVXJttYcUIQqWTDFLyPGwixOg6d/RKVKchyuHo/h4=
+			7JLte7jTKs+WyZ46FNm86ScJJmIPNSlJk6YLhUgxjh4=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yZgeCY5ANTXrE7/HVasDSRagw3t/2ySHbLS0WT3jvUw=
+			L0RmEouPQAOvsF5Bk4Dxk8brzPvDpivqSZIl9MRgq4c=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -198,14 +198,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uq8mAo+nDlpahXwPdZvIQhozEQ8mTKiJn0tmtZx0Zfg=
+			vW7500O+rjoFBWToDJQayLHDGSEUNAdpuf8IEqayWco=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9MhTzOioGDugwxfcoh0Z5MAaJHGlMBjentOl1SQbFdI=
+			N6K8wEdR6eJT2JNxVZenZTc+BHErRj/CYmxwHz1/R70=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -261,7 +261,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ffuswuwko9GHW+C/L4Te0u4zsTAuEhuLUNzkTwW9bdM=
+			eEja9lL+AK/bWqUnPpibtfW6zWte+y9kZ/8XQl0FxJc=
 			</data>
 		</dict>
 	</dict>
