@@ -124,7 +124,8 @@ final public class StyliticsConfig {
   final public let dataApisHost: StyliticsData.DataApisHost?
   final public let trackingApisHost: StyliticsData.TrackingApisHost?
   final public let clientName: Swift.String
-  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, clientName: Swift.String)
+  final public let disableDarkMode: Swift.Bool?
+  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, clientName: Swift.String, disableDarkMode: Swift.Bool? = nil)
   @objc deinit
 }
 extension Swift.Dictionary {
@@ -274,6 +275,12 @@ extension StyliticsData.ReplacementItems : Swift.Decodable {
   public static func configure(config: StyliticsData.StyliticsConfig) throws
   public static func engagement(trackingInfo: StyliticsData.EngagementsTrackingInfo, response: ((StyliticsData.EngagementsResponse) -> Swift.Void)? = nil)
   public static func purchases(purchasedItems: StyliticsData.PurchasedItems, response: ((StyliticsData.PurchasesResponse) -> Swift.Void)? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class ConfigManager {
+  public static var disableDarkMode: Swift.Bool {
+    get
+  }
   @objc deinit
 }
 public struct PurchasedItems {

@@ -11,7 +11,7 @@ import _Concurrency
 public struct ClassicConfig {
   public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
   public struct Widget {
-    public init(borderColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBorderColor.toUIColor, borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBackgroundColor.toUIColor)
+    public init(borderColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBorderColor.toUIColor, borderWeight: CoreGraphics.CGFloat = 1, cornerRadius: CoreGraphics.CGFloat = 8, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBackgroundColor.toUIColor, widgetTopSpacing: CoreGraphics.CGFloat = 37.5)
   }
   public struct BottomLabel {
     public init(title: Swift.String = Constants.VIEW_DETAIL_TEXT, fontFamily: Swift.String = "HelveticaNeue", fontWeight: UIKit.UIFont.Weight = .regular, fontSize: CoreGraphics.CGFloat = 14, fontColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelFontColor.toUIColor, showUnderline: Swift.Bool = true, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicBottomLabelBackgroundColor.toUIColor, borderColor: UIKit.UIColor = UIColor(red: 0.882,
@@ -30,9 +30,9 @@ public enum TopLabelPosition {
   }
 }
 public struct ProductListConfig {
-  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.ProductListConfig.ItemPrice = ItemPrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions())
+  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.ProductListConfig.ItemPrice = ItemPrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions(), itemBackgroundColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemBackgroundColor.toUIColor, itemDividerColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemDividerColor.toUIColor)
   public struct ItemName {
-    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemNameFontColor.toUIColor)
+    public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemNameFontColor.toUIColor, titleTextTransform: StyliticsUI.ProductListConfig.TitleTextTransform? = nil)
   }
   public struct ItemPrice {
     public init(fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, priceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemSalePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListStrikeThroughPriceFontColor.toUIColor, style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
@@ -63,6 +63,14 @@ public struct ProductListConfig {
     case show
     case hide
     public static func == (a: StyliticsUI.ProductListConfig.PriceStrikethrough, b: StyliticsUI.ProductListConfig.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum TitleTextTransform {
+    case upper
+    public static func == (a: StyliticsUI.ProductListConfig.TitleTextTransform, b: StyliticsUI.ProductListConfig.TitleTextTransform) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
@@ -111,6 +119,8 @@ public enum StandardProductListConfigColor : Swift.String {
   case standardProductListShopButtonFontColor
   case standardProductListSeeMoreFontColor
   case standardProductListShopButtonBackgroundColor
+  case standardProductListItemBackgroundColor
+  case standardProductListItemDividerColor
   public var toUIColor: UIKit.UIColor {
     get
   }
@@ -270,6 +280,8 @@ extension StyliticsUI.ProductListConfig.ShopViewPosition : Swift.Equatable {}
 extension StyliticsUI.ProductListConfig.ShopViewPosition : Swift.Hashable {}
 extension StyliticsUI.ProductListConfig.PriceStrikethrough : Swift.Equatable {}
 extension StyliticsUI.ProductListConfig.PriceStrikethrough : Swift.Hashable {}
+extension StyliticsUI.ProductListConfig.TitleTextTransform : Swift.Equatable {}
+extension StyliticsUI.ProductListConfig.TitleTextTransform : Swift.Hashable {}
 extension StyliticsUI.ShopTheModelPosition : Swift.Equatable {}
 extension StyliticsUI.ShopTheModelPosition : Swift.Hashable {}
 extension StyliticsUI.ClassicConfigColor : Swift.Equatable {}
