@@ -74,6 +74,10 @@ public struct Outfit {
   public var items: [StyliticsData.OutfitItem]?
   public let onModelImage: Swift.Bool?
   public var requestId: Swift.String
+  public let widgetAPIOutfitSortCompare: StyliticsData.DecodableDictionary?
+  public let imageUpdatedAt: Swift.String?
+  public let primaryRequestedID: Swift.String?
+  public let traits: [StyliticsData.DecodableDictionary]?
 }
 extension StyliticsData.Outfit : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
@@ -114,6 +118,13 @@ public struct OutfitItem {
   public let price: Swift.Double?
   public let pattern: Swift.String?
   public var requestId: Swift.String
+  public let lookbookImageURL: Swift.String?
+  public let department: Swift.String?
+  public let colorHex: Swift.String?
+  public let priceLocalized: Swift.String?
+  public let transparentImageURL: Swift.String?
+  public let retailerCategory: Swift.String?
+  public let salePriceLocalized: Swift.String?
 }
 extension StyliticsData.OutfitItem : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
@@ -123,9 +134,9 @@ final public class StyliticsConfig {
   final public let enableDebugLogs: Swift.Bool?
   final public let dataApisHost: StyliticsData.DataApisHost?
   final public let trackingApisHost: StyliticsData.TrackingApisHost?
+  final public let locale: Swift.String?
   final public let clientName: Swift.String
-  final public let disableDarkMode: Swift.Bool?
-  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, clientName: Swift.String, disableDarkMode: Swift.Bool? = nil)
+  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, locale: Swift.String? = nil, clientName: Swift.String)
   @objc deinit
 }
 extension Swift.Dictionary {
@@ -241,6 +252,7 @@ public enum TrackingApisHost {
 }
 public struct Outfits {
   public var list: [StyliticsData.Outfit]
+  public let localizationVersion: Swift.String?
   public var isMixAndMatchEnabled: Swift.Bool
 }
 extension StyliticsData.Outfits : Swift.Decodable {
@@ -275,12 +287,6 @@ extension StyliticsData.ReplacementItems : Swift.Decodable {
   public static func configure(config: StyliticsData.StyliticsConfig) throws
   public static func engagement(trackingInfo: StyliticsData.EngagementsTrackingInfo, response: ((StyliticsData.EngagementsResponse) -> Swift.Void)? = nil)
   public static func purchases(purchasedItems: StyliticsData.PurchasedItems, response: ((StyliticsData.PurchasesResponse) -> Swift.Void)? = nil)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers final public class ConfigManager {
-  public static var disableDarkMode: Swift.Bool {
-    get
-  }
   @objc deinit
 }
 public struct PurchasedItems {

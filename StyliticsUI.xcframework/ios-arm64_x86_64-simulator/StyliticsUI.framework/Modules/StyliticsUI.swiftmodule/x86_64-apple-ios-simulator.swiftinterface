@@ -8,6 +8,16 @@ import StyliticsData
 import Swift
 import UIKit
 import _Concurrency
+@_hasMissingDesignatedInitializers final public class StyliticsUIApis {
+  public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, productListScreenState: StyliticsUI.ProductListScreenState = .enable()) -> UIKit.UIView
+  public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
+  public static func closeProductListScreen()
+  public static func clearData(for requestId: Swift.String)
+  @objc deinit
+}
+public enum ProductListScreenTemplate {
+  case standard(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
+}
 public struct ClassicConfig {
   public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
   public struct Widget {
@@ -88,13 +98,6 @@ public enum ShopTheModelPosition {
     get
   }
 }
-@_hasMissingDesignatedInitializers final public class StyliticsUIApis {
-  public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, productListScreenState: StyliticsUI.ProductListScreenState = .enable()) -> UIKit.UIView
-  public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
-  public static func closeProductListScreen()
-  public static func clearData(for requestId: Swift.String)
-  @objc deinit
-}
 public enum ClassicConfigColor : Swift.String {
   case classicWidgetBackgroundColor
   case classicWidgetBorderColor
@@ -139,6 +142,21 @@ final public class ProductListListener {
   public init(onOutfitItemClick: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil, onOutfitItemView: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil, onItemSwap: ((Swift.Int, Swift.Int, Swift.Int) -> Swift.Void)? = nil)
   @objc deinit
 }
+public struct ProductListScreenConfig {
+  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), productListTemplate: StyliticsUI.ProductListTemplate = .standard())
+  public enum ProductListScreenHeaderAlign {
+    case top
+    case centre
+    public static func == (a: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign, b: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct ItemListHeader {
+    public init(title: Swift.String = "Product List", productListScreenHeaderAlign: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign = .top, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemListHeaderTitleFontColor.toUIColor)
+  }
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ProductListContainerView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -158,6 +176,9 @@ extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
   public static let SHOP_TEXT: Swift.String
   public static let SEE_MORE_OPTIONS_CLOSE_TEXT: Swift.String
   public static let SEE_MORE_OPTIONS_TEXT: Swift.String
+  public static let NIKE_DOTS_ITEM_HEADER_TITLE: Swift.String
+  public static let NIKE_DOTS_VIEW_ENTIRE_LOOK_TEXT: Swift.String
+  public static let NIKE_DOTS_SHOP_THE_MODEL_TEXT: Swift.String
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ClassicDisplayContainerView : UIKit.UIView {
@@ -255,21 +276,6 @@ public enum ProductListTemplate {
 public struct OutfitInfo {
   public let outfit: StyliticsData.Outfit
   public let position: Swift.Int
-}
-public struct ProductListScreenConfig {
-  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), productListTemplate: StyliticsUI.ProductListTemplate = .standard())
-  public enum ProductListScreenHeaderAlign {
-    case top
-    case centre
-    public static func == (a: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign, b: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public struct ItemListHeader {
-    public init(title: Swift.String = "Product List", productListScreenHeaderAlign: StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign = .top, fontFamily: Swift.String = "HelveticaNeue", fontSize: CoreGraphics.CGFloat = 16, fontWeight: UIKit.UIFont.Weight = .medium, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemListHeaderTitleFontColor.toUIColor)
-  }
 }
 public struct ShopTheModel {
   public init(name: Swift.String = "", position: StyliticsUI.ShopTheModelPosition = .topLeft, width: CoreGraphics.CGFloat = 60, height: CoreGraphics.CGFloat = 60)
