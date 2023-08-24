@@ -40,9 +40,12 @@ public enum TopLabelPosition {
   }
 }
 public struct ProductListConfig {
-  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.ProductListConfig.ItemPrice = ItemPrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions(), itemBackgroundColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemBackgroundColor.toUIColor, itemDividerColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemDividerColor.toUIColor)
+  public init(itemName: StyliticsUI.ProductListConfig.ItemName = ItemName(), brandName: StyliticsUI.ProductListConfig.BrandName = BrandName(), itemPrice: StyliticsUI.ProductListConfig.ItemPrice = ItemPrice(), shop: StyliticsUI.ProductListConfig.ShopViewType = .text(), seeMoreOptions: StyliticsUI.ProductListConfig.SeeMoreOptions = SeeMoreOptions(), itemBackgroundColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemBackgroundColor.toUIColor, itemDividerColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemDividerColor.toUIColor, hideAnchorItem: Swift.Bool? = nil)
   public struct ItemName {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreGraphics.CGFloat = 16, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemNameFontColor.toUIColor, titleTextTransform: StyliticsUI.ProductListConfig.TitleTextTransform? = nil)
+  }
+  public struct BrandName {
+    public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreGraphics.CGFloat = 16, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListBrandNameFontColor.toUIColor)
   }
   public struct ItemPrice {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreGraphics.CGFloat = 16, priceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemSalePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListStrikeThroughPriceFontColor.toUIColor, style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
@@ -115,6 +118,7 @@ public enum ClassicConfigColor : Swift.String {
 public enum StandardProductListConfigColor : Swift.String {
   case standardProductListItemListHeaderTitleFontColor
   case standardProductListItemNameFontColor
+  case standardProductListBrandNameFontColor
   case standardProductListItemPriceFontColor
   case standardProductListItemSalePriceFontColor
   case standardProductListStrikeThroughPriceFontColor
@@ -160,7 +164,7 @@ final public class ProductListListener {
   @objc deinit
 }
 public struct ProductListScreenConfig {
-  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), productListTemplate: StyliticsUI.ProductListTemplate = .standard())
+  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), presentationStyle: UIKit.UIModalPresentationStyle = .automatic, productListTemplate: StyliticsUI.ProductListTemplate = .standard())
   public enum ProductListScreenHeaderAlign {
     case top
     case centre
@@ -181,7 +185,6 @@ public struct ProductListScreenConfig {
 }
 extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
 }
 extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
@@ -294,7 +297,7 @@ public struct HotspotConfig {
 }
 public enum OutfitsTemplate {
   case classic(classicConfig: StyliticsUI.ClassicConfig = ClassicConfig(), classicListener: StyliticsUI.ClassicListener? = nil, isItemSwapEnabled: Swift.Bool = false, showScrollBar: Swift.Bool = false)
-  case hotspot(hotspotConfig: StyliticsUI.HotspotConfig = HotspotConfig(), hotspotListener: StyliticsUI.HotspotListener = HotspotListener())
+  case hotspot(hotspotConfig: StyliticsUI.HotspotConfig = HotspotConfig(), hotspotListener: StyliticsUI.HotspotListener = HotspotListener(), showScrollBar: Swift.Bool = false)
 }
 public struct OutfitItemInfo {
   public let outfitItem: StyliticsData.OutfitItem

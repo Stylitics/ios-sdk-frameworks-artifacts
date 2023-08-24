@@ -4,6 +4,7 @@
 import Foundation
 @_exported import StyliticsData
 import Swift
+import SystemConfiguration
 import UIKit
 import _Concurrency
 public struct CollageDimensions {
@@ -245,6 +246,8 @@ extension StyliticsData.ReplacementItem : Swift.Decodable {
   }
   public func toOutfitItem(outfitItem: StyliticsData.OutfitItem) -> StyliticsData.OutfitItem
   public init(from decoder: Swift.Decoder) throws
+}
+public struct ModelLookup {
 }
 public enum TrackingApisHost {
   case production
