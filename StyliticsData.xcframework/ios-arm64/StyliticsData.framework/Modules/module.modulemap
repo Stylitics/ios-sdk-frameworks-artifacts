@@ -6,6 +6,6 @@ framework module StyliticsData {
 }
 
 module StyliticsData.Swift {
-    header "StyliticsData-Swift.h"
-    requires objc
+  header "StyliticsData-Swift.h"
+  requires objc
 }

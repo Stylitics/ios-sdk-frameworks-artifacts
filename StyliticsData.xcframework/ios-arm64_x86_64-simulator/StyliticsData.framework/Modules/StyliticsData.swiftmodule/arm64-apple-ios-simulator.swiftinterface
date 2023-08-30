@@ -1,12 +1,14 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsData
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import StyliticsData
 import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
+import _StringProcessing
 public struct CollageDimensions {
   public let outfitHeight: Swift.Int?
   public let outfitWidth: Swift.Int?
@@ -33,7 +35,7 @@ extension StyliticsData.CollageDimensions : Swift.Decodable {
       get
     }
   }
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Coords {
   public let xCoord: Swift.Int?
@@ -43,14 +45,14 @@ public struct Coords {
   public let width: Swift.Int?
 }
 extension StyliticsData.Coords : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ReplacementsResponse {
   public typealias ResponseType = StyliticsData.ReplacementItems
   public let response: Foundation.URLResponse?
   public let data: StyliticsData.ReplacementsResponse.ResponseType?
-  public let error: Swift.Error?
-  public init(response: Foundation.URLResponse?, data: StyliticsData.ReplacementsResponse.ResponseType?, error: Swift.Error?)
+  public let error: (any Swift.Error)?
+  public init(response: Foundation.URLResponse?, data: StyliticsData.ReplacementsResponse.ResponseType?, error: (any Swift.Error)?)
 }
 public struct Outfit {
   public let lookbookImageUrl: Swift.String?
@@ -81,10 +83,10 @@ public struct Outfit {
   public let traits: [StyliticsData.DecodableDictionary]?
 }
 extension StyliticsData.Outfit : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct EngagementsResponse {
-  public var error: Swift.Error?
+  public var error: (any Swift.Error)?
 }
 public struct OutfitItem {
   public let promotions: [Swift.String]?
@@ -128,7 +130,7 @@ public struct OutfitItem {
   public let salePriceLocalized: Swift.String?
 }
 extension StyliticsData.OutfitItem : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 final public class StyliticsConfig {
   final public let timeoutInSecs: Swift.Double?
@@ -147,10 +149,10 @@ public struct OutfitsResponse {
   public typealias ResponseType = StyliticsData.Outfits
   public let response: Foundation.URLResponse?
   public let data: StyliticsData.OutfitsResponse.ResponseType?
-  public let error: Swift.Error?
+  public let error: (any Swift.Error)?
 }
 public struct PurchasesResponse {
-  public var error: Swift.Error?
+  public var error: (any Swift.Error)?
 }
 @_hasMissingDesignatedInitializers final public class ExperienceConfigManager {
   @objc deinit
@@ -245,7 +247,7 @@ extension StyliticsData.ReplacementItem : Swift.Decodable {
     }
   }
   public func toOutfitItem(outfitItem: StyliticsData.OutfitItem) -> StyliticsData.OutfitItem
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ModelLookup {
 }
@@ -263,7 +265,7 @@ public struct Outfits {
   public var isMixAndMatchEnabled: Swift.Bool
 }
 extension StyliticsData.Outfits : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum Event : Swift.String, Swift.CaseIterable {
   case load
@@ -301,7 +303,7 @@ public struct ReplacementItems {
   public let items: [Swift.String : [StyliticsData.ReplacementItem]]
 }
 extension StyliticsData.ReplacementItems : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class StyliticsDataApis {
   public static func outfits(filterInfo: [Swift.String : Swift.String], shouldEnableMixAndMatch: Swift.Bool = false, response: @escaping (StyliticsData.OutfitsResponse) -> Swift.Void) throws
@@ -330,7 +332,7 @@ public struct EngagementsTrackingInfo {
 public struct DecodableDictionary : Swift.Decodable {
   public typealias Value = [Swift.String : Any]
   public let dictionary: StyliticsData.DecodableDictionary.Value?
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum DataApisHost {
   case production
