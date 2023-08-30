@@ -6,6 +6,6 @@ framework module StyliticsUI {
 }
 
 module StyliticsUI.Swift {
-    header "StyliticsUI-Swift.h"
-    requires objc
+  header "StyliticsUI-Swift.h"
+  requires objc
 }
