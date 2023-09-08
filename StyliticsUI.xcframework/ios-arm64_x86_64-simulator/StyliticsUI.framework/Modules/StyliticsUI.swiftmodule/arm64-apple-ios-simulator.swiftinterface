@@ -11,9 +11,9 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 @_hasMissingDesignatedInitializers final public class StyliticsUIApis {
-  public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, productListScreenState: StyliticsUI.ProductListScreenState = .enable()) -> UIKit.UIView
+  public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, displayProductListFromSDK: Swift.Bool = true, productListScreenTemplate: StyliticsUI.ProductListScreenTemplate = .standard()) -> UIKit.UIView
   public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
-  public static func closeProductListScreen()
+  public static func closeProductListScreen(requestId: Swift.String)
   public static func clearData(for requestId: Swift.String)
   @objc deinit
 }
@@ -47,7 +47,7 @@ public struct ProductListConfig {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 16, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemNameFontColor.toUIColor, titleTextTransform: StyliticsUI.ProductListConfig.TitleTextTransform? = nil)
   }
   public struct BrandName {
-    public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 16, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListBrandNameFontColor.toUIColor)
+    public init(showBrand: Swift.Bool = false, fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 16, fontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListBrandNameFontColor.toUIColor)
   }
   public struct ItemPrice {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 16, priceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListItemSalePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = StandardProductListConfigColor.standardProductListStrikeThroughPriceFontColor.toUIColor, style: StyliticsUI.ProductListConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, decimal: Swift.Int = 2)
@@ -166,7 +166,7 @@ final public class ProductListListener {
   @objc deinit
 }
 public struct ProductListScreenConfig {
-  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), presentationStyle: UIKit.UIModalPresentationStyle = .automatic, productListTemplate: StyliticsUI.ProductListTemplate = .standard())
+  public init(itemListHeader: StyliticsUI.ProductListScreenConfig.ItemListHeader = ItemListHeader(), productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener = ProductListListener(), presentationStyle: UIKit.UIModalPresentationStyle = .automatic, showScrollBar: Swift.Bool = false)
   public enum ProductListScreenHeaderAlign {
     case top
     case centre
