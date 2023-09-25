@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		hwgvaaLmeJMaYShZtFjWXWUZLzc=
+		TDo4leujnzi1JEA6b6pbVFA4Ak0=
 		</data>
 		<key>ClassicCollectionViewCell.nib</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>ClassicDisplayContainerView.nib</key>
 		<data>
-		IgMiLgQZHZFh0Ri8nVKXMOUEXow=
+		KmipD/u2Ezt5G+H2WMKPq8SzAsQ=
 		</data>
 		<key>CustomLabelView.nib</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>HotspotContainerView.nib</key>
 		<data>
-		+POLT4/r3NBsJTXg6VYp8RRhCO8=
+		OOeA8M2ZZY142FJtT+uF0qSISKY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		2CODga2XBKFLqAubvnzJxUDJSo0=
+		zy22sfG8KbA65VzSu7/04+RywHg=
 		</data>
 		<key>InfoLabelView.nib</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		a8WKyQX5R0umaWwmlHvPK3H+k9c=
+		9l9p/Tf5aJXIqD1LOX/aGJ76a6U=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		a8WKyQX5R0umaWwmlHvPK3H+k9c=
+		9l9p/Tf5aJXIqD1LOX/aGJ76a6U=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>ProductListScreen.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		+O7stLweNWxzyeDundTPIw+Bu40=
+		7QeXMLnB6SaOBdBDAIA2p8rOevA=
 		</data>
 		<key>ReplacementHorizontalCollectionViewCell.nib</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>ReplacementHorizontalContainerView.nib</key>
 		<data>
-		DYFqTJZAhkZhV9t74mZuW1z8dbk=
+		k+Zr0pzP6K1C5I0amZ9ga3tCGZA=
 		</data>
 		<key>ReplacementRowTableViewCell.nib</key>
 		<data>
@@ -142,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uNmi/lXXsMtf1Li3N8z2bY1i0+vu30xKYdBMjQ2Ogio=
+			dNxNiG8a2Cl6RsUFm5P5WN3y5QLJ5Vym8ZzlM2nQHtU=
 			</data>
 		</dict>
 		<key>ClassicCollectionViewCell.nib</key>
@@ -156,7 +156,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8GhScxamHx3dnEmTExa0o+WI6aKaqkcyBOHMSlfZGLc=
+			CkCW05eUcI8xy1Dh/G0Y6wg8e0yXWBTD2EXT5VYIpcc=
 			</data>
 		</dict>
 		<key>CustomLabelView.nib</key>
@@ -205,7 +205,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NMTg0Mt/vdmVHpGZBuozf6TDbxt0Pv8COQr/9tJqbfk=
+			mIbtSK0tUv3rFx1uGu2tw5hdAkPI8QMzWMO3bMwD2Z4=
 			</data>
 		</dict>
 		<key>InfoLabelView.nib</key>
@@ -219,7 +219,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qk9Y7nFzCOVC0kkFrOs144PWMg6OjVQOLbhBfrIAzH4=
+			0HhsWyfz6tJAAonACO9H/sycqEHYUJd4RfgRVXxDZ2I=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -254,7 +254,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qk9Y7nFzCOVC0kkFrOs144PWMg6OjVQOLbhBfrIAzH4=
+			0HhsWyfz6tJAAonACO9H/sycqEHYUJd4RfgRVXxDZ2I=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -317,7 +317,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gd3Uhkg66td/NU7BE3hgj08ZJ6kijerP2M2Rdt2yk8M=
+			f1CJN8l1P40Tf7+GPcOTOPhohe20siH5doRoY7Jred8=
 			</data>
 		</dict>
 		<key>ReplacementHorizontalCollectionViewCell.nib</key>
@@ -331,7 +331,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BX8wRNf1vNbvjwKpBP7hzoqzITpImCes7dzNOxvdStc=
+			WtuYjR48kdLl3M4Kiq8YyHZEL8nplniUs4HFg+2cLgA=
 			</data>
 		</dict>
 		<key>ReplacementRowTableViewCell.nib</key>

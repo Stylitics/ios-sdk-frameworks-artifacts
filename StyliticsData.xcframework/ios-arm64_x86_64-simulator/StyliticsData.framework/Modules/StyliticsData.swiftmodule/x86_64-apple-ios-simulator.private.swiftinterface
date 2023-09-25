@@ -1,0 +1,358 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsData
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+@_exported import StyliticsData
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+public struct CollageDimensions {
+  public let outfitHeight: Swift.Int?
+  public let outfitWidth: Swift.Int?
+  public let imageHeight: Swift.Int?
+  public let imageWidth: Swift.Int?
+}
+extension StyliticsData.CollageDimensions : Swift.Decodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case outfitHeight
+    case outfitWidth
+    case imageHeight
+    case imageWidth
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Coords {
+  public let xCoord: Swift.Int?
+  public let yCoord: Swift.Int?
+  public let zCoord: Swift.Int?
+  public let height: Swift.Int?
+  public let width: Swift.Int?
+}
+extension StyliticsData.Coords : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ReplacementsResponse {
+  public typealias ResponseType = StyliticsData.ReplacementItems
+  public let response: Foundation.URLResponse?
+  public let data: StyliticsData.ReplacementsResponse.ResponseType?
+  public let error: (any Swift.Error)?
+  public init(response: Foundation.URLResponse?, data: StyliticsData.ReplacementsResponse.ResponseType?, error: (any Swift.Error)?)
+}
+public struct Outfit {
+  public let lookbookImageUrl: Swift.String?
+  public let tags: [Swift.String]?
+  public let primaryStyliticsItemId: Swift.Int?
+  public let relativeBoost: Swift.String?
+  public let label: Swift.String?
+  public let largeImageUrl: Swift.String?
+  public let accountId: Swift.Int?
+  public let versionId: Swift.Int?
+  public let transparentImageUrl: Swift.String?
+  public let username: Swift.String?
+  public let sessionId: Swift.String?
+  public let baseImageUrl: Swift.String?
+  public let impressionId: Swift.String?
+  public let imageUrl: Swift.String?
+  public let primaryRemoteId: Swift.String?
+  public let updatedAt: Swift.String?
+  public let coverImageUrl: Swift.String?
+  public let id: Swift.Int?
+  public let accountUsername: Swift.String?
+  public var items: [StyliticsData.OutfitItem]?
+  public let onModelImage: Swift.Bool?
+  public var requestId: Swift.String
+  public let widgetAPIOutfitSortCompare: StyliticsData.DecodableDictionary?
+  public let imageUpdatedAt: Swift.String?
+  public let primaryRequestedID: Swift.String?
+  public let traits: [StyliticsData.DecodableDictionary]?
+}
+extension StyliticsData.Outfit : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EngagementsResponse {
+  public var error: (any Swift.Error)?
+}
+public struct OutfitItem {
+  public let promotions: [Swift.String]?
+  public let category: Swift.String?
+  public let tags: [Swift.String]?
+  public let largeImageUrl: Swift.String?
+  public let otherClientItemIds: StyliticsData.DecodableDictionary?
+  public let smallImageUrl: Swift.String?
+  public let color: Swift.String?
+  public let accountId: Swift.Int?
+  public let productId: Swift.String?
+  public let coords: StyliticsData.Coords?
+  public let itemId: Swift.Int?
+  public let name: Swift.String?
+  public let affiliateLink: Swift.String?
+  public let username: Swift.String?
+  public let baseImageUrl: Swift.String?
+  public let imageUrl: Swift.String?
+  public let brand: Swift.String?
+  public let style: Swift.String?
+  public let remoteId: Swift.String?
+  public let sku: Swift.String?
+  public let stocked: Swift.Bool?
+  public let salePrice: Swift.Double?
+  public let retailerStyle: Swift.String?
+  public let clientOriginalImageUrl: Swift.String?
+  public let accountUsername: Swift.String?
+  public let retailer: Swift.String?
+  public let gender: Swift.String?
+  public let skus: [Swift.String]?
+  public let retailerColor: Swift.String?
+  public let price: Swift.Double?
+  public let pattern: Swift.String?
+  public var requestId: Swift.String
+  public let lookbookImageURL: Swift.String?
+  public let department: Swift.String?
+  public let colorHex: Swift.String?
+  public let priceLocalized: Swift.String?
+  public let transparentImageURL: Swift.String?
+  public let retailerCategory: Swift.String?
+  public let salePriceLocalized: Swift.String?
+}
+extension StyliticsData.OutfitItem : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+final public class StyliticsConfig {
+  final public let timeoutInSecs: Swift.Double?
+  final public let enableDebugLogs: Swift.Bool?
+  final public let dataApisHost: StyliticsData.DataApisHost?
+  final public let trackingApisHost: StyliticsData.TrackingApisHost?
+  final public let locale: Swift.String?
+  final public let clientName: Swift.String
+  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, locale: Swift.String? = nil, clientName: Swift.String)
+  @objc deinit
+}
+extension Swift.Dictionary {
+  public func merge(_ dict: [Key : Value]?) -> [Key : Value]
+}
+public struct OutfitsResponse {
+  public typealias ResponseType = StyliticsData.Outfits
+  public let response: Foundation.URLResponse?
+  public let data: StyliticsData.OutfitsResponse.ResponseType?
+  public let error: (any Swift.Error)?
+}
+public struct PurchasesResponse {
+  public var error: (any Swift.Error)?
+}
+@_hasMissingDesignatedInitializers final public class ExperienceConfigManager {
+  @objc deinit
+}
+extension StyliticsData.ExperienceConfigManager {
+  public static var labelStyle: Swift.String? {
+    get
+  }
+}
+public enum NetworkError : Swift.Error {
+  case noData
+  public static func == (a: StyliticsData.NetworkError, b: StyliticsData.NetworkError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ReplacementItem {
+  public let promotions: [Swift.String]?
+  public let category: Swift.String?
+  public let largeImageUrl: Swift.String?
+  public let otherClientItemIds: StyliticsData.DecodableDictionary?
+  public let collageDimensions: StyliticsData.CollageDimensions?
+  public let smallImageUrl: Swift.String?
+  public let productId: Swift.String?
+  public let itemId: Swift.Int?
+  public let name: Swift.String?
+  public let affiliateLink: Swift.String?
+  public let username: Swift.String?
+  public let imageUrl: Swift.String?
+  public let brand: Swift.String?
+  public let region: Swift.String?
+  public let style: Swift.String?
+  public let remoteId: Swift.String?
+  public let sku: Swift.String?
+  public let rowWidgetImageUrl: Swift.String?
+  public let salePrice: Swift.Double?
+  public let id: Swift.Int?
+  public let retailerStyle: Swift.String?
+  public let clientOriginalImageUrl: Swift.String?
+  public let accountUsername: Swift.String?
+  public let retailer: Swift.String?
+  public let gender: Swift.String?
+  public let skus: [Swift.String]?
+  public let price: Swift.Double?
+  public let priceLocalized: Swift.String?
+  public let salePriceLocalized: Swift.String?
+}
+extension StyliticsData.ReplacementItem : Swift.Decodable {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case promotions
+    case category
+    case largeImageUrl
+    case otherClientItemIds
+    case collageDimensions
+    case smallImageUrl
+    case productId
+    case itemId
+    case name
+    case affiliateLink
+    case username
+    case imageUrl
+    case brand
+    case region
+    case style
+    case remoteId
+    case sku
+    case rowWidgetImageUrl
+    case salePrice
+    case id
+    case retailerStyle
+    case clientOriginalImageUrl
+    case accountUsername
+    case retailer
+    case gender
+    case skus
+    case price
+    case priceLocalized
+    case salePriceLocalized
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func toOutfitItem(outfitItem: StyliticsData.OutfitItem) -> StyliticsData.OutfitItem
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ModelLookup {
+}
+public enum TrackingApisHost {
+  case production
+  case staging
+  case custom(Swift.String)
+  public var host: Swift.String {
+    get
+  }
+}
+public struct Outfits {
+  public var list: [StyliticsData.Outfit]
+  public let localizationVersion: Swift.String?
+  public var isMixAndMatchEnabled: Swift.Bool
+}
+extension StyliticsData.Outfits : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Event : Swift.String, Swift.CaseIterable {
+  case load
+  case view
+  case click
+  case swap
+  case jumplink
+  case addToCart
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [StyliticsData.Event]
+  public typealias RawValue = Swift.String
+  public static var allCases: [StyliticsData.Event] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum UIComponent : Swift.String {
+  case hotspot
+  case itemList
+  case modalItemList
+  case itemTile
+  case collage
+  case productList
+  case miniModal
+  case bundleCta
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ReplacementItems {
+  public let items: [Swift.String : [StyliticsData.ReplacementItem]]
+}
+extension StyliticsData.ReplacementItems : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class StyliticsDataApis {
+  public static func outfits(filterInfo: [Swift.String : Swift.String], shouldEnableMixAndMatch: Swift.Bool = false, response: @escaping (StyliticsData.OutfitsResponse) -> Swift.Void) throws
+  public static func replacements(optionsInfo: [Swift.String : Swift.String], response: @escaping (StyliticsData.ReplacementsResponse) -> Swift.Void)
+  public static func configure(config: StyliticsData.StyliticsConfig) throws
+  public static func engagement(trackingInfo: StyliticsData.EngagementsTrackingInfo, response: ((StyliticsData.EngagementsResponse) -> Swift.Void)? = nil)
+  public static func purchases(purchasedItems: StyliticsData.PurchasedItems, response: ((StyliticsData.PurchasesResponse) -> Swift.Void)? = nil)
+  @objc deinit
+}
+public struct PurchasedItems {
+  public init(currency: Swift.String, orderId: Swift.String? = nil, itemInfoList: [StyliticsData.PurchasedItemInfo])
+}
+public struct PurchasedItemInfo {
+  public init?(itemId: Swift.String?, price: Swift.Double?)
+  public init?(itemId: Swift.String?, price: Swift.Int?)
+  public init?(itemId: Swift.Int?, price: Swift.Double?)
+}
+public enum EngagementInfo {
+  case outfit(outfit: StyliticsData.Outfit, position: Swift.Int)
+  case outfitItem(outfitItem: StyliticsData.OutfitItem, position: Swift.Int)
+  case replacement(outfit: StyliticsData.Outfit, oldOutfitItem: StyliticsData.OutfitItem, newOutfitItem: StyliticsData.OutfitItem)
+}
+public struct EngagementsTrackingInfo {
+  public init(event: StyliticsData.Event, engagementInfo: StyliticsData.EngagementInfo, extraInfo: [Swift.String : Any]? = nil)
+}
+public struct DecodableDictionary : Swift.Decodable {
+  public typealias Value = [Swift.String : Any]
+  public let dictionary: StyliticsData.DecodableDictionary.Value?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum DataApisHost {
+  case production
+  case staging
+  case custom(Swift.String)
+  public var host: Swift.String {
+    get
+  }
+}
+extension StyliticsData.CollageDimensions.CodingKeys : Swift.Equatable {}
+extension StyliticsData.CollageDimensions.CodingKeys : Swift.Hashable {}
+extension StyliticsData.CollageDimensions.CodingKeys : Swift.RawRepresentable {}
+extension StyliticsData.NetworkError : Swift.Equatable {}
+extension StyliticsData.NetworkError : Swift.Hashable {}
+extension StyliticsData.ReplacementItem.CodingKeys : Swift.Equatable {}
+extension StyliticsData.ReplacementItem.CodingKeys : Swift.Hashable {}
+extension StyliticsData.ReplacementItem.CodingKeys : Swift.RawRepresentable {}
+extension StyliticsData.Event : Swift.Equatable {}
+extension StyliticsData.Event : Swift.Hashable {}
+extension StyliticsData.Event : Swift.RawRepresentable {}
+extension StyliticsData.UIComponent : Swift.Equatable {}
+extension StyliticsData.UIComponent : Swift.Hashable {}
+extension StyliticsData.UIComponent : Swift.RawRepresentable {}
