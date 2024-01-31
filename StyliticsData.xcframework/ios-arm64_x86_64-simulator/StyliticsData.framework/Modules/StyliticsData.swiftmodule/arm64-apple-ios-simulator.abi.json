@@ -6154,11 +6154,11 @@
             "mangledName": "$s13StyliticsData0A6ConfigC6localeSSSgvp",
             "moduleName": "StyliticsData",
             "declAttributes": [
+              "HasInitialValue",
               "Final",
               "HasStorage",
               "AccessControl"
             ],
-            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
@@ -6190,6 +6190,62 @@
                   "Final"
                 ],
                 "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData0A6ConfigC6localeSSSgvs",
+                "mangledName": "$s13StyliticsData0A6ConfigC6localeSSSgvs",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData0A6ConfigC6localeSSSgvM",
+                "mangledName": "$s13StyliticsData0A6ConfigC6localeSSSgvM",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -6242,9 +6298,129 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "customerProfileId",
+            "printedName": "customerProfileId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13StyliticsData0A6ConfigC17customerProfileIdSSSgvp",
+            "mangledName": "$s13StyliticsData0A6ConfigC17customerProfileIdSSSgvp",
+            "moduleName": "StyliticsData",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData0A6ConfigC17customerProfileIdSSSgvg",
+                "mangledName": "$s13StyliticsData0A6ConfigC17customerProfileIdSSSgvg",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData0A6ConfigC17customerProfileIdSSSgvs",
+                "mangledName": "$s13StyliticsData0A6ConfigC17customerProfileIdSSSgvs",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData0A6ConfigC17customerProfileIdSSSgvM",
+                "mangledName": "$s13StyliticsData0A6ConfigC17customerProfileIdSSSgvM",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(timeoutInSecs:enableDebugLogs:dataApisHost:trackingApisHost:locale:clientName:)",
+            "printedName": "init(timeoutInSecs:enableDebugLogs:dataApisHost:trackingApisHost:locale:clientName:customerProfileId:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6332,11 +6508,26 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13StyliticsData0A6ConfigC13timeoutInSecs15enableDebugLogs12dataApisHost08trackingkL06locale10clientNameACSdSg_SbSgAA0bkL0OSgAA08TrackingkL0OSgSSSgSStcfc",
-            "mangledName": "$s13StyliticsData0A6ConfigC13timeoutInSecs15enableDebugLogs12dataApisHost08trackingkL06locale10clientNameACSdSg_SbSgAA0bkL0OSgAA08TrackingkL0OSgSSSgSStcfc",
+            "usr": "s:13StyliticsData0A6ConfigC13timeoutInSecs15enableDebugLogs12dataApisHost08trackingkL06locale10clientName17customerProfileIdACSdSg_SbSgAA0bkL0OSgAA08TrackingkL0OSgSSSgSSAStcfc",
+            "mangledName": "$s13StyliticsData0A6ConfigC13timeoutInSecs15enableDebugLogs12dataApisHost08trackingkL06locale10clientName17customerProfileIdACSdSg_SbSgAA0bkL0OSgAA08TrackingkL0OSgSSSgSSAStcfc",
             "moduleName": "StyliticsData",
             "declAttributes": [
               "AccessControl"
@@ -6351,6 +6542,16 @@
         "declAttributes": [
           "Final",
           "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "StyliticsData",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -10797,6 +10998,116 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "accountId",
+            "printedName": "accountId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13StyliticsData7OutfitsV9accountIdSiSgvp",
+            "mangledName": "$s13StyliticsData7OutfitsV9accountIdSiSgvp",
+            "moduleName": "StyliticsData",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData7OutfitsV9accountIdSiSgvg",
+                "mangledName": "$s13StyliticsData7OutfitsV9accountIdSiSgvg",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData7OutfitsV9accountIdSiSgvs",
+                "mangledName": "$s13StyliticsData7OutfitsV9accountIdSiSgvs",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13StyliticsData7OutfitsV9accountIdSiSgvM",
+                "mangledName": "$s13StyliticsData7OutfitsV9accountIdSiSgvM",
+                "moduleName": "StyliticsData",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -11040,6 +11351,43 @@
             "declKind": "EnumElement",
             "usr": "s:13StyliticsData5EventO8jumplinkyA2CmF",
             "mangledName": "$s13StyliticsData5EventO8jumplinkyA2CmF",
+            "moduleName": "StyliticsData"
+          },
+          {
+            "kind": "Var",
+            "name": "visit",
+            "printedName": "visit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StyliticsData.Event.Type) -> StyliticsData.Event",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Event",
+                    "printedName": "StyliticsData.Event",
+                    "usr": "s:13StyliticsData5EventO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "StyliticsData.Event.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Event",
+                        "printedName": "StyliticsData.Event",
+                        "usr": "s:13StyliticsData5EventO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13StyliticsData5EventO5visityA2CmF",
+            "mangledName": "$s13StyliticsData5EventO5visityA2CmF",
             "moduleName": "StyliticsData"
           },
           {
@@ -11891,13 +12239,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "StyliticsData"
-      },
-      {
         "kind": "TypeDecl",
         "name": "StyliticsDataApis",
         "printedName": "StyliticsDataApis",
@@ -12173,6 +12514,80 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateGlobalLocale",
+            "printedName": "updateGlobalLocale(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13StyliticsData0aB4ApisC18updateGlobalLocaleyySSSgKFZ",
+            "mangledName": "$s13StyliticsData0aB4ApisC18updateGlobalLocaleyySSSgKFZ",
+            "moduleName": "StyliticsData",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateCustomerProfileId",
+            "printedName": "updateCustomerProfileId(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13StyliticsData0aB4ApisC23updateCustomerProfileIdyySSSgKFZ",
+            "mangledName": "$s13StyliticsData0aB4ApisC23updateCustomerProfileIdyySSSgKFZ",
+            "moduleName": "StyliticsData",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -12259,13 +12674,6 @@
         "kind": "Import",
         "name": "SystemConfiguration",
         "printedName": "SystemConfiguration",
-        "declKind": "Import",
-        "moduleName": "StyliticsData"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "StyliticsData"
       },
@@ -12764,6 +13172,63 @@
             "declKind": "EnumElement",
             "usr": "s:13StyliticsData14EngagementInfoO11replacementyAcA6OutfitV_AA0F4ItemVAHtcACmF",
             "mangledName": "$s13StyliticsData14EngagementInfoO11replacementyAcA6OutfitV_AA0F4ItemVAHtcACmF",
+            "moduleName": "StyliticsData"
+          },
+          {
+            "kind": "Var",
+            "name": "eventDetails",
+            "printedName": "eventDetails",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(StyliticsData.EngagementInfo.Type) -> (Swift.String) -> StyliticsData.EngagementInfo",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> StyliticsData.EngagementInfo",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EngagementInfo",
+                        "printedName": "StyliticsData.EngagementInfo",
+                        "usr": "s:13StyliticsData14EngagementInfoO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(requestId: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "StyliticsData.EngagementInfo.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EngagementInfo",
+                        "printedName": "StyliticsData.EngagementInfo",
+                        "usr": "s:13StyliticsData14EngagementInfoO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13StyliticsData14EngagementInfoO12eventDetailsyACSS_tcACmF",
+            "mangledName": "$s13StyliticsData14EngagementInfoO12eventDetailsyACSS_tcACmF",
             "moduleName": "StyliticsData"
           }
         ],
@@ -14103,13 +14568,6 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/NetworkLayer\/Requests\/DataRequest.swift",
-      "kind": "StringLiteral",
-      "offset": 2390,
-      "length": 9,
-      "value": "\"dataURL\""
-    },
-    {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/OutfitReqResTrackingInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 425,
@@ -14420,86 +14878,135 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 208,
+      "offset": 225,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 216,
+      "offset": 233,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 819,
-      "length": 28,
-      "value": "\"CFBundleShortVersionString\""
+      "offset": 728,
+      "length": 3,
+      "value": "\"0\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 941,
+      "offset": 903,
+      "length": 5,
+      "value": "\"1.4\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "StringLiteral",
+      "offset": 990,
       "length": 57,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 965,
+      "offset": 1014,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 968,
+      "offset": 1017,
       "length": 1,
       "value": "\".\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 994,
+      "offset": 1043,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 997,
+      "offset": 1046,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "Array",
-      "offset": 1162,
+      "offset": 1211,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "Dictionary",
+      "offset": 1928,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "StringLiteral",
+      "offset": 1952,
+      "length": 5,
+      "value": "\"url\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "Array",
+      "offset": 2634,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "Array",
-      "offset": 1781,
+      "offset": 3052,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
       "kind": "Array",
-      "offset": 2199,
+      "offset": 3495,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
-      "kind": "Array",
-      "offset": 2642,
-      "length": 2,
+      "kind": "Dictionary",
+      "offset": 4399,
+      "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "StringLiteral",
+      "offset": 4421,
+      "length": 10,
+      "value": "\"page_url\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "StringLiteral",
+      "offset": 4893,
+      "length": 8,
+      "value": "\"%02hhx\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ExtensionUtility.swift",
+      "kind": "StringLiteral",
+      "offset": 5018,
+      "length": 41,
+      "value": "\"com.stylitics.RefreshWidgetNotification\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/DateTimeUtility.swift",
@@ -14629,484 +15136,526 @@
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
+      "kind": "StringLiteral",
+      "offset": 631,
+      "length": 51,
+      "value": "\"exp.\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
+      "kind": "StringLiteral",
+      "offset": 663,
+      "length": 1,
+      "value": "\".test-presence-ios\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 639,
+      "offset": 733,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 696,
-      "length": 2,
-      "value": "24"
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 738,
+      "offset": 790,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 783,
+      "offset": 831,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 876,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1043,
+      "offset": 1136,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "Dictionary",
-      "offset": 1279,
+      "offset": 1372,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1640,
+      "offset": 1943,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1696,
-      "length": 9,
-      "value": "\"present\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1856,
+      "offset": 2180,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1978,
+      "offset": 2302,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2107,
+      "offset": 2431,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "StringLiteral",
-      "offset": 2355,
+      "offset": 2679,
       "length": 10,
       "value": "\"username\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "StringLiteral",
-      "offset": 2657,
+      "offset": 2981,
       "length": 60,
       "value": "\"Error: ExperienceConfigManager Failed to create UrlRequest\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3119,
+      "offset": 3553,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ExperienceConfigManager.swift",
       "kind": "Dictionary",
-      "offset": 3233,
+      "offset": 3667,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 751,
+      "offset": 767,
       "length": 9,
       "value": "\"subject\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 862,
+      "offset": 878,
       "length": 8,
       "value": "\"action\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 942,
+      "offset": 958,
       "length": 8,
       "value": "\"locale\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 1062,
+      "offset": 1078,
       "length": 10,
       "value": "\"ab_group\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 1154,
+      "offset": 1170,
       "length": 14,
       "value": "\"screen_width\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 1252,
+      "offset": 1268,
       "length": 15,
       "value": "\"screen_height\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2236,
+      "offset": 1368,
+      "length": 13,
+      "value": "\"instance_id\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
+      "kind": "StringLiteral",
+      "offset": 1497,
+      "length": 19,
+      "value": "\"experience_config\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
+      "kind": "StringLiteral",
+      "offset": 2135,
+      "length": 16,
+      "value": "\"client_user_id\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
+      "kind": "StringLiteral",
+      "offset": 2591,
       "length": 17,
       "value": "\"item_image_type\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2314,
+      "offset": 2669,
       "length": 17,
       "value": "\"item_sale_price\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2377,
+      "offset": 2732,
       "length": 9,
       "value": "\"item_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2429,
+      "offset": 2784,
       "length": 12,
       "value": "\"item_price\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2483,
+      "offset": 2838,
       "length": 18,
       "value": "\"item_promo_texts\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2548,
+      "offset": 2903,
       "length": 15,
       "value": "\"item_position\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Dictionary",
-      "offset": 2948,
+      "offset": 3303,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 2979,
+      "offset": 3334,
       "length": 11,
       "value": "\"outfit_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3031,
+      "offset": 3386,
       "length": 19,
       "value": "\"outfit_version_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3098,
+      "offset": 3453,
       "length": 17,
       "value": "\"outfit_position\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3155,
+      "offset": 3510,
       "length": 12,
       "value": "\"sort_label\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3211,
+      "offset": 3566,
       "length": 16,
       "value": "\"relative_boost\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Dictionary",
-      "offset": 3635,
+      "offset": 3990,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3671,
+      "offset": 4026,
       "length": 9,
       "value": "\"item_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3737,
+      "offset": 4092,
       "length": 17,
       "value": "\"swapped_item_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3811,
+      "offset": 4166,
       "length": 11,
       "value": "\"outfit_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3868,
+      "offset": 4223,
       "length": 12,
       "value": "\"account_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 3951,
+      "offset": 4306,
       "length": 13,
       "value": "\"pdp_item_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4032,
+      "offset": 4387,
       "length": 14,
       "value": "\"touch_device\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "BooleanLiteral",
-      "offset": 4050,
+      "offset": 4405,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4368,
+      "offset": 4723,
       "length": 20,
       "value": "\"outfit_promo_texts\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4463,
+      "offset": 4818,
       "length": 14,
       "value": "\"default_view\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "BooleanLiteral",
-      "offset": 4479,
+      "offset": 4834,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4497,
+      "offset": 4852,
       "length": 13,
       "value": "\"showcase_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "IntegerLiteral",
-      "offset": 4512,
+      "offset": 4867,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4527,
+      "offset": 4882,
       "length": 14,
       "value": "\"mnm_disabled\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4595,
+      "offset": 4950,
       "length": 11,
       "value": "\"client_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "IntegerLiteral",
-      "offset": 4608,
+      "offset": 4963,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4623,
+      "offset": 4978,
       "length": 14,
       "value": "\"touch_device\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "BooleanLiteral",
-      "offset": 4639,
+      "offset": 4994,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4785,
+      "offset": 5140,
       "length": 13,
       "value": "\"pdp_item_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 4861,
+      "offset": 5216,
       "length": 16,
       "value": "\"requested_tags\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Dictionary",
-      "offset": 5283,
+      "offset": 5638,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
-      "kind": "StringLiteral",
-      "offset": 5308,
-      "length": 19,
-      "value": "\"experience_config\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Array",
-      "offset": 5427,
+      "offset": 5691,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Array",
-      "offset": 5673,
+      "offset": 5937,
       "length": 5,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Array",
-      "offset": 6723,
+      "offset": 7445,
       "length": 5,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "Array",
-      "offset": 7794,
+      "offset": 8516,
+      "length": 5,
+      "value": "[[]]"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
+      "kind": "Array",
+      "offset": 9582,
       "length": 5,
       "value": "[[]]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 8869,
+      "offset": 10657,
+      "length": 20,
+      "value": "\"pdp_item_remote_id\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
+      "kind": "StringLiteral",
+      "offset": 10743,
+      "length": 14,
+      "value": "\"mnm_disabled\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
+      "kind": "StringLiteral",
+      "offset": 10961,
       "length": 10,
       "value": "\"page_url\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 8953,
+      "offset": 11045,
       "length": 14,
       "value": "\"ui_component\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9108,
+      "offset": 11200,
       "length": 11,
       "value": "\"outfit_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9140,
+      "offset": 11232,
       "length": 8,
       "value": "\"outfit\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9191,
+      "offset": 11283,
       "length": 13,
       "value": "\"widget_type\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9277,
+      "offset": 11369,
       "length": 13,
       "value": "\"widget_type\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9372,
+      "offset": 11464,
       "length": 10,
       "value": "\"page_url\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9422,
+      "offset": 11514,
       "length": 10,
       "value": "\"page_url\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9500,
+      "offset": 11592,
       "length": 14,
       "value": "\"ui_component\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/Engagements.swift",
       "kind": "StringLiteral",
-      "offset": 9554,
+      "offset": 11646,
       "length": 14,
       "value": "\"ui_component\""
     },
@@ -15393,371 +15942,385 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Models\/Outfits\/Outfits.swift",
       "kind": "StringLiteral",
-      "offset": 457,
+      "offset": 488,
       "length": 9,
       "value": "\"outfits\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Models\/Outfits\/Outfits.swift",
       "kind": "StringLiteral",
-      "offset": 502,
+      "offset": 533,
       "length": 22,
       "value": "\"localization_version\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Models\/Outfits\/Outfits.swift",
       "kind": "StringLiteral",
-      "offset": 457,
+      "offset": 581,
+      "length": 12,
+      "value": "\"account_id\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Models\/Outfits\/Outfits.swift",
+      "kind": "StringLiteral",
+      "offset": 488,
       "length": 9,
       "value": "\"outfits\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Models\/Outfits\/Outfits.swift",
       "kind": "StringLiteral",
-      "offset": 502,
+      "offset": 533,
       "length": 22,
       "value": "\"localization_version\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Models\/Outfits\/Outfits.swift",
+      "kind": "StringLiteral",
+      "offset": 581,
+      "length": 12,
+      "value": "\"account_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 324,
+      "offset": 339,
       "length": 13,
       "value": "\"add-to-cart\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "BooleanLiteral",
-      "offset": 923,
+      "offset": 1248,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "BooleanLiteral",
-      "offset": 964,
+      "offset": 1289,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 324,
+      "offset": 339,
       "length": 13,
       "value": "\"add-to-cart\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1426,
       "length": 16,
       "value": "\"outfits-widget\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1141,
+      "offset": 1466,
       "length": 14,
       "value": "\"mnm-embedded\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1176,
+      "offset": 1501,
       "length": 11,
       "value": "\"mnm-modal\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1215,
+      "offset": 1540,
       "length": 19,
       "value": "\"closet-essentials\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1260,
+      "offset": 1585,
       "length": 16,
       "value": "\"featured-shops\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1298,
+      "offset": 1623,
       "length": 12,
       "value": "\"V3-classic\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1338,
+      "offset": 1663,
       "length": 20,
       "value": "\"V3-main-and-detail\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1380,
+      "offset": 1705,
       "length": 12,
       "value": "\"V3-gallery\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1411,
+      "offset": 1736,
       "length": 9,
       "value": "\"V3-nike\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1444,
+      "offset": 1769,
       "length": 14,
       "value": "\"V3-moodboard\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1484,
+      "offset": 1809,
       "length": 17,
       "value": "\"V3-nike-gallery\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1523,
+      "offset": 1848,
       "length": 13,
       "value": "\"V3-hotspots\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1555,
+      "offset": 1880,
       "length": 9,
       "value": "\"ios-sdk\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1426,
       "length": 16,
       "value": "\"outfits-widget\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1141,
+      "offset": 1466,
       "length": 14,
       "value": "\"mnm-embedded\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1176,
+      "offset": 1501,
       "length": 11,
       "value": "\"mnm-modal\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1215,
+      "offset": 1540,
       "length": 19,
       "value": "\"closet-essentials\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1260,
+      "offset": 1585,
       "length": 16,
       "value": "\"featured-shops\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1298,
+      "offset": 1623,
       "length": 12,
       "value": "\"V3-classic\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1338,
+      "offset": 1663,
       "length": 20,
       "value": "\"V3-main-and-detail\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1380,
+      "offset": 1705,
       "length": 12,
       "value": "\"V3-gallery\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1411,
+      "offset": 1736,
       "length": 9,
       "value": "\"V3-nike\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1444,
+      "offset": 1769,
       "length": 14,
       "value": "\"V3-moodboard\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1484,
+      "offset": 1809,
       "length": 17,
       "value": "\"V3-nike-gallery\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1523,
+      "offset": 1848,
       "length": 13,
       "value": "\"V3-hotspots\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1555,
+      "offset": 1880,
       "length": 9,
       "value": "\"ios-sdk\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1684,
+      "offset": 2009,
       "length": 10,
       "value": "\"hot-spot\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1715,
+      "offset": 2040,
       "length": 11,
       "value": "\"item-list\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1752,
+      "offset": 2077,
       "length": 17,
       "value": "\"modal-item-list\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1790,
+      "offset": 2115,
       "length": 11,
       "value": "\"item-tile\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1821,
+      "offset": 2146,
       "length": 9,
       "value": "\"collage\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1854,
+      "offset": 2179,
       "length": 14,
       "value": "\"product-list\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1890,
+      "offset": 2215,
       "length": 12,
       "value": "\"mini-modal\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1924,
+      "offset": 2249,
       "length": 12,
       "value": "\"bundle-cta\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1684,
+      "offset": 2009,
       "length": 10,
       "value": "\"hot-spot\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1715,
+      "offset": 2040,
       "length": 11,
       "value": "\"item-list\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1752,
+      "offset": 2077,
       "length": 17,
       "value": "\"modal-item-list\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1790,
+      "offset": 2115,
       "length": 11,
       "value": "\"item-tile\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1821,
+      "offset": 2146,
       "length": 9,
       "value": "\"collage\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1854,
+      "offset": 2179,
       "length": 14,
       "value": "\"product-list\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1890,
+      "offset": 2215,
       "length": 12,
       "value": "\"mini-modal\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 1924,
+      "offset": 2249,
       "length": 12,
       "value": "\"bundle-cta\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 2082,
+      "offset": 2407,
       "length": 23,
       "value": "\"client-original-image\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Engagements\/EngagementTrackingEnums.swift",
       "kind": "StringLiteral",
-      "offset": 2082,
+      "offset": 2407,
       "length": 23,
       "value": "\"client-original-image\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/StyliticsDataApis.swift",
       "kind": "BooleanLiteral",
-      "offset": 720,
+      "offset": 707,
       "length": 5,
       "value": "false"
     },
@@ -15785,1381 +16348,1297 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ConfigManager.swift",
       "kind": "StringLiteral",
-      "offset": 1638,
+      "offset": 1759,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ConfigManager.swift",
       "kind": "StringLiteral",
-      "offset": 1658,
+      "offset": 1779,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Config\/ConfigManager.swift",
       "kind": "StringLiteral",
-      "offset": 1673,
+      "offset": 1794,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ResponseHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 1638,
+      "offset": 2602,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ResponseHandler.swift",
+      "kind": "Array",
+      "offset": 2915,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ResponseHandler.swift",
+      "kind": "Array",
+      "offset": 3908,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/ResponseHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 2471,
+      "offset": 4469,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 281,
+      "offset": 268,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 326,
+      "offset": 313,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 396,
+      "offset": 383,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 519,
+      "offset": 506,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 638,
+      "offset": 625,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1205,
+      "offset": 1192,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1240,
+      "offset": 1227,
       "length": 10,
       "value": "\"Signal: \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1324,
+      "offset": 1311,
       "length": 6,
       "value": "\"\n\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1398,
+      "offset": 1385,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1404,
+      "offset": 1391,
       "length": 1,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1572,
+      "offset": 1559,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1610,
+      "offset": 1597,
       "length": 19,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1628,
+      "offset": 1615,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1666,
+      "offset": 1653,
       "length": 6,
       "value": "\"\n\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1709,
+      "offset": 1696,
       "length": 27,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1732,
+      "offset": 1719,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1735,
+      "offset": 1722,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1773,
+      "offset": 1760,
       "length": 6,
       "value": "\"\n\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1853,
+      "offset": 1840,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1859,
+      "offset": 1846,
       "length": 1,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 1997,
+      "offset": 1995,
       "length": 12,
-      "value": "\"stacktrace\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 2097,
-      "length": 12,
-      "value": "\"stacktrace\""
+      "value": "\"stackTrace\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 2304,
+      "offset": 2294,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2327,
+      "offset": 2317,
       "length": 12,
       "value": "\"hw.machine\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 2358,
+      "offset": 2348,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 2402,
+      "offset": 2392,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2444,
+      "offset": 2434,
       "length": 12,
       "value": "\"hw.machine\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 2480,
+      "offset": 2470,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "Dictionary",
-      "offset": 2744,
+      "offset": 2734,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2770,
+      "offset": 2760,
       "length": 19,
       "value": "\"bundle_identifier\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2825,
+      "offset": 2815,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2850,
+      "offset": 2840,
       "length": 8,
       "value": "\"device\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2900,
+      "offset": 2890,
       "length": 8,
       "value": "\"system\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 2942,
+      "offset": 2929,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 3056,
-      "length": 16,
-      "value": "\"device_details\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 3256,
+      "offset": 3196,
       "length": 4,
       "value": "\" (\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 3274,
+      "offset": 3214,
       "length": 3,
       "value": "\")\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 3790,
+      "offset": 3789,
       "length": 38,
       "value": "\"Error: \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 3827,
+      "offset": 3826,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 3968,
-      "length": 13,
-      "value": "\"requestInfo\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4034,
-      "length": 16,
-      "value": "\"device_details\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4103,
-      "length": 12,
-      "value": "\"stacktrace\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "Dictionary",
-      "offset": 4226,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4310,
-      "length": 13,
-      "value": "\"requestInfo\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4372,
-      "length": 5,
-      "value": "\"url\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4418,
-      "length": 9,
-      "value": "\"dataURL\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4455,
+      "offset": 4764,
       "length": 14,
       "value": "\"request_info\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 4577,
+      "offset": 4947,
       "length": 16,
       "value": "\"device_details\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 4623,
-      "length": 16,
-      "value": "\"device_details\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4746,
-      "length": 12,
-      "value": "\"stacktrace\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4788,
-      "length": 12,
-      "value": "\"stacktrace\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 4924,
+      "offset": 5013,
       "length": 18,
       "value": "\"sdk_version_name\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 4987,
+      "offset": 5076,
       "length": 6,
-      "value": "\"UUID\""
+      "value": "\"uuid\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 154,
+      "offset": 141,
       "length": 20,
       "value": "\"StyliticsData.StyliticsCrashLogger\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 5482,
+      "offset": 5571,
       "length": 11,
       "value": "\"x-api-key\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 6232,
+      "offset": 6321,
       "length": 3,
       "value": "200"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 6238,
+      "offset": 6327,
       "length": 3,
       "value": "299"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 6363,
+      "offset": 6452,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 6401,
+      "offset": 6490,
       "length": 48,
       "value": "\"Unexpected response status code: \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 6448,
+      "offset": 6537,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 6494,
+      "offset": 6583,
       "length": 14,
       "value": "\"NetworkError\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 6794,
+      "offset": 6883,
       "length": 18,
       "value": "\"No data received\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 6857,
+      "offset": 6946,
       "length": 14,
       "value": "\"NetworkError\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "IntegerLiteral",
-      "offset": 6879,
+      "offset": 6968,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7258,
+      "offset": 7535,
       "length": 16,
       "value": "\"EXC_BAD_ACCESS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7404,
+      "offset": 7673,
       "length": 21,
       "value": "\"EXC_BAD_INSTRUCTION\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7550,
+      "offset": 7816,
       "length": 16,
       "value": "\"EXC_ARITHMETIC\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7690,
+      "offset": 7948,
       "length": 15,
       "value": "\"EXC_EMULATION\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7828,
+      "offset": 8077,
       "length": 14,
       "value": "\"EXC_SOFTWARE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 7967,
+      "offset": 8206,
       "length": 16,
       "value": "\"EXC_BREAKPOINT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8105,
+      "offset": 8336,
       "length": 13,
       "value": "\"EXC_SYSCALL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8245,
+      "offset": 8465,
       "length": 18,
       "value": "\"EXC_MACH_SYSCALL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8387,
+      "offset": 8601,
       "length": 15,
       "value": "\"EXC_RPC_ALERT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8522,
+      "offset": 8727,
       "length": 11,
       "value": "\"EXC_CRASH\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8656,
+      "offset": 8848,
       "length": 14,
       "value": "\"EXC_RESOURCE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8790,
+      "offset": 8972,
       "length": 11,
       "value": "\"EXC_GUARD\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 8929,
+      "offset": 9098,
       "length": 19,
       "value": "\"EXC_CORPSE_NOTIFY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 9076,
+      "offset": 9240,
       "length": 19,
       "value": "\"EXCEPTION_DEFAULT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 9221,
+      "offset": 9380,
       "length": 17,
       "value": "\"EXCEPTION_STATE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 9373,
+      "offset": 9525,
       "length": 26,
       "value": "\"EXCEPTION_STATE_IDENTITY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 9538,
+      "offset": 9692,
       "length": 30,
       "value": "\"EXCEPTION_IDENTITY_PROTECTED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 9700,
+      "offset": 9860,
       "length": 23,
       "value": "\"MACH_EXCEPTION_ERRORS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 10138,
+      "offset": 10012,
       "length": 21,
       "value": "\"EXC_MASK_BAD_ACCESS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 10294,
+      "offset": 10165,
       "length": 26,
       "value": "\"EXC_MASK_BAD_INSTRUCTION\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 10450,
+      "offset": 10323,
       "length": 21,
       "value": "\"EXC_MASK_ARITHMETIC\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 10600,
+      "offset": 10470,
       "length": 20,
       "value": "\"EXC_MASK_EMULATION\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 10748,
+      "offset": 10614,
       "length": 19,
       "value": "\"EXC_MASK_SOFTWARE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 10897,
+      "offset": 10758,
       "length": 21,
       "value": "\"EXC_MASK_BREAKPOINT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11045,
+      "offset": 10903,
       "length": 18,
       "value": "\"EXC_MASK_SYSCALL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11195,
+      "offset": 11047,
       "length": 23,
       "value": "\"EXC_MASK_MACH_SYSCALL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11347,
+      "offset": 11198,
       "length": 20,
       "value": "\"EXC_MASK_RPC_ALERT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11492,
+      "offset": 11339,
       "length": 16,
       "value": "\"EXC_MASK_CRASH\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11636,
+      "offset": 11475,
       "length": 19,
       "value": "\"EXC_MASK_RESOURCE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11780,
+      "offset": 11614,
       "length": 16,
       "value": "\"EXC_MASK_GUARD\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 11929,
+      "offset": 11755,
       "length": 24,
       "value": "\"EXC_MASK_CORPSE_NOTIFY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12079,
+      "offset": 11905,
       "length": 17,
       "value": "\"FIRST_EXCEPTION\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12222,
+      "offset": 12041,
       "length": 17,
       "value": "\"EXC_SOFT_SIGNAL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12362,
+      "offset": 12174,
       "length": 14,
       "value": "\"EXC_MACF_MIN\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12499,
+      "offset": 12301,
       "length": 14,
       "value": "\"EXC_MACF_MAX\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12659,
+      "offset": 12428,
       "length": 14,
       "value": "\"KERN_SUCCESS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12804,
+      "offset": 12563,
       "length": 22,
       "value": "\"KERN_INVALID_ADDRESS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 12960,
+      "offset": 12717,
       "length": 25,
       "value": "\"KERN_PROTECTION_FAILURE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13117,
+      "offset": 12875,
       "length": 23,
       "value": "\"KERN_INVALID_ARGUMENT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13263,
+      "offset": 13020,
       "length": 14,
       "value": "\"KERN_FAILURE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13410,
+      "offset": 13157,
       "length": 24,
       "value": "\"KERN_RESOURCE_SHORTAGE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13562,
+      "offset": 13309,
       "length": 19,
       "value": "\"KERN_NOT_RECEIVER\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13706,
+      "offset": 13448,
       "length": 16,
       "value": "\"KERN_NO_ACCESS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13850,
+      "offset": 13584,
       "length": 19,
       "value": "\"KERN_MEMORY_ERROR\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 13995,
+      "offset": 13724,
       "length": 17,
       "value": "\"KERN_NOT_IN_SET\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 14139,
+      "offset": 13861,
       "length": 18,
       "value": "\"KERN_NAME_EXISTS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 14280,
+      "offset": 13996,
       "length": 14,
       "value": "\"KERN_ABORTED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 14422,
+      "offset": 14128,
       "length": 19,
       "value": "\"KERN_INVALID_NAME\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 14569,
+      "offset": 14270,
       "length": 19,
       "value": "\"KERN_INVALID_TASK\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 14717,
+      "offset": 14413,
       "length": 20,
       "value": "\"KERN_INVALID_RIGHT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 14866,
+      "offset": 14558,
       "length": 20,
       "value": "\"KERN_INVALID_VALUE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15016,
+      "offset": 14704,
       "length": 21,
       "value": "\"KERN_UREFS_OVERFLOW\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15171,
+      "offset": 14856,
       "length": 25,
       "value": "\"KERN_INVALID_CAPABILITY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15324,
+      "offset": 15010,
       "length": 19,
       "value": "\"KERN_RIGHT_EXISTS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15471,
+      "offset": 15152,
       "length": 19,
       "value": "\"KERN_INVALID_HOST\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15620,
+      "offset": 15296,
       "length": 21,
       "value": "\"KERN_MEMORY_PRESENT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15774,
+      "offset": 15447,
       "length": 24,
       "value": "\"KERN_MEMORY_DATA_MOVED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 15933,
+      "offset": 15606,
       "length": 26,
       "value": "\"KERN_MEMORY_RESTART_COPY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 16096,
+      "offset": 15771,
       "length": 28,
       "value": "\"KERN_INVALID_PROCESSOR_SET\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 16252,
+      "offset": 15931,
       "length": 19,
       "value": "\"KERN_POLICY_LIMIT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 16401,
+      "offset": 16075,
       "length": 21,
       "value": "\"KERN_INVALID_POLICY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 16552,
+      "offset": 16223,
       "length": 21,
       "value": "\"KERN_INVALID_OBJECT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 16704,
+      "offset": 16372,
       "length": 22,
       "value": "\"KERN_ALREADY_WAITING\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 16853,
+      "offset": 16519,
       "length": 18,
       "value": "\"KERN_DEFAULT_SET\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17006,
+      "offset": 16666,
       "length": 26,
       "value": "\"KERN_EXCEPTION_PROTECTED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17162,
+      "offset": 16824,
       "length": 21,
       "value": "\"KERN_INVALID_LEDGER\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17321,
+      "offset": 16980,
       "length": 29,
       "value": "\"KERN_INVALID_MEMORY_CONTROL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17482,
+      "offset": 17146,
       "length": 23,
       "value": "\"KERN_INVALID_SECURITY\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17634,
+      "offset": 17297,
       "length": 20,
       "value": "\"KERN_NOT_DEPRESSED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17780,
+      "offset": 17439,
       "length": 17,
       "value": "\"KERN_TERMINATED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 17931,
+      "offset": 17583,
       "length": 25,
       "value": "\"KERN_LOCK_SET_DESTROYED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 18085,
+      "offset": 17738,
       "length": 20,
       "value": "\"KERN_LOCK_UNSTABLE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 18231,
+      "offset": 17880,
       "length": 17,
       "value": "\"KERN_LOCK_OWNED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 18379,
+      "offset": 18021,
       "length": 22,
       "value": "\"KERN_LOCK_OWNED_SELF\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 18536,
+      "offset": 18176,
       "length": 26,
       "value": "\"KERN_SEMAPHORE_DESTROYED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 18699,
+      "offset": 18341,
       "length": 28,
       "value": "\"KERN_RPC_SERVER_TERMINATED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 18863,
+      "offset": 18509,
       "length": 27,
       "value": "\"KERN_RPC_TERMINATE_ORPHAN\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19025,
+      "offset": 18674,
       "length": 26,
       "value": "\"KERN_RPC_CONTINUE_ORPHAN\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19180,
+      "offset": 18831,
       "length": 20,
       "value": "\"KERN_NOT_SUPPORTED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19325,
+      "offset": 18972,
       "length": 16,
       "value": "\"KERN_NODE_DOWN\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19468,
+      "offset": 19107,
       "length": 18,
       "value": "\"KERN_NOT_WAITING\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19621,
+      "offset": 19254,
       "length": 26,
       "value": "\"KERN_OPERATION_TIMED_OUT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19777,
+      "offset": 19412,
       "length": 21,
       "value": "\"KERN_CODESIGN_ERROR\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 19927,
+      "offset": 19559,
       "length": 20,
       "value": "\"KERN_POLICY_STATIC\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20087,
+      "offset": 19715,
       "length": 31,
       "value": "\"KERN_INSUFFICIENT_BUFFER_SIZE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20240,
+      "offset": 19875,
       "length": 13,
       "value": "\"KERN_DENIED\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20379,
+      "offset": 20003,
       "length": 17,
       "value": "\"KERN_MISSING_KC\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20522,
+      "offset": 20139,
       "length": 17,
       "value": "\"KERN_INVALID_KC\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20664,
+      "offset": 20274,
       "length": 16,
       "value": "\"KERN_NOT_FOUND\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20806,
+      "offset": 20408,
       "length": 17,
       "value": "\"KERN_RETURN_MAX\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 20959,
+      "offset": 20554,
       "length": 8,
       "value": "\"SIGHUP\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21084,
+      "offset": 20663,
       "length": 8,
       "value": "\"SIGINT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21210,
+      "offset": 20773,
       "length": 9,
       "value": "\"SIGQUIT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21336,
+      "offset": 20884,
       "length": 8,
       "value": "\"SIGILL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21462,
+      "offset": 20994,
       "length": 9,
       "value": "\"SIGTRAP\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21589,
+      "offset": 21106,
       "length": 9,
       "value": "\"SIGABRT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21716,
+      "offset": 21218,
       "length": 8,
       "value": "\"SIGIOT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21841,
+      "offset": 21327,
       "length": 8,
       "value": "\"SIGEMT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 21967,
+      "offset": 21437,
       "length": 8,
       "value": "\"SIGFPE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22093,
+      "offset": 21547,
       "length": 9,
       "value": "\"SIGKILL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22219,
+      "offset": 21658,
       "length": 8,
       "value": "\"SIGBUS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22345,
+      "offset": 21768,
       "length": 9,
       "value": "\"SIGSEGV\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22471,
+      "offset": 21879,
       "length": 8,
       "value": "\"SIGSYS\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22597,
+      "offset": 21989,
       "length": 9,
       "value": "\"SIGPIPE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22724,
+      "offset": 22101,
       "length": 9,
       "value": "\"SIGALRM\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22851,
+      "offset": 22213,
       "length": 9,
       "value": "\"SIGTERM\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 22977,
+      "offset": 22324,
       "length": 8,
       "value": "\"SIGURG\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23103,
+      "offset": 22434,
       "length": 9,
       "value": "\"SIGSTOP\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23230,
+      "offset": 22546,
       "length": 9,
       "value": "\"SIGTSTP\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23357,
+      "offset": 22658,
       "length": 9,
       "value": "\"SIGCONT\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23484,
+      "offset": 22770,
       "length": 9,
       "value": "\"SIGCHLD\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23611,
+      "offset": 22882,
       "length": 9,
       "value": "\"SIGTTIN\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23738,
-      "length": 9,
-      "value": "\"SIGTTIN\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
-      "kind": "StringLiteral",
-      "offset": 23864,
+      "offset": 22993,
       "length": 7,
       "value": "\"SIGIO\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 23990,
+      "offset": 23102,
       "length": 9,
       "value": "\"SIGXCPU\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24117,
+      "offset": 23214,
       "length": 9,
       "value": "\"SIGXFSZ\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24246,
+      "offset": 23328,
       "length": 11,
       "value": "\"SIGVTALRM\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24375,
+      "offset": 23444,
       "length": 9,
       "value": "\"SIGPROF\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24504,
+      "offset": 23558,
       "length": 10,
       "value": "\"SIGWINCH\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24632,
+      "offset": 23672,
       "length": 9,
       "value": "\"SIGINFO\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24760,
+      "offset": 23785,
       "length": 9,
       "value": "\"SIGUSR1\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 24887,
+      "offset": 23897,
       "length": 9,
       "value": "\"SIGUSR2\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 25018,
+      "offset": 24013,
       "length": 12,
       "value": "\"SIGEV_NONE\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 25153,
+      "offset": 24136,
       "length": 14,
       "value": "\"SIGEV_SIGNAL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/CrashLogger\/StyliticsCrashLogger.swift",
       "kind": "StringLiteral",
-      "offset": 25290,
+      "offset": 24263,
       "length": 14,
       "value": "\"SIGEV_THREAD\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/RequestHandler.swift",
       "kind": "StringLiteral",
-      "offset": 1356,
+      "offset": 1372,
       "length": 3,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/RequestHandler.swift",
       "kind": "StringLiteral",
-      "offset": 1486,
+      "offset": 1502,
       "length": 3,
       "value": "\",\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/RequestHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 4470,
-      "length": 13,
-      "value": "\"requestInfo\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/NetworkLayer\/Resources\/PurchasesResource.swift",
@@ -17227,93 +17706,107 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "IntegerLiteral",
-      "offset": 470,
+      "offset": 486,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 1728,
+      "offset": 1744,
       "length": 10,
       "value": "\"ab_group\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 1781,
+      "offset": 1797,
       "length": 13,
       "value": "\"campaign_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 1837,
+      "offset": 1853,
       "length": 10,
       "value": "\"currency\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 1885,
+      "offset": 1901,
       "length": 7,
       "value": "\"items\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 1935,
+      "offset": 1951,
       "length": 10,
       "value": "\"order_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2013,
+      "offset": 2029,
       "length": 13,
       "value": "\"order_total\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2069,
+      "offset": 2085,
       "length": 10,
       "value": "\"item_ids\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2123,
+      "offset": 2139,
       "length": 14,
       "value": "\"screen_width\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2182,
+      "offset": 2198,
       "length": 10,
       "value": "\"page_url\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2235,
+      "offset": 2251,
       "length": 15,
       "value": "\"screen_height\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2296,
+      "offset": 2312,
       "length": 8,
       "value": "\"source\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
       "kind": "StringLiteral",
-      "offset": 2337,
+      "offset": 2353,
       "length": 19,
       "value": "\"experience_config\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
+      "kind": "StringLiteral",
+      "offset": 2434,
+      "length": 13,
+      "value": "\"instance_id\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Tracking\/Purchases\/Purchases.swift",
+      "kind": "StringLiteral",
+      "offset": 2697,
+      "length": 16,
+      "value": "\"client_user_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/IUUIDGenerator.swift",
@@ -17326,6 +17819,20 @@
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/IUUIDGenerator.swift",
       "kind": "StringLiteral",
       "offset": 552,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/IUUIDGenerator.swift",
+      "kind": "StringLiteral",
+      "offset": 727,
+      "length": 11,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/IUUIDGenerator.swift",
+      "kind": "StringLiteral",
+      "offset": 737,
       "length": 1,
       "value": "\"\""
     },
@@ -17451,128 +17958,177 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1445,
+      "offset": 1457,
+      "length": 32,
+      "value": "\"Data SDK isn't configured yet.\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1519,
       "length": 28,
       "value": "\"Unable to form a valid URL\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1517,
+      "offset": 1591,
       "length": 34,
       "value": "\"Error in formatting request body\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1575,
+      "offset": 1649,
       "length": 7,
       "value": "\"Error\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1614,
+      "offset": 1688,
       "length": 15,
       "value": "\"error_message\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1665,
+      "offset": 1739,
       "length": 12,
       "value": "\"Api Failed\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1712,
+      "offset": 1786,
       "length": 11,
       "value": "\"Api Error\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1768,
+      "offset": 1842,
       "length": 28,
       "value": "\"Client name not configured\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1855,
+      "offset": 1929,
       "length": 6,
       "value": "\"true\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1897,
+      "offset": 1971,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1937,
+      "offset": 2011,
       "length": 7,
       "value": "\"en-US\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1973,
+      "offset": 2047,
       "length": 12,
       "value": "\"request_id\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2011,
+      "offset": 2085,
       "length": 9,
       "value": "\"sdk-ios\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2047,
+      "offset": 2121,
       "length": 10,
       "value": "\"modifier\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2119,
+      "offset": 2157,
+      "length": 9,
+      "value": "\"present\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2192,
+      "length": 9,
+      "value": "\"control\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2263,
       "length": 6,
       "value": "\"UUID\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2190,
+      "offset": 2334,
       "length": 4,
       "value": "\"12\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2238,
+      "offset": 2382,
       "length": 4,
       "value": "\"40\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2277,
+      "offset": 2421,
       "length": 6,
       "value": "\"Nike\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 2354,
+      "offset": 2498,
       "length": 34,
       "value": "\"STYLITICS_CLEAR_DATA_FOR_REQUEST\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2605,
+      "length": 24,
+      "value": "\"StyliticsDataUrlLogger\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2667,
+      "length": 28,
+      "value": "\"StyliticsRequestInfoLogger\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2737,
+      "length": 27,
+      "value": "\"StyliticsStacktraceLogger\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 2804,
+      "length": 30,
+      "value": "\"StyliticsDeviceDetailsLogger\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/EnumConstants.swift",
@@ -17759,16 +18315,30 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/TrackingDataHandler.swift",
       "kind": "Dictionary",
-      "offset": 430,
+      "offset": 397,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/TrackingDataHandler.swift",
       "kind": "StringLiteral",
-      "offset": 2374,
+      "offset": 2662,
       "length": 11,
       "value": "\"requestId\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/TrackingDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 2874,
+      "length": 14,
+      "value": "\"oldRequestId\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ios\/StyliticsData\/StyliticsData\/Utility\/TrackingDataHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 2958,
+      "length": 14,
+      "value": "\"newRequestId\""
     }
   ]
 }

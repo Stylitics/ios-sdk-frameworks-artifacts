@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsData
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name StyliticsData
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import CryptoKit
 import Foundation
 @_exported import StyliticsData
 import Swift
@@ -137,9 +138,10 @@ final public class StyliticsConfig {
   final public let enableDebugLogs: Swift.Bool?
   final public let dataApisHost: StyliticsData.DataApisHost?
   final public let trackingApisHost: StyliticsData.TrackingApisHost?
-  final public let locale: Swift.String?
+  final public var locale: Swift.String?
   final public let clientName: Swift.String
-  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, locale: Swift.String? = nil, clientName: Swift.String)
+  final public var customerProfileId: Swift.String?
+  public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, locale: Swift.String? = nil, clientName: Swift.String, customerProfileId: Swift.String? = nil)
   @objc deinit
 }
 extension Swift.Dictionary {
@@ -263,6 +265,7 @@ public struct Outfits {
   public var list: [StyliticsData.Outfit]
   public let localizationVersion: Swift.String?
   public var isMixAndMatchEnabled: Swift.Bool
+  public var accountId: Swift.Int?
 }
 extension StyliticsData.Outfits : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
@@ -273,6 +276,7 @@ public enum Event : Swift.String, Swift.CaseIterable {
   case click
   case swap
   case jumplink
+  case visit
   case addToCart
   public init?(rawValue: Swift.String)
   public typealias AllCases = [StyliticsData.Event]
@@ -311,6 +315,8 @@ extension StyliticsData.ReplacementItems : Swift.Decodable {
   public static func configure(config: StyliticsData.StyliticsConfig) throws
   public static func engagement(trackingInfo: StyliticsData.EngagementsTrackingInfo, response: ((StyliticsData.EngagementsResponse) -> Swift.Void)? = nil)
   public static func purchases(purchasedItems: StyliticsData.PurchasedItems, response: ((StyliticsData.PurchasesResponse) -> Swift.Void)? = nil)
+  public static func updateGlobalLocale(_ locale: Swift.String?) throws
+  public static func updateCustomerProfileId(_ customerProfileId: Swift.String?) throws
   @objc deinit
 }
 public struct PurchasedItems {
@@ -325,6 +331,7 @@ public enum EngagementInfo {
   case outfit(outfit: StyliticsData.Outfit, position: Swift.Int)
   case outfitItem(outfitItem: StyliticsData.OutfitItem, position: Swift.Int)
   case replacement(outfit: StyliticsData.Outfit, oldOutfitItem: StyliticsData.OutfitItem, newOutfitItem: StyliticsData.OutfitItem)
+  case eventDetails(requestId: Swift.String)
 }
 public struct EngagementsTrackingInfo {
   public init(event: StyliticsData.Event, engagementInfo: StyliticsData.EngagementInfo, extraInfo: [Swift.String : Any]? = nil)
