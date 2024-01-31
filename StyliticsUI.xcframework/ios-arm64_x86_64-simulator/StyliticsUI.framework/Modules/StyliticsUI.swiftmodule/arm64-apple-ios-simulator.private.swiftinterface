@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsUI
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -10,18 +10,17 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
-@_hasMissingDesignatedInitializers final public class StyliticsUIApis {
+@_hasMissingDesignatedInitializers final public class StyliticsUIApis : StyliticsUI.IStylitics {
   public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, displayProductListFromSDK: Swift.Bool = true, productListScreenTemplate: StyliticsUI.ProductListScreenTemplate = .standard()) -> UIKit.UIView
   public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
   public static func closeProductListScreen(requestId: Swift.String)
-  public static func clearData(for requestId: Swift.String)
   @objc deinit
 }
 public enum ProductListScreenTemplate {
   case standard(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
 }
-public struct ClassicConfig {
-  public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel())
+public struct ClassicConfig : StyliticsUI.IWidgetConfig {
+  public init(widget: StyliticsUI.ClassicConfig.Widget = Widget(), topLabel: StyliticsUI.TopLabel = TopLabel(), bottomLabel: StyliticsUI.ClassicConfig.BottomLabel = BottomLabel(), shopTheModel: StyliticsUI.ShopTheModel = ShopTheModel(), topLabelPosition: StyliticsUI.TopLabelPosition = .topLeft)
   public struct Widget {
     public init(borderColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBorderColor.toUIColor, borderWeight: CoreFoundation.CGFloat = 1, cornerRadius: CoreFoundation.CGFloat = 8, backgroundColor: UIKit.UIColor = ClassicConfigColor.classicWidgetBackgroundColor.toUIColor, widgetTopSpacing: CoreFoundation.CGFloat = 37.5)
   }
@@ -192,6 +191,9 @@ extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
 }
+public protocol IRefreshView {
+  func refreshView(outfits: StyliticsData.Outfits?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+}
 @_hasMissingDesignatedInitializers final public class Constants {
   public static let MINIMALIST_TEXT: Swift.String
   public static let VIEW_DETAIL_TEXT: Swift.String
@@ -204,7 +206,7 @@ extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
   public static let SHOP_THE_LOOK_TEXT: Swift.String
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ClassicDisplayContainerView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ClassicDisplayContainerView : UIKit.UIView, StyliticsUI.IRefreshView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
@@ -220,8 +222,11 @@ extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDelega
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
 }
+extension StyliticsUI.ClassicDisplayContainerView {
+  @_Concurrency.MainActor(unsafe) final public func refreshView(outfits: StyliticsData.Outfits? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+}
 public struct HotspotListener {
-  public init(onClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onOutfitItemClick: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil)
+  public init(onClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onViewDetailsClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onOutfitItemClick: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil)
 }
 public struct TopLabel {
   public init(label1: StyliticsUI.TopLabel.Label1 = Label1(), label2: StyliticsUI.TopLabel.Label2 = Label2(), label3: StyliticsUI.TopLabel.Label3 = Label3(), label4: StyliticsUI.TopLabel.Label4 = Label4(), label5: StyliticsUI.TopLabel.Label5 = Label5(), label6: StyliticsUI.TopLabel.Label6 = Label6(), label7: StyliticsUI.TopLabel.Label7 = Label7())
@@ -232,16 +237,16 @@ public struct TopLabel {
                                                  alpha: 1), backgroundColor: UIKit.UIColor = .white, borderColor: UIKit.UIColor = UIColor(red: 142/255,
                                                    green: 57/255,
                                                    blue: 227/255,
-                                                   alpha: 1), borderWeight: CoreFoundation.CGFloat = 2, cornerRadius: CoreFoundation.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreFoundation.CGFloat = 6, paddingHorizontal: CoreFoundation.CGFloat = 16)
+                                                   alpha: 1), borderWeight: CoreFoundation.CGFloat = 2, cornerRadius: CoreFoundation.CGFloat = 15, paddingVertical: CoreFoundation.CGFloat = 6, paddingHorizontal: CoreFoundation.CGFloat = 16)
   }
   public struct Label2 {
-    public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-bold", fontSize: CoreFoundation.CGFloat = 14, fontColor: UIKit.UIColor = .white, backgroundColor: UIKit.UIColor = .black, cornerRadius: CoreFoundation.CGFloat = 0, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreFoundation.CGFloat = 6, paddingHorizontal: CoreFoundation.CGFloat = 16, iconAndTitleSpacing: CoreFoundation.CGFloat = 8)
+    public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-bold", fontSize: CoreFoundation.CGFloat = 14, fontColor: UIKit.UIColor = .white, backgroundColor: UIKit.UIColor = .black, cornerRadius: CoreFoundation.CGFloat = 0, paddingVertical: CoreFoundation.CGFloat = 6, paddingHorizontal: CoreFoundation.CGFloat = 16, iconAndTitleSpacing: CoreFoundation.CGFloat = 8)
   }
   public struct Label3 {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-light", fontSize: CoreFoundation.CGFloat = 16, fontColor: UIKit.UIColor = .black, backgroundColor: UIKit.UIColor = .white, cornerRadius: CoreFoundation.CGFloat = 8, shadowColor: UIKit.UIColor = UIColor(red: 0,
                                                    green: 0,
                                                    blue: 0,
-                                                   alpha: 0.16), shadowRadius: CoreFoundation.CGFloat = 4, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreFoundation.CGFloat = 8, paddingHorizontal: CoreFoundation.CGFloat = 12)
+                                                   alpha: 0.16), shadowRadius: CoreFoundation.CGFloat = 4, paddingVertical: CoreFoundation.CGFloat = 8, paddingHorizontal: CoreFoundation.CGFloat = 12)
   }
   public struct Label4 {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue", fontSize: CoreFoundation.CGFloat = 12, fontColor: UIKit.UIColor = .white, backgroundColorBeforeAnimation: UIKit.UIColor = UIColor(red: 45/255,
@@ -253,7 +258,7 @@ public struct TopLabel {
                                                                      alpha: 1), cornerRadius: CoreFoundation.CGFloat = 6, shadowColor: UIKit.UIColor = UIColor(red: 0,
                                                    green: 0,
                                                    blue: 0,
-                                                   alpha: 0.16), shadowRadius: CoreFoundation.CGFloat = 4, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreFoundation.CGFloat = 12, paddingHorizontal: CoreFoundation.CGFloat = 12)
+                                                   alpha: 0.16), shadowRadius: CoreFoundation.CGFloat = 4, paddingVertical: CoreFoundation.CGFloat = 12, paddingHorizontal: CoreFoundation.CGFloat = 12)
   }
   public struct Label5 {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 71/255,
@@ -262,7 +267,7 @@ public struct TopLabel {
                                                  alpha: 1), backgroundColor: UIKit.UIColor = UIColor(red: 235/255,
                                                        green: 236/255,
                                                        blue: 254/255,
-                                                       alpha: 1), cornerRadius: CoreFoundation.CGFloat = 15, position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreFoundation.CGFloat = 8, paddingHorizontal: CoreFoundation.CGFloat = 16)
+                                                       alpha: 1), cornerRadius: CoreFoundation.CGFloat = 15, paddingVertical: CoreFoundation.CGFloat = 8, paddingHorizontal: CoreFoundation.CGFloat = 16)
   }
   public struct Label6 {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-bold", fontSize: CoreFoundation.CGFloat = 16, fontColor: UIKit.UIColor = UIColor(red: 30/255,
@@ -272,21 +277,27 @@ public struct TopLabel {
                                                    green: 0,
                                                    blue: 0,
                                                    alpha: 0.05), shadowRadius: CoreFoundation.CGFloat = 10, shadowOffset: CoreFoundation.CGSize = CGSize(width: 0,
-                                                  height: 4), position: StyliticsUI.TopLabelPosition = .topLeft, paddingVertical: CoreFoundation.CGFloat = 12, paddingHorizontal: CoreFoundation.CGFloat = 22)
+                                                  height: 4), paddingVertical: CoreFoundation.CGFloat = 12, paddingHorizontal: CoreFoundation.CGFloat = 22)
   }
   public struct Label7 {
     public init(fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 14, fontColor: UIKit.UIColor = UIColor(red: 30/255,
                                                  green: 30/255,
                                                  blue: 30/255,
-                                                 alpha: 1), position: StyliticsUI.TopLabelPosition = .topLeft, iconAndTitleSpacing: CoreFoundation.CGFloat = 8, iconColor: UIKit.UIColor = .black)
+                                                 alpha: 1), iconAndTitleSpacing: CoreFoundation.CGFloat = 8, iconColor: UIKit.UIColor = .black)
   }
+}
+public protocol IStylitics {
+}
+extension StyliticsUI.IStylitics {
+  public static func refreshTemplate(view: UIKit.UIView, outfits: StyliticsData.Outfits? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+  public static func clearData(for requestId: Swift.String)
 }
 public enum ProductListScreenState {
   case disable
   case enable(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
 }
-public struct HotspotConfig {
-  public init(widget: StyliticsUI.HotspotConfig.Widget = Widget(), infoLabel: StyliticsUI.HotspotConfig.InfoLabel = InfoLabel(), shopTheLook: StyliticsUI.HotspotConfig.ShopTheLook = ShopTheLook())
+public struct HotspotConfig : StyliticsUI.IWidgetConfig {
+  public init(widget: StyliticsUI.HotspotConfig.Widget = Widget(), infoLabel: StyliticsUI.HotspotConfig.InfoLabel = InfoLabel(), shopTheLook: StyliticsUI.HotspotConfig.ShopTheLook = ShopTheLook(), topLabel: StyliticsUI.TopLabel = TopLabel())
   public struct ShopTheLook {
     public init(title: Swift.String = Constants.SHOP_THE_LOOK_TEXT, fontFamilyAndWeight: Swift.String = "HelveticaNeue-medium", fontSize: CoreFoundation.CGFloat = 12, fontColor: UIKit.UIColor = HotspotConfigColor.shopTheLookFontColor.toUIColor)
   }
@@ -311,6 +322,8 @@ final public class ClassicListener {
 }
 public enum ProductListTemplate {
   case standard(productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener? = nil, showScrollBar: Swift.Bool = false)
+}
+public protocol IWidgetConfig {
 }
 public struct OutfitInfo {
   public let outfit: StyliticsData.Outfit

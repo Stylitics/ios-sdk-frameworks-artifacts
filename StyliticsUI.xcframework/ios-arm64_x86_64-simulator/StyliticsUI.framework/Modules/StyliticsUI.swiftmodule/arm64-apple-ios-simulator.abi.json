@@ -195,34 +195,6 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "clearData",
-            "printedName": "clearData(for:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11StyliticsUI0A6UIApisC9clearData3forySS_tFZ",
-            "mangledName": "$s11StyliticsUI0A6UIApisC9clearData3forySS_tFZ",
-            "moduleName": "StyliticsUI",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -233,7 +205,16 @@
           "Final",
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "IStylitics",
+            "printedName": "IStylitics",
+            "usr": "s:11StyliticsUI10IStyliticsP",
+            "mangledName": "$s11StyliticsUI10IStyliticsP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -382,7 +363,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(widget:topLabel:bottomLabel:shopTheModel:)",
+            "printedName": "init(widget:topLabel:bottomLabel:shopTheModel:topLabelPosition:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -417,11 +398,18 @@
                 "printedName": "StyliticsUI.ShopTheModel",
                 "hasDefaultArg": true,
                 "usr": "s:11StyliticsUI12ShopTheModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TopLabelPosition",
+                "printedName": "StyliticsUI.TopLabelPosition",
+                "hasDefaultArg": true,
+                "usr": "s:11StyliticsUI16TopLabelPositionO"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11StyliticsUI13ClassicConfigV6widget8topLabel06bottomG012shopTheModelA2C6WidgetV_AA03TopG0VAC06BottomG0VAA04ShopjK0Vtcfc",
-            "mangledName": "$s11StyliticsUI13ClassicConfigV6widget8topLabel06bottomG012shopTheModelA2C6WidgetV_AA03TopG0VAC06BottomG0VAA04ShopjK0Vtcfc",
+            "usr": "s:11StyliticsUI13ClassicConfigV6widget8topLabel06bottomG012shopTheModel0fG8PositionA2C6WidgetV_AA03TopG0VAC06BottomG0VAA04ShopjK0VAA0ngL0Otcfc",
+            "mangledName": "$s11StyliticsUI13ClassicConfigV6widget8topLabel06bottomG012shopTheModel0fG8PositionA2C6WidgetV_AA03TopG0VAC06BottomG0VAA04ShopjK0VAA0ngL0Otcfc",
             "moduleName": "StyliticsUI",
             "declAttributes": [
               "AccessControl"
@@ -624,6 +612,15 @@
         "moduleName": "StyliticsUI",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "IWidgetConfig",
+            "printedName": "IWidgetConfig",
+            "usr": "s:11StyliticsUI13IWidgetConfigP",
+            "mangledName": "$s11StyliticsUI13IWidgetConfigP"
+          }
         ]
       },
       {
@@ -3829,6 +3826,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "StyliticsData",
         "printedName": "StyliticsData",
         "declKind": "Import",
@@ -4877,6 +4884,86 @@
       },
       {
         "kind": "Import",
+        "name": "StyliticsData",
+        "printedName": "StyliticsData",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IRefreshView",
+        "printedName": "IRefreshView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "refreshView",
+            "printedName": "refreshView(outfits:widgetConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StyliticsData.Outfits?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Outfits",
+                    "printedName": "StyliticsData.Outfits",
+                    "usr": "s:13StyliticsData7OutfitsV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StyliticsUI.IWidgetConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IWidgetConfig",
+                    "printedName": "StyliticsUI.IWidgetConfig",
+                    "usr": "s:11StyliticsUI13IWidgetConfigP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11StyliticsUI12IRefreshViewP07refreshD07outfits12widgetConfigy0A4Data7OutfitsVSg_AA07IWidgetH0_pSgtF",
+            "mangledName": "$s11StyliticsUI12IRefreshViewP07refreshD07outfits12widgetConfigy0A4Data7OutfitsVSg_AA07IWidgetH0_pSgtF",
+            "moduleName": "StyliticsUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : StyliticsUI.IRefreshView>",
+            "sugared_genericSig": "<Self where Self : StyliticsUI.IRefreshView>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11StyliticsUI12IRefreshViewP",
+        "mangledName": "$s11StyliticsUI12IRefreshViewP",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -5380,6 +5467,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "StyliticsData",
         "printedName": "StyliticsData",
         "declKind": "Import",
@@ -5790,6 +5887,58 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshView",
+            "printedName": "refreshView(outfits:widgetConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StyliticsData.Outfits?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Outfits",
+                    "printedName": "StyliticsData.Outfits",
+                    "usr": "s:13StyliticsData7OutfitsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StyliticsUI.IWidgetConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IWidgetConfig",
+                    "printedName": "StyliticsUI.IWidgetConfig",
+                    "usr": "s:11StyliticsUI13IWidgetConfigP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11StyliticsUI27ClassicDisplayContainerViewC07refreshF07outfits12widgetConfigy0A4Data7OutfitsVSg_AA07IWidgetJ0_pSgtF",
+            "mangledName": "$s11StyliticsUI27ClassicDisplayContainerViewC07refreshF07outfits12widgetConfigy0A4Data7OutfitsVSg_AA07IWidgetJ0_pSgtF",
+            "moduleName": "StyliticsUI",
+            "declAttributes": [
+              "Final",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -5810,6 +5959,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "IRefreshView",
+            "printedName": "IRefreshView",
+            "usr": "s:11StyliticsUI12IRefreshViewP",
+            "mangledName": "$s11StyliticsUI12IRefreshViewP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -5917,13 +6073,40 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(onClick:onView:onOutfitItemClick:)",
+            "printedName": "init(onClick:onView:onViewDetailsClick:onOutfitItemClick:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "HotspotListener",
                 "printedName": "StyliticsUI.HotspotListener",
                 "usr": "s:11StyliticsUI15HotspotListenerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((StyliticsUI.OutfitInfo) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StyliticsUI.OutfitInfo) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OutfitInfo",
+                        "printedName": "StyliticsUI.OutfitInfo",
+                        "usr": "s:11StyliticsUI10OutfitInfoV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -6021,8 +6204,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11StyliticsUI15HotspotListenerV7onClick0E4View0e10OutfitItemF0ACyAA0H4InfoVcSg_AIyAH_AA0hiJ0VtcSgtcfc",
-            "mangledName": "$s11StyliticsUI15HotspotListenerV7onClick0E4View0e10OutfitItemF0ACyAA0H4InfoVcSg_AIyAH_AA0hiJ0VtcSgtcfc",
+            "usr": "s:11StyliticsUI15HotspotListenerV7onClick0E4View0eg7DetailsF00e10OutfitItemF0ACyAA0I4InfoVcSg_A2JyAI_AA0ijK0VtcSgtcfc",
+            "mangledName": "$s11StyliticsUI15HotspotListenerV7onClick0E4View0eg7DetailsF00e10OutfitItemF0ACyAA0I4InfoVcSg_A2JyAI_AA0ijK0VtcSgtcfc",
             "moduleName": "StyliticsUI",
             "declAttributes": [
               "AccessControl"
@@ -6165,7 +6348,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:borderColor:borderWeight:cornerRadius:position:paddingVertical:paddingHorizontal:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:borderColor:borderWeight:cornerRadius:paddingVertical:paddingHorizontal:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6224,13 +6407,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6245,8 +6421,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label1V19fontFamilyAndWeight0F4Size0F5Color010backgroundK006borderK00mI012cornerRadius8position15paddingVertical0Q10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCA2t2rA0cD8PositionOA2Rtcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label1V19fontFamilyAndWeight0F4Size0F5Color010backgroundK006borderK00mI012cornerRadius8position15paddingVertical0Q10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCA2t2rA0cD8PositionOA2Rtcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label1V19fontFamilyAndWeight0F4Size0F5Color010backgroundK006borderK00mI012cornerRadius15paddingVertical0P10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCA2s4Qtcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label1V19fontFamilyAndWeight0F4Size0F5Color010backgroundK006borderK00mI012cornerRadius15paddingVertical0P10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCA2s4Qtcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6270,7 +6446,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:cornerRadius:position:paddingVertical:paddingHorizontal:iconAndTitleSpacing:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:cornerRadius:paddingVertical:paddingHorizontal:iconAndTitleSpacing:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6315,13 +6491,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6343,8 +6512,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label2V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius8position15paddingVertical0P10Horizontal04iconH12TitleSpacingAESS_14CoreFoundation7CGFloatVSo7UIColorCAsqA0cD8PositionOA3Qtcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label2V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius8position15paddingVertical0P10Horizontal04iconH12TitleSpacingAESS_12CoreGraphics7CGFloatVSo7UIColorCAsqA0cD8PositionOA3Qtcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label2V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius15paddingVertical0O10Horizontal04iconH12TitleSpacingAESS_14CoreFoundation7CGFloatVSo7UIColorCAr4Ptcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label2V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius15paddingVertical0O10Horizontal04iconH12TitleSpacingAESS_12CoreGraphics7CGFloatVSo7UIColorCAr4Ptcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6368,7 +6537,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:cornerRadius:shadowColor:shadowRadius:position:paddingVertical:paddingHorizontal:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:cornerRadius:shadowColor:shadowRadius:paddingVertical:paddingHorizontal:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6427,13 +6596,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6448,8 +6610,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label3V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius06shadowK00oN08position15paddingVertical0Q10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCAtrtrA0cD8PositionOA2Rtcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label3V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius06shadowK00oN08position15paddingVertical0Q10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCAtrtrA0cD8PositionOA2Rtcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label3V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius06shadowK00oN015paddingVertical0P10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCAsqs3Qtcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label3V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius06shadowK00oN015paddingVertical0P10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCAsqs3Qtcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6473,7 +6635,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColorBeforeAnimation:backgroundColorAfterAnimation:cornerRadius:shadowColor:shadowRadius:position:paddingVertical:paddingHorizontal:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColorBeforeAnimation:backgroundColorAfterAnimation:cornerRadius:shadowColor:shadowRadius:paddingVertical:paddingHorizontal:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6539,13 +6701,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6560,8 +6715,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label4V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ08position15paddingVertical0T10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCA2ususA0cD8PositionOA2Stcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label4V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ08position15paddingVertical0T10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCA2ususA0cD8PositionOA2Stcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label4V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ015paddingVertical0S10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCA2trt3Rtcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label4V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ015paddingVertical0S10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCA2trt3Rtcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6585,7 +6740,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:cornerRadius:position:paddingVertical:paddingHorizontal:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColor:cornerRadius:paddingVertical:paddingHorizontal:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6630,13 +6785,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6651,8 +6799,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label5V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius8position15paddingVertical0P10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCArpA0cD8PositionOA2Ptcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label5V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius8position15paddingVertical0P10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCArpA0cD8PositionOA2Ptcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label5V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius15paddingVertical0O10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCAq3Otcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label5V19fontFamilyAndWeight0F4Size0F5Color010backgroundK012cornerRadius15paddingVertical0O10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCAq3Otcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6676,7 +6824,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColorBeforeAnimation:backgroundColorAfterAnimation:cornerRadius:shadowColor:shadowRadius:shadowOffset:position:paddingVertical:paddingHorizontal:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:backgroundColorBeforeAnimation:backgroundColorAfterAnimation:cornerRadius:shadowColor:shadowRadius:shadowOffset:paddingVertical:paddingHorizontal:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6749,13 +6897,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6770,8 +6911,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label6V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ00R6Offset8position15paddingVertical0U10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCA2vtvTSo6CGSizeVAA0cD8PositionOA2Ttcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label6V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ00R6Offset8position15paddingVertical0U10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCA2vtvTSo6CGSizeVAA0cD8PositionOA2Ttcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label6V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ00R6Offset15paddingVertical0T10HorizontalAESS_14CoreFoundation7CGFloatVSo7UIColorCA2usuSSo6CGSizeVA2Stcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label6V19fontFamilyAndWeight0F4Size0F5Color010backgroundK15BeforeAnimation0lk5AfterN012cornerRadius06shadowK00rQ00R6Offset15paddingVertical0T10HorizontalAESS_12CoreGraphics7CGFloatVSo7UIColorCA2usuSSo6CGSizeVA2Stcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6795,7 +6936,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:position:iconAndTitleSpacing:iconColor:)",
+                "printedName": "init(fontFamilyAndWeight:fontSize:fontColor:iconAndTitleSpacing:iconColor:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6826,13 +6967,6 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "TopLabelPosition",
-                    "printedName": "StyliticsUI.TopLabelPosition",
-                    "hasDefaultArg": true,
-                    "usr": "s:11StyliticsUI16TopLabelPositionO"
-                  },
-                  {
-                    "kind": "TypeNominal",
                     "name": "CGFloat",
                     "printedName": "CoreGraphics.CGFloat",
                     "hasDefaultArg": true,
@@ -6847,8 +6981,8 @@
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:11StyliticsUI8TopLabelV6Label7V19fontFamilyAndWeight0F4Size0F5Color8position04iconH12TitleSpacing0mK0AESS_14CoreFoundation7CGFloatVSo7UIColorCAA0cD8PositionOAnPtcfc",
-                "mangledName": "$s11StyliticsUI8TopLabelV6Label7V19fontFamilyAndWeight0F4Size0F5Color8position04iconH12TitleSpacing0mK0AESS_12CoreGraphics7CGFloatVSo7UIColorCAA0cD8PositionOAnPtcfc",
+                "usr": "s:11StyliticsUI8TopLabelV6Label7V19fontFamilyAndWeight0F4Size0F5Color04iconH12TitleSpacing0lK0AESS_14CoreFoundation7CGFloatVSo7UIColorCAmOtcfc",
+                "mangledName": "$s11StyliticsUI8TopLabelV6Label7V19fontFamilyAndWeight0F4Size0F5Color04iconH12TitleSpacing0lK0AESS_12CoreGraphics7CGFloatVSo7UIColorCAmOtcfc",
                 "moduleName": "StyliticsUI",
                 "declAttributes": [
                   "AccessControl"
@@ -6890,6 +7024,134 @@
         "printedName": "StyliticsData",
         "declKind": "Import",
         "moduleName": "StyliticsUI"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI"
+      },
+      {
+        "kind": "Import",
+        "name": "StyliticsData",
+        "printedName": "StyliticsData",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IStylitics",
+        "printedName": "IStylitics",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "refreshTemplate",
+            "printedName": "refreshTemplate(view:outfits:widgetConfig:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StyliticsData.Outfits?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Outfits",
+                    "printedName": "StyliticsData.Outfits",
+                    "usr": "s:13StyliticsData7OutfitsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StyliticsUI.IWidgetConfig?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IWidgetConfig",
+                    "printedName": "StyliticsUI.IWidgetConfig",
+                    "usr": "s:11StyliticsUI13IWidgetConfigP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11StyliticsUI10IStyliticsPAAE15refreshTemplate4view7outfits12widgetConfigySo6UIViewC_0A4Data7OutfitsVSgAA07IWidgetI0_pSgtFZ",
+            "mangledName": "$s11StyliticsUI10IStyliticsPAAE15refreshTemplate4view7outfits12widgetConfigySo6UIViewC_0A4Data7OutfitsVSgAA07IWidgetI0_pSgtFZ",
+            "moduleName": "StyliticsUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : StyliticsUI.IStylitics>",
+            "sugared_genericSig": "<Self where Self : StyliticsUI.IStylitics>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clearData",
+            "printedName": "clearData(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11StyliticsUI10IStyliticsPAAE9clearData3forySS_tFZ",
+            "mangledName": "$s11StyliticsUI10IStyliticsPAAE9clearData3forySS_tFZ",
+            "moduleName": "StyliticsUI",
+            "genericSig": "<τ_0_0 where τ_0_0 : StyliticsUI.IStylitics>",
+            "sugared_genericSig": "<Self where Self : StyliticsUI.IStylitics>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11StyliticsUI10IStyliticsP",
+        "mangledName": "$s11StyliticsUI10IStyliticsP",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "AccessControl"
+        ]
       },
       {
         "kind": "Import",
@@ -7126,7 +7388,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(widget:infoLabel:shopTheLook:)",
+            "printedName": "init(widget:infoLabel:shopTheLook:topLabel:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7154,11 +7416,18 @@
                 "printedName": "StyliticsUI.HotspotConfig.ShopTheLook",
                 "hasDefaultArg": true,
                 "usr": "s:11StyliticsUI13HotspotConfigV11ShopTheLookV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TopLabel",
+                "printedName": "StyliticsUI.TopLabel",
+                "hasDefaultArg": true,
+                "usr": "s:11StyliticsUI8TopLabelV"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:11StyliticsUI13HotspotConfigV6widget9infoLabel11shopTheLookA2C6WidgetV_AC04InfoG0VAC04ShopiJ0Vtcfc",
-            "mangledName": "$s11StyliticsUI13HotspotConfigV6widget9infoLabel11shopTheLookA2C6WidgetV_AC04InfoG0VAC04ShopiJ0Vtcfc",
+            "usr": "s:11StyliticsUI13HotspotConfigV6widget9infoLabel11shopTheLook03topG0A2C6WidgetV_AC04InfoG0VAC04ShopiJ0VAA03TopG0Vtcfc",
+            "mangledName": "$s11StyliticsUI13HotspotConfigV6widget9infoLabel11shopTheLook03topG0A2C6WidgetV_AC04InfoG0VAC04ShopiJ0VAA03TopG0Vtcfc",
             "moduleName": "StyliticsUI",
             "declAttributes": [
               "AccessControl"
@@ -7375,6 +7644,15 @@
         "moduleName": "StyliticsUI",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "IWidgetConfig",
+            "printedName": "IWidgetConfig",
+            "usr": "s:11StyliticsUI13IWidgetConfigP",
+            "mangledName": "$s11StyliticsUI13IWidgetConfigP"
+          }
         ]
       },
       {
@@ -8078,6 +8356,28 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IWidgetConfig",
+        "printedName": "IWidgetConfig",
+        "declKind": "Protocol",
+        "usr": "s:11StyliticsUI13IWidgetConfigP",
+        "mangledName": "$s11StyliticsUI13IWidgetConfigP",
+        "moduleName": "StyliticsUI",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -8412,80 +8712,73 @@
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
-      "kind": "FloatLiteral",
-      "offset": 316,
-      "length": 3,
-      "value": "2.5"
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 348,
+      "offset": 307,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "Array",
-      "offset": 400,
+      "offset": 359,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 661,
+      "offset": 470,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 649,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1372,
+      "offset": 1360,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1397,
+      "offset": 1385,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2657,
+      "offset": 2645,
       "length": 51,
       "value": "\"Error: itemTapped doesn't contains index \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2707,
+      "offset": 2695,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicDisplayCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4862,
+      "offset": 4953,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Flavors\/Common\/StyliticsUIApis.swift",
       "kind": "BooleanLiteral",
-      "offset": 360,
+      "offset": 372,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Flavors\/Common\/StyliticsUIApis.swift",
-      "kind": "StringLiteral",
-      "offset": 1381,
-      "length": 11,
-      "value": "\"requestId\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/OutfitItems\/ProductList\/ProductListTableViewCell\/ReplacementRowCellViewModel.swift",
@@ -8504,105 +8797,105 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 986,
+      "offset": 1156,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1033,
+      "offset": 1203,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 1190,
+      "offset": 1360,
       "length": 4,
       "value": "37.5"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "StringLiteral",
-      "offset": 1941,
+      "offset": 2111,
       "length": 15,
       "value": "\"HelveticaNeue\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1998,
+      "offset": 2168,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 2143,
+      "offset": 2313,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 2260,
+      "offset": 2430,
       "length": 5,
       "value": "0.882"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 2325,
+      "offset": 2495,
       "length": 5,
       "value": "0.882"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "FloatLiteral",
-      "offset": 2389,
+      "offset": 2559,
       "length": 5,
       "value": "0.882"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2454,
+      "offset": 2624,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2502,
+      "offset": 2672,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2549,
+      "offset": 2719,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2599,
+      "offset": 2769,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2651,
+      "offset": 2821,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/ClassicConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2699,
+      "offset": 2869,
       "length": 2,
       "value": "24"
     },
@@ -8623,7 +8916,7 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ReuseableViews\/IndividualImageView.swift",
       "kind": "IntegerLiteral",
-      "offset": 802,
+      "offset": 841,
       "length": 1,
       "value": "0"
     },
@@ -8929,6 +9222,20 @@
       "value": "16"
     },
     {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Protocol\/IRefreshWidget.swift",
+      "kind": "StringLiteral",
+      "offset": 426,
+      "length": 14,
+      "value": "\"oldRequestId\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Protocol\/IRefreshWidget.swift",
+      "kind": "StringLiteral",
+      "offset": 456,
+      "length": 14,
+      "value": "\"newRequestId\""
+    },
+    {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/OutfitItems\/ProductListScreen\/Model\/Flavor\/Common\/ProductListScreenConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 730,
@@ -8958,106 +9265,134 @@
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
+      "kind": "IntegerLiteral",
+      "offset": 997,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 771,
+      "offset": 1032,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 1275,
+      "offset": 1677,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2726,
+      "offset": 2875,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3933,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3185,
+      "offset": 4392,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 3241,
+      "offset": 4448,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 3841,
+      "offset": 5048,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4788,
+      "offset": 6064,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4963,
+      "offset": 6115,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6289,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5240,
+      "offset": 6337,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6613,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 7286,
+      "offset": 8659,
       "length": 3,
       "value": "0.8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 7373,
+      "offset": 8746,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 7377,
+      "offset": 8750,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 7447,
+      "offset": 8820,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 7452,
+      "offset": 8825,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionViewCell.swift",
       "kind": "StringLiteral",
-      "offset": 7543,
+      "offset": 8916,
       "length": 2,
       "value": "\"\""
     },
@@ -9099,91 +9434,98 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "Array",
-      "offset": 289,
+      "offset": 305,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 488,
+      "offset": 504,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 537,
+      "offset": 553,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 653,
+      "offset": 669,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 690,
+      "offset": 706,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 782,
+      "offset": 798,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 827,
+      "offset": 843,
       "length": 4,
       "value": "1.25"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 878,
+      "offset": 894,
       "length": 3,
       "value": "1.2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2551,
+      "offset": 3285,
       "length": 59,
       "value": "\"Error: updateCell doesn't contains index \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 2609,
+      "offset": 3343,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3487,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2759,
+      "offset": 3556,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3065,
+      "offset": 3862,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3081,
+      "offset": 3878,
       "length": 1,
       "value": "0"
     },
@@ -9510,6 +9852,83 @@
       "value": "\"STYLITICS_CLEAR_DATA_FOR_REQUEST\""
     },
     {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 287,
+      "length": 3,
+      "value": "2.5"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "IntegerLiteral",
+      "offset": 377,
+      "length": 3,
+      "value": "280"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 383,
+      "length": 7,
+      "value": "-0.0107"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 402,
+      "length": 5,
+      "value": "6.464"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 410,
+      "length": 8,
+      "value": "-0.02875"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 430,
+      "length": 5,
+      "value": "11.55"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "IntegerLiteral",
+      "offset": 484,
+      "length": 3,
+      "value": "315"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 492,
+      "length": 16,
+      "value": "-0.0122559652928"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 521,
+      "length": 15,
+      "value": "7.2449023891171"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 542,
+      "length": 16,
+      "value": "-0.0334014807169"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Model\/Template.swift",
+      "kind": "FloatLiteral",
+      "offset": 571,
+      "length": 16,
+      "value": "13.9226394871083"
+    },
+    {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/OutfitItems\/ProductListScreen\/ViewModel\/ProductListViewModel.swift",
       "kind": "FloatLiteral",
       "offset": 974,
@@ -9561,107 +9980,170 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 216,
+      "offset": 232,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "Array",
-      "offset": 295,
+      "offset": 311,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 339,
+      "offset": 355,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 383,
+      "offset": 399,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 587,
+      "kind": "FloatLiteral",
+      "offset": 577,
+      "length": 4,
+      "value": "1.25"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 636,
       "length": 3,
-      "value": "296"
+      "value": "1.2"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 758,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 925,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 615,
-      "length": 3,
-      "value": "370"
+      "offset": 1189,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2154,
+      "offset": 1205,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3407,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3660,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2405,
+      "offset": 3911,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2853,
+      "offset": 4359,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3625,
+      "offset": 5131,
       "length": 68,
       "value": "\"Error: updateCell doesn't contains index \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 3692,
+      "offset": 5198,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5360,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3860,
+      "offset": 5438,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerView.swift",
       "kind": "StringLiteral",
-      "offset": 851,
+      "offset": 865,
       "length": 29,
       "value": "\"ClassicDisplayContainerView\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1188,
+      "offset": 1202,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerView.swift",
       "kind": "StringLiteral",
-      "offset": 1960,
+      "offset": 1974,
       "length": 27,
       "value": "\"ClassicCollectionViewCell\""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4985,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4989,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayContainerView\/ClassicDisplayContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5059,
+      "length": 2,
+      "value": "24"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/OutfitItems\/ProductList\/ProductListTableViewCell\/DisplayedItemCellViewModel.swift",
@@ -9806,30 +10288,58 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 766,
       "length": 22,
       "value": "\"HotspotContainerView\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 968,
+      "offset": 1089,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
       "kind": "StringLiteral",
-      "offset": 1340,
+      "offset": 1549,
       "length": 27,
       "value": "\"HotspotCollectionViewCell\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1675,
+      "offset": 1884,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4309,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4550,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4554,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotContainerView\/HotspotContainerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4624,
+      "length": 2,
+      "value": "24"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/OutfitItems\/ProductList\/ProductListTableViewCell\/ReplacementRowTableViewCell.swift",
@@ -9841,1164 +10351,1192 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1241,
+      "offset": 1202,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1294,
+      "offset": 1255,
       "length": 15,
       "value": "\"HelveticaNeue\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1351,
+      "offset": 1312,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1409,
+      "offset": 1370,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1412,
+      "offset": 1373,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1473,
+      "offset": 1434,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1476,
+      "offset": 1437,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1536,
+      "offset": 1497,
       "length": 2,
       "value": "33"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1539,
+      "offset": 1500,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1600,
+      "offset": 1561,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1715,
+      "offset": 1676,
       "length": 3,
       "value": "142"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1719,
+      "offset": 1680,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1782,
+      "offset": 1743,
       "length": 2,
       "value": "57"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1785,
+      "offset": 1746,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1847,
+      "offset": 1808,
       "length": 3,
       "value": "227"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1851,
+      "offset": 1812,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1914,
+      "offset": 1875,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1962,
+      "offset": 1923,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2009,
+      "offset": 1970,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2119,
+      "offset": 2021,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2171,
+      "offset": 2073,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 3585,
+      "offset": 3367,
       "length": 8,
       "value": "\"label2\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3628,
+      "offset": 3410,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 3682,
+      "offset": 3464,
       "length": 20,
       "value": "\"HelveticaNeue-bold\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3744,
+      "offset": 3526,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3896,
+      "offset": 3678,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4005,
+      "offset": 3728,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4057,
+      "offset": 3780,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4112,
+      "offset": 3835,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5501,
+      "offset": 5104,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 5555,
+      "offset": 5158,
       "length": 21,
       "value": "\"HelveticaNeue-light\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5618,
+      "offset": 5221,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5770,
+      "offset": 5373,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5829,
+      "offset": 5432,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5890,
+      "offset": 5493,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5950,
+      "offset": 5553,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "FloatLiteral",
-      "offset": 6011,
+      "offset": 5614,
       "length": 4,
       "value": "0.16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6062,
+      "offset": 5665,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6171,
+      "offset": 5715,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6223,
+      "offset": 5767,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7714,
+      "offset": 7138,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 7768,
+      "offset": 7192,
       "length": 15,
       "value": "\"HelveticaNeue\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7825,
+      "offset": 7249,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7953,
+      "offset": 7377,
       "length": 2,
       "value": "45"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7956,
+      "offset": 7380,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8038,
+      "offset": 7462,
       "length": 2,
       "value": "74"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8041,
+      "offset": 7465,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8122,
+      "offset": 7546,
       "length": 2,
       "value": "85"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8125,
+      "offset": 7549,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8207,
+      "offset": 7631,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8285,
+      "offset": 7709,
       "length": 2,
       "value": "43"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8288,
+      "offset": 7712,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8369,
+      "offset": 7793,
       "length": 2,
       "value": "75"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8372,
+      "offset": 7796,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8452,
+      "offset": 7876,
       "length": 3,
       "value": "117"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8456,
+      "offset": 7880,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8537,
+      "offset": 7961,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8585,
+      "offset": 8009,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8644,
+      "offset": 8068,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8705,
+      "offset": 8129,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8765,
+      "offset": 8189,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "FloatLiteral",
-      "offset": 8826,
+      "offset": 8250,
       "length": 4,
       "value": "0.16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8877,
+      "offset": 8301,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8986,
+      "offset": 8351,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9039,
+      "offset": 8404,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10650,
+      "offset": 9895,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 10704,
+      "offset": 9949,
       "length": 22,
       "value": "\"HelveticaNeue-medium\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10768,
+      "offset": 10013,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10826,
+      "offset": 10071,
       "length": 2,
       "value": "71"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10829,
+      "offset": 10074,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10890,
+      "offset": 10135,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10948,
+      "offset": 10193,
       "length": 3,
       "value": "171"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10952,
+      "offset": 10197,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11013,
+      "offset": 10258,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11077,
+      "offset": 10322,
       "length": 3,
       "value": "235"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11081,
+      "offset": 10326,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11148,
+      "offset": 10393,
       "length": 3,
       "value": "236"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11152,
+      "offset": 10397,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11218,
+      "offset": 10463,
       "length": 3,
       "value": "254"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11222,
+      "offset": 10467,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11289,
+      "offset": 10534,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11337,
+      "offset": 10582,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11447,
+      "offset": 10633,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11499,
+      "offset": 10685,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 12794,
+      "offset": 11860,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 12848,
+      "offset": 11914,
       "length": 20,
       "value": "\"HelveticaNeue-bold\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 12910,
+      "offset": 11976,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 12968,
+      "offset": 12034,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 12971,
+      "offset": 12037,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13032,
+      "offset": 12098,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13035,
+      "offset": 12101,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13095,
+      "offset": 12161,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13098,
+      "offset": 12164,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13159,
+      "offset": 12225,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13346,
+      "offset": 12412,
       "length": 2,
       "value": "32"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13406,
+      "offset": 12472,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13467,
+      "offset": 12533,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13527,
+      "offset": 12593,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "FloatLiteral",
-      "offset": 13588,
+      "offset": 12654,
       "length": 4,
       "value": "0.05"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13639,
+      "offset": 12705,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13700,
+      "offset": 12766,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13761,
+      "offset": 12827,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13871,
+      "offset": 12878,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 13924,
+      "offset": 12931,
       "length": 2,
       "value": "22"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 15495,
+      "offset": 14382,
       "length": 8,
       "value": "\"label7\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15569,
+      "offset": 14456,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 15623,
+      "offset": 14510,
       "length": 22,
       "value": "\"HelveticaNeue-medium\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15687,
+      "offset": 14574,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15745,
+      "offset": 14632,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15748,
+      "offset": 14635,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15809,
+      "offset": 14696,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15812,
+      "offset": 14699,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15872,
+      "offset": 14759,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15875,
+      "offset": 14762,
       "length": 3,
       "value": "255"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 15936,
+      "offset": 14823,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 16050,
+      "offset": 14878,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 16918,
+      "offset": 15665,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 16979,
+      "offset": 15726,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 17040,
+      "offset": 15787,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 17101,
+      "offset": 15848,
       "length": 3,
       "value": "\"4\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 17162,
+      "offset": 15909,
       "length": 3,
       "value": "\"5\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 17223,
+      "offset": 15970,
       "length": 3,
       "value": "\"6\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "StringLiteral",
-      "offset": 17284,
+      "offset": 16031,
       "length": 3,
       "value": "\"7\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 18179,
+      "offset": 16891,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 18215,
+      "offset": 16927,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 18346,
+      "offset": 17010,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 18387,
+      "offset": 17051,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 18430,
+      "offset": 17094,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/Model\/TopLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 18530,
+      "offset": 17194,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
-      "kind": "StringLiteral",
-      "offset": 562,
-      "length": 28,
-      "value": "\"CFBundleShortVersionString\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
-      "kind": "StringLiteral",
-      "offset": 684,
-      "length": 57,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
-      "kind": "StringLiteral",
-      "offset": 708,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
-      "kind": "StringLiteral",
-      "offset": 711,
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Protocol\/IStylitics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 735,
       "length": 1,
-      "value": "\".\""
+      "value": "3"
     },
     {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Protocol\/IStylitics.swift",
       "kind": "StringLiteral",
-      "offset": 737,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
-      "kind": "StringLiteral",
-      "offset": 740,
-      "length": 1,
-      "value": "\"\""
+      "offset": 957,
+      "length": 11,
+      "value": "\"requestId\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "FloatLiteral",
-      "offset": 837,
+      "offset": 373,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 947,
+      "offset": 483,
       "length": 15,
       "value": "\"%.\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 960,
+      "offset": 496,
       "length": 1,
       "value": "\"f\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "BooleanLiteral",
-      "offset": 1389,
+      "offset": 925,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 1907,
+      "offset": 1443,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 1960,
+      "offset": 1496,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 2008,
+      "offset": 1544,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 2059,
+      "offset": 1595,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "BooleanLiteral",
-      "offset": 2157,
+      "offset": 1693,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 2553,
+      "offset": 2089,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 3021,
+      "offset": 2557,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 3476,
+      "offset": 3012,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 3903,
+      "offset": 3439,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "BooleanLiteral",
-      "offset": 5014,
+      "offset": 4550,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 7872,
+      "offset": 7404,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 7931,
+      "offset": 7463,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 7993,
+      "offset": 7525,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 8057,
+      "offset": 7589,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 8963,
+      "offset": 8495,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 8970,
+      "offset": 8502,
       "length": 5,
       "value": "\"...\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 9533,
+      "offset": 9065,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 9645,
+      "offset": 9177,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 9662,
+      "offset": 9194,
       "length": 1,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 9681,
+      "offset": 9213,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 10048,
+      "offset": 9580,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 10093,
+      "offset": 9625,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 10229,
+      "offset": 9761,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 10392,
+      "offset": 9924,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 10476,
+      "offset": 10008,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "IntegerLiteral",
-      "offset": 10529,
+      "offset": 10061,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
       "kind": "StringLiteral",
-      "offset": 10634,
+      "offset": 10166,
       "length": 3,
       "value": "\" \""
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10358,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10409,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10462,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10514,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10902,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10914,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10939,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Utility\/ExtensionUtility.swift",
+      "kind": "StringLiteral",
+      "offset": 11050,
+      "length": 41,
+      "value": "\"com.stylitics.RefreshWidgetNotification\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/DataSource\/Remote\/RemoteDataSource.swift",
@@ -11143,49 +11681,49 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 844,
       "length": 22,
       "value": "\"HelveticaNeue-medium\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 784,
+      "offset": 908,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "StringLiteral",
-      "offset": 1344,
+      "offset": 1468,
       "length": 15,
       "value": "\"HelveticaNeue\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1401,
+      "offset": 1525,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1649,
+      "offset": 1773,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2416,
+      "offset": 2540,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/Model\/HotspotConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 2463,
+      "offset": 2587,
       "length": 1,
       "value": "8"
     },
@@ -11675,84 +12213,84 @@
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2443,
+      "offset": 2484,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 2490,
+      "offset": 2531,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 3214,
+      "offset": 3275,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3273,
+      "offset": 3334,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 3332,
+      "offset": 3393,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 3556,
+      "offset": 3617,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 3598,
+      "offset": 3659,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 4006,
+      "offset": 4095,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5637,
+      "offset": 5726,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 7884,
+      "offset": 7990,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "FloatLiteral",
-      "offset": 8381,
+      "offset": 8487,
       "length": 4,
       "value": "16.0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/ClassicDisplay\/ClassicDisplayCollectionViewCell\/ClassicCollectionViewCell.swift",
       "kind": "BooleanLiteral",
-      "offset": 10097,
+      "offset": 10203,
       "length": 4,
       "value": "true"
     },
@@ -11898,617 +12436,624 @@
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 480,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "Array",
-      "offset": 559,
+      "offset": 624,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 590,
+      "offset": 655,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
-      "kind": "FloatLiteral",
-      "offset": 634,
-      "length": 3,
-      "value": "2.5"
-    },
-    {
-      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "Array",
-      "offset": 694,
+      "offset": 717,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 777,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 772,
+      "offset": 909,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 904,
+      "offset": 1041,
       "length": 5,
       "value": "\"1,1\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 929,
+      "offset": 1066,
       "length": 5,
       "value": "\"1,2\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 957,
+      "offset": 1094,
       "length": 5,
       "value": "\"1,3\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 979,
+      "offset": 1116,
       "length": 5,
       "value": "\"1,4\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1010,
+      "offset": 1147,
       "length": 5,
       "value": "\"1,5\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1038,
+      "offset": 1175,
       "length": 5,
       "value": "\"2,1\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1065,
+      "offset": 1202,
       "length": 5,
       "value": "\"2,2\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1095,
+      "offset": 1232,
       "length": 5,
       "value": "\"2,3\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1119,
+      "offset": 1256,
       "length": 5,
       "value": "\"2,4\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1152,
+      "offset": 1289,
       "length": 5,
       "value": "\"2,5\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1182,
+      "offset": 1319,
       "length": 5,
       "value": "\"3,1\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1208,
+      "offset": 1345,
       "length": 5,
       "value": "\"3,2\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1237,
+      "offset": 1374,
       "length": 5,
       "value": "\"3,3\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1260,
+      "offset": 1397,
       "length": 5,
       "value": "\"3,4\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 1292,
+      "offset": 1429,
       "length": 5,
       "value": "\"3,5\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1921,
+      "offset": 2252,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1946,
+      "offset": 2277,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2699,
+      "offset": 3187,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 4251,
+      "offset": 5036,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4649,
+      "offset": 5434,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 4924,
+      "offset": 5709,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5234,
+      "offset": 6019,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5539,
+      "offset": 6324,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6015,
+      "offset": 6800,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6098,
+      "offset": 6883,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6175,
+      "offset": 6960,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 6511,
+      "offset": 7296,
       "length": 6,
       "value": "\"... \""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6738,
+      "offset": 7523,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6742,
+      "offset": 7527,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7431,
+      "offset": 8216,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 7892,
+      "offset": 8677,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8255,
+      "offset": 9040,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8362,
+      "offset": 9147,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8780,
+      "offset": 9655,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8851,
+      "offset": 9726,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 8923,
+      "offset": 9798,
       "length": 4,
       "value": "0.45"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 8954,
+      "offset": 9829,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 8982,
+      "offset": 9857,
       "length": 4,
       "value": "0.55"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9013,
+      "offset": 9888,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9056,
+      "offset": 9931,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9363,
+      "offset": 10328,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 9487,
+      "offset": 10452,
       "length": 4,
       "value": "0.26"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9518,
+      "offset": 10483,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 9546,
+      "offset": 10511,
       "length": 4,
       "value": "0.42"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9577,
+      "offset": 10542,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 9605,
+      "offset": 10570,
       "length": 4,
       "value": "0.58"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9636,
+      "offset": 10601,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 9664,
+      "offset": 10629,
       "length": 4,
       "value": "0.74"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9695,
+      "offset": 10660,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9738,
+      "offset": 10703,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9894,
+      "offset": 10859,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9927,
+      "offset": 10892,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 9951,
+      "offset": 10916,
       "length": 15,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 9958,
+      "offset": 10923,
       "length": 1,
       "value": "\",\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 9965,
+      "offset": 10930,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10162,
+      "offset": 11127,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10201,
+      "offset": 11166,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10230,
+      "offset": 11195,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10268,
+      "offset": 11233,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10353,
+      "offset": 11318,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10407,
+      "offset": 11372,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10492,
+      "offset": 11457,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10567,
+      "offset": 11532,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10652,
+      "offset": 11617,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10706,
+      "offset": 11671,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 10791,
+      "offset": 11756,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11047,
+      "offset": 12012,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11082,
+      "offset": 12047,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11112,
+      "offset": 12077,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11116,
+      "offset": 12081,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11141,
+      "offset": 12106,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11145,
+      "offset": 12110,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 11331,
+      "offset": 12296,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11376,
+      "offset": 12341,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11454,
+      "offset": 12419,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11530,
+      "offset": 12495,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11584,
+      "offset": 12549,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11662,
+      "offset": 12627,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 11771,
+      "offset": 12736,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "Array",
-      "offset": 12177,
+      "offset": 13142,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 13503,
+      "offset": 14468,
       "length": 12,
       "value": "\"rightCaret\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 13603,
+      "offset": 14568,
       "length": 14,
       "value": "\"shoppingIcon\""
     },
     {
       "filePath": "\/Users\/tusharmand\/Documents\/Stylitics\/mobile-sdk-ui-ios\/StyliticsUI\/StyliticsUI\/Outfits\/Hotspot\/HotspotCollectionViewCell\/HotspotCollectionCellViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 15089,
+      "offset": 16028,
       "length": 4,
       "value": "true"
     }
