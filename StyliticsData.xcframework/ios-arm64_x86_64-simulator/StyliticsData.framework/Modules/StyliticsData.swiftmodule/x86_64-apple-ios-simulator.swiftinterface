@@ -1,15 +1,17 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name StyliticsData
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CryptoKit
 import Foundation
+import SQLite3
 @_exported import StyliticsData
 import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public struct CollageDimensions {
   public let outfitHeight: Swift.Int?
   public let outfitWidth: Swift.Int?
@@ -48,12 +50,42 @@ public struct Coords {
 extension StyliticsData.Coords : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct BrowsedItem {
+  public let id: Swift.Int?
+  public let name: Swift.String?
+  public let pairingMessage: Swift.String?
+}
+extension StyliticsData.BrowsedItem : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct ReplacementsResponse {
   public typealias ResponseType = StyliticsData.ReplacementItems
   public let response: Foundation.URLResponse?
   public let data: StyliticsData.ReplacementsResponse.ResponseType?
   public let error: (any Swift.Error)?
   public init(response: Foundation.URLResponse?, data: StyliticsData.ReplacementsResponse.ResponseType?, error: (any Swift.Error)?)
+}
+public struct GalleryBundle {
+  public let personalization: StyliticsData.Personalization?
+  public let lookbookImageUrl: Swift.String?
+  public let primaryStyliticsItemId: Swift.Int?
+  public let largeImageUrl: Swift.String?
+  public let accountId: Swift.Int?
+  public let transparentImageUrl: Swift.String?
+  public let username: Swift.String?
+  public let baseImageUrl: Swift.String?
+  public let imageUrl: Swift.String?
+  public let primaryRemoteId: Swift.String?
+  public let coverImageUrl: Swift.String?
+  public let id: Swift.Int?
+  public let accountUsername: Swift.String?
+  public var items: [StyliticsData.GalleryBundleItem]?
+  public let anchorItems: [Swift.String]?
+  public var requestId: Swift.String
+  public var bundleContext: StyliticsData.BundleContext?
+}
+extension StyliticsData.GalleryBundle : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Outfit {
   public let lookbookImageUrl: Swift.String?
@@ -84,6 +116,25 @@ public struct Outfit {
   public let traits: [StyliticsData.DecodableDictionary]?
 }
 extension StyliticsData.Outfit : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GalleryBundleItem {
+  public let promotions: [Swift.String]?
+  public let colorHex: Swift.String?
+  public let otherClientItemIds: StyliticsData.DecodableDictionary?
+  public let itemId: Swift.Int?
+  public let name: Swift.String?
+  public let affiliateLink: Swift.String?
+  public let baseImageUrl: Swift.String?
+  public let remoteId: Swift.String?
+  public let stocked: Swift.Bool?
+  public let salePrice: Swift.Double?
+  public let accountUsername: Swift.String?
+  public let price: Swift.Double?
+  public var requestId: Swift.String
+  public var contextType: StyliticsData.ContextType?
+}
+extension StyliticsData.GalleryBundleItem : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct EngagementsResponse {
@@ -144,6 +195,14 @@ final public class StyliticsConfig {
   public init(timeoutInSecs: Swift.Double? = nil, enableDebugLogs: Swift.Bool? = nil, dataApisHost: StyliticsData.DataApisHost? = nil, trackingApisHost: StyliticsData.TrackingApisHost? = nil, locale: Swift.String? = nil, clientName: Swift.String, customerProfileId: Swift.String? = nil)
   @objc deinit
 }
+public struct PurchasedItem {
+  public let id: Swift.Int?
+  public let name: Swift.String?
+  public let pairingMessage: Swift.String?
+}
+extension StyliticsData.PurchasedItem : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
 extension Swift.Dictionary {
   public func merge(_ dict: [Key : Value]?) -> [Key : Value]
 }
@@ -161,6 +220,21 @@ public struct PurchasesResponse {
 }
 extension StyliticsData.ExperienceConfigManager {
   public static var labelStyle: Swift.String? {
+    get
+  }
+}
+public struct GalleryBundles {
+  public var list: [StyliticsData.GalleryBundle]
+}
+extension StyliticsData.GalleryBundles : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ContextType : Swift.String {
+  case purchased
+  case browsed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -303,6 +377,12 @@ public enum UIComponent : Swift.String {
     get
   }
 }
+public struct BundleContext {
+  public let imageUrl: Swift.String?
+  public let contextType: StyliticsData.ContextType
+  public let pairingMessage: Swift.String?
+  public let productName: Swift.String?
+}
 public struct ReplacementItems {
   public let items: [Swift.String : [StyliticsData.ReplacementItem]]
 }
@@ -312,6 +392,7 @@ extension StyliticsData.ReplacementItems : Swift.Decodable {
 @_hasMissingDesignatedInitializers public class StyliticsDataApis {
   public static func outfits(filterInfo: [Swift.String : Swift.String], shouldEnableMixAndMatch: Swift.Bool = false, response: @escaping (StyliticsData.OutfitsResponse) -> Swift.Void) throws
   public static func replacements(optionsInfo: [Swift.String : Swift.String], response: @escaping (StyliticsData.ReplacementsResponse) -> Swift.Void)
+  public static func dynamicGalleries(filterInfo: [Swift.String : Swift.String], response: @escaping (StyliticsData.DynamicGalleriesResponse) -> Swift.Void) throws
   public static func configure(config: StyliticsData.StyliticsConfig) throws
   public static func engagement(trackingInfo: StyliticsData.EngagementsTrackingInfo, response: ((StyliticsData.EngagementsResponse) -> Swift.Void)? = nil)
   public static func purchases(purchasedItems: StyliticsData.PurchasedItems, response: ((StyliticsData.PurchasesResponse) -> Swift.Void)? = nil)
@@ -331,6 +412,8 @@ public enum EngagementInfo {
   case outfit(outfit: StyliticsData.Outfit, position: Swift.Int)
   case outfitItem(outfitItem: StyliticsData.OutfitItem, position: Swift.Int)
   case replacement(outfit: StyliticsData.Outfit, oldOutfitItem: StyliticsData.OutfitItem, newOutfitItem: StyliticsData.OutfitItem)
+  case galleryBundle(galleryBundle: StyliticsData.GalleryBundle, position: Swift.Int)
+  case galleryBundleItem(galleryBundleItem: StyliticsData.GalleryBundleItem, position: Swift.Int)
   case eventDetails(requestId: Swift.String)
 }
 public struct EngagementsTrackingInfo {
@@ -341,6 +424,12 @@ public struct DecodableDictionary : Swift.Decodable {
   public let dictionary: StyliticsData.DecodableDictionary.Value?
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct DynamicGalleriesResponse {
+  public typealias ResponseType = StyliticsData.GalleryBundles
+  public let response: Foundation.URLResponse?
+  public let data: StyliticsData.DynamicGalleriesResponse.ResponseType?
+  public let error: (any Swift.Error)?
+}
 public enum DataApisHost {
   case production
   case staging
@@ -349,9 +438,19 @@ public enum DataApisHost {
     get
   }
 }
+public struct Personalization {
+  public let browsedItems: [StyliticsData.BrowsedItem]?
+  public let purchasedItems: [StyliticsData.PurchasedItem]?
+}
+extension StyliticsData.Personalization : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
 extension StyliticsData.CollageDimensions.CodingKeys : Swift.Equatable {}
 extension StyliticsData.CollageDimensions.CodingKeys : Swift.Hashable {}
 extension StyliticsData.CollageDimensions.CodingKeys : Swift.RawRepresentable {}
+extension StyliticsData.ContextType : Swift.Equatable {}
+extension StyliticsData.ContextType : Swift.Hashable {}
+extension StyliticsData.ContextType : Swift.RawRepresentable {}
 extension StyliticsData.NetworkError : Swift.Equatable {}
 extension StyliticsData.NetworkError : Swift.Hashable {}
 extension StyliticsData.ReplacementItem.CodingKeys : Swift.Equatable {}

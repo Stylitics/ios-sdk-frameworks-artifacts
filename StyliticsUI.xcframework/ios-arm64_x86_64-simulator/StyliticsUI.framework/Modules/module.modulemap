@@ -1,7 +1,7 @@
 framework module StyliticsUI {
   umbrella header "StyliticsUI.h"
-
   export *
+
   module * { export * }
 }
 
