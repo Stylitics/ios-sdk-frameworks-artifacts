@@ -1,20 +1,28 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsUI
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import DeveloperToolsSupport
 import Foundation
 import SafariServices
 import StyliticsData
 @_exported import StyliticsUI
 import Swift
+import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @_hasMissingDesignatedInitializers final public class StyliticsUIApis : StyliticsUI.IStylitics {
   public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, displayProductListFromSDK: Swift.Bool = true, productListScreenTemplate: StyliticsUI.ProductListScreenTemplate = .standard()) -> UIKit.UIView
   public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
+  public static func load(bundleInfo: StyliticsUI.GalleryBundleInfo, galleryProductListInfo: StyliticsUI.DynamicGalleryProductListInfo) -> UIKit.UIView
   public static func closeProductListScreen(requestId: Swift.String)
+  public static func load(galleryBundles: StyliticsData.GalleryBundles, dynamicGalleryInfo: StyliticsUI.DynamicGalleryInfo = DynamicGalleryInfo(), displayProductListFromSDK: Swift.Bool = true, galleryProductListScreenConfig: StyliticsUI.GalleryProductListScreenConfig = GalleryProductListScreenConfig()) -> UIKit.UIView
   @objc deinit
+}
+public struct DynamicGalleryProductListInfo {
+  public init(productListConfig: StyliticsUI.GalleryProductListConfig = GalleryProductListConfig(), productListListener: StyliticsUI.GalleryProductListListener? = nil)
 }
 public enum ProductListScreenTemplate {
   case standard(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
@@ -155,6 +163,51 @@ public enum HotspotConfigColor : Swift.String {
     get
   }
 }
+public enum DynamicGalleryConfigColor : Swift.String {
+  case widgetBackgroundColor
+  case shopThisLookBackgroundColor
+  case headerBackgroundColor
+  case footerBackgroundColor
+  case bulletHighlightedColor
+  public var toUIColor: UIKit.UIColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum GalleryProductListConfigColor : Swift.String {
+  case headerFontColor
+  case itemNameFontColor
+  case itemPriceFontColor
+  case salePriceFontColor
+  case strikeThroughColor
+  case itemBorderColor
+  case imageBorderColor
+  case backgroundColor
+  case imageBackgroundColor
+  public var toUIColor: UIKit.UIColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct GalleryProductListListener {
+  public init(onOutfitItemClick: ((StyliticsUI.GalleryBundleInfo, StyliticsUI.GalleryBundleItemInfo) -> Swift.Void)? = nil, onOutfitItemView: ((StyliticsUI.GalleryBundleInfo, StyliticsUI.GalleryBundleItemInfo) -> Swift.Void)? = nil)
+}
+public struct GalleryBundleItemInfo {
+  public let bundleItem: StyliticsData.GalleryBundleItem
+  public let position: Swift.Int
+}
+public struct GalleryBundleInfo {
+  public let galleryBundle: StyliticsData.GalleryBundle
+  public let position: Swift.Int
+}
 public struct ReplacementInfo {
   public let replacementItem: StyliticsData.ReplacementItem
   public let position: Swift.Int
@@ -193,6 +246,11 @@ extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
 }
 public protocol IRefreshView {
   func refreshView(outfits: StyliticsData.Outfits?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+  func refreshView(galleryBundles: StyliticsData.GalleryBundles?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+}
+extension StyliticsUI.IRefreshView {
+  public func refreshView(outfits: StyliticsData.Outfits?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+  public func refreshView(galleryBundles: StyliticsData.GalleryBundles?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
 }
 @_hasMissingDesignatedInitializers final public class Constants {
   public static let MINIMALIST_TEXT: Swift.String
@@ -204,7 +262,38 @@ public protocol IRefreshView {
   public static let NIKE_DOTS_VIEW_ENTIRE_LOOK_TEXT: Swift.String
   public static let NIKE_DOTS_SHOP_THE_MODEL_TEXT: Swift.String
   public static let SHOP_THE_LOOK_TEXT: Swift.String
+  public static let SHOP_THIS_LOOK_TEXT: Swift.String
   @objc deinit
+}
+public struct DynamicGalleryConfig : StyliticsUI.IWidgetConfig {
+  public init(widget: StyliticsUI.DynamicGalleryConfig.Widget = Widget(), context: StyliticsUI.DynamicGalleryConfig.Context = Context(), bottomLabel: StyliticsUI.DynamicGalleryConfig.BottomLabel = BottomLabel(), bullet: StyliticsUI.DynamicGalleryConfig.Bullet = Bullet())
+  public struct Widget {
+    public init(cornerRadius: CoreFoundation.CGFloat = 14, backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.widgetBackgroundColor.toUIColor, cardGutter: CoreFoundation.CGFloat = 12)
+  }
+  public struct Context {
+    public init(backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.headerBackgroundColor.toUIColor, imageBackgroundColor: UIKit.UIColor = .white, paddingHorizontal: CoreFoundation.CGFloat = 20, paddingVertical: CoreFoundation.CGFloat = 16, productNameFontFamilyAndWeight: Swift.String = "SFProText-Semibold", productNameFontSize: CoreFoundation.CGFloat = 15, productNameFontColor: UIKit.UIColor = .black, titleFontFamilyAndWeight: Swift.String = "SFProText-Regular", titleFontSize: CoreFoundation.CGFloat = 13, titleFontColor: UIKit.UIColor = .black, productNameVerticalSpacing: CoreFoundation.CGFloat = 0)
+  }
+  public struct BottomLabel {
+    public init(title: Swift.String = Constants.SHOP_THIS_LOOK_TEXT, fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, fontColor: UIKit.UIColor = .white, backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.footerBackgroundColor.toUIColor, titleBackgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.shopThisLookBackgroundColor.toUIColor, cornerRadius: CoreFoundation.CGFloat = 16, titlePaddingVertical: CoreFoundation.CGFloat = 7, titlePaddingHorizontal: CoreFoundation.CGFloat = 14, bottomPadding: CoreFoundation.CGFloat = 16, rightPadding: CoreFoundation.CGFloat = 20)
+  }
+  public struct Bullet {
+    public init(defaultColor: UIKit.UIColor = .gray, highlightedColor: UIKit.UIColor = DynamicGalleryConfigColor.bulletHighlightedColor.toUIColor, paddingVertical: CoreFoundation.CGFloat = 10)
+  }
+}
+public struct GalleryProductListScreenConfig {
+  public init(itemListHeader: StyliticsUI.GalleryProductListScreenConfig.ItemListHeader = ItemListHeader(), galleryProductListInfo: StyliticsUI.DynamicGalleryProductListInfo = DynamicGalleryProductListInfo(), presentationStyle: UIKit.UIModalPresentationStyle = .automatic)
+  public enum ProductListScreenHeaderAlign {
+    case top
+    case centre
+    public static func == (a: StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign, b: StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct ItemListHeader {
+    public init(title: Swift.String = "Shop this look", productListScreenHeaderAlign: StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign = .top, fontFamilyAndWeight: Swift.String = "SFProText-Semibold", fontSize: CoreFoundation.CGFloat = 17, fontColor: UIKit.UIColor = GalleryProductListConfigColor.headerFontColor.toUIColor)
+  }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ClassicDisplayContainerView : UIKit.UIView, StyliticsUI.IRefreshView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -224,6 +313,12 @@ extension StyliticsUI.ClassicDisplayContainerView : UIKit.UICollectionViewDelega
 }
 extension StyliticsUI.ClassicDisplayContainerView {
   @_Concurrency.MainActor(unsafe) final public func refreshView(outfits: StyliticsData.Outfits? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+}
+public struct DynamicGalleryInfo {
+  public init(config: StyliticsUI.DynamicGalleryConfig = DynamicGalleryConfig(), listener: StyliticsUI.DynamicGalleryListener? = nil)
+}
+public struct DynamicGalleryListener {
+  public init(onClick: ((StyliticsUI.GalleryBundleInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.GalleryBundleInfo) -> Swift.Void)? = nil)
 }
 public struct HotspotListener {
   public init(onClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onViewDetailsClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onOutfitItemClick: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil)
@@ -290,6 +385,7 @@ public protocol IStylitics {
 }
 extension StyliticsUI.IStylitics {
   public static func refreshTemplate(view: UIKit.UIView, outfits: StyliticsData.Outfits? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+  public static func refreshTemplate(view: UIKit.UIView, galleryBundles: StyliticsData.GalleryBundles? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
   public static func clearData(for requestId: Swift.String)
 }
 public enum ProductListScreenState {
@@ -312,6 +408,28 @@ public enum OutfitsTemplate {
   case classic(classicConfig: StyliticsUI.ClassicConfig = ClassicConfig(), classicListener: StyliticsUI.ClassicListener? = nil, isItemSwapEnabled: Swift.Bool = false, showScrollBar: Swift.Bool = false)
   case hotspot(hotspotConfig: StyliticsUI.HotspotConfig = HotspotConfig(), hotspotListener: StyliticsUI.HotspotListener = HotspotListener(), showScrollBar: Swift.Bool = false)
 }
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class DynamicGalleryContainerView : UIKit.UIView, StyliticsUI.IRefreshView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StyliticsUI.DynamicGalleryContainerView : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+}
+extension StyliticsUI.DynamicGalleryContainerView : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension StyliticsUI.DynamicGalleryContainerView : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
+}
+extension StyliticsUI.DynamicGalleryContainerView : UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+}
+extension StyliticsUI.DynamicGalleryContainerView {
+  @_Concurrency.MainActor(unsafe) final public func refreshView(galleryBundles: StyliticsData.GalleryBundles? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+}
 public struct OutfitItemInfo {
   public let outfitItem: StyliticsData.OutfitItem
   public let position: Swift.Int
@@ -322,6 +440,24 @@ final public class ClassicListener {
 }
 public enum ProductListTemplate {
   case standard(productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener? = nil, showScrollBar: Swift.Bool = false)
+}
+public struct GalleryProductListConfig {
+  public init(itemName: StyliticsUI.GalleryProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.GalleryProductListConfig.ItemPrice = ItemPrice(), backgroundColor: UIKit.UIColor = GalleryProductListConfigColor.backgroundColor.toUIColor, imageBackgroundColor: UIKit.UIColor = GalleryProductListConfigColor.imageBackgroundColor.toUIColor, imageBorderColor: UIKit.UIColor = GalleryProductListConfigColor.imageBorderColor.toUIColor, itemBorderColor: UIKit.UIColor = GalleryProductListConfigColor.itemBorderColor.toUIColor, paddingHorizontal: CoreFoundation.CGFloat = 16, paddingVertical: CoreFoundation.CGFloat = 12, productDetailsPadding: CoreFoundation.CGFloat = 16)
+  public struct ItemName {
+    public init(fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 17, fontColor: UIKit.UIColor = GalleryProductListConfigColor.itemNameFontColor.toUIColor, productNameVerticalSpacing: CoreFoundation.CGFloat = 2)
+  }
+  public struct ItemPrice {
+    public init(fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, priceFontColor: UIKit.UIColor = GalleryProductListConfigColor.itemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = GalleryProductListConfigColor.salePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = GalleryProductListConfigColor.strikeThroughColor.toUIColor, swapPricePosion: Swift.Bool = false, style: StyliticsUI.GalleryProductListConfig.PriceStrikethrough = .show, decimal: Swift.Int = 2, priceVerticalSpacing: CoreFoundation.CGFloat = 3)
+  }
+  public enum PriceStrikethrough {
+    case show
+    case hide
+    public static func == (a: StyliticsUI.GalleryProductListConfig.PriceStrikethrough, b: StyliticsUI.GalleryProductListConfig.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
 }
 public protocol IWidgetConfig {
 }
@@ -351,5 +487,15 @@ extension StyliticsUI.StandardProductListConfigColor : Swift.RawRepresentable {}
 extension StyliticsUI.HotspotConfigColor : Swift.Equatable {}
 extension StyliticsUI.HotspotConfigColor : Swift.Hashable {}
 extension StyliticsUI.HotspotConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.DynamicGalleryConfigColor : Swift.Equatable {}
+extension StyliticsUI.DynamicGalleryConfigColor : Swift.Hashable {}
+extension StyliticsUI.DynamicGalleryConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.GalleryProductListConfigColor : Swift.Equatable {}
+extension StyliticsUI.GalleryProductListConfigColor : Swift.Hashable {}
+extension StyliticsUI.GalleryProductListConfigColor : Swift.RawRepresentable {}
 extension StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Equatable {}
 extension StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Hashable {}
+extension StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Equatable {}
+extension StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Hashable {}
+extension StyliticsUI.GalleryProductListConfig.PriceStrikethrough : Swift.Equatable {}
+extension StyliticsUI.GalleryProductListConfig.PriceStrikethrough : Swift.Hashable {}
