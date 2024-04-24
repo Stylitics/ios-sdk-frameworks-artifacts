@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name StyliticsUI
 // swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
 import DeveloperToolsSupport
 import Foundation
 import SafariServices
@@ -13,16 +14,36 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public struct ShopTheSetConfigs : StyliticsUI.IWidgetConfig {
+  public init(carousel: StyliticsUI.ShopTheSetConfigs.Carousel = Carousel(), itemList: StyliticsUI.ShopTheSetConfigs.ItemList = ItemList())
+  public struct Carousel {
+    public init(paddingVertical: CoreFoundation.CGFloat = 30, backgroundColor: UIKit.UIColor = ShopTheSetConfigColor.carouselBackgroundColor.toUIColor, imageSize: CoreFoundation.CGFloat = 176, imageGutter: CoreFoundation.CGFloat = 48)
+  }
+  public struct ItemList {
+    public init(itemNameFontFamilyAndWeight: Swift.String = "SFProText-Regular", itemNameFontSize: CoreFoundation.CGFloat = 14, itemNameFontColor: UIKit.UIColor = ShopTheSetConfigColor.itemNameFontColor.toUIColor, backgroundColor: UIKit.UIColor = ShopTheSetConfigColor.itemListBackgroundColor.toUIColor, cornerRadius: CoreFoundation.CGFloat = 10, paddingVertical: CoreFoundation.CGFloat = 24, paddingHorizontal: CoreFoundation.CGFloat = 16, itemPaddingVertical: CoreFoundation.CGFloat = 12, itemPaddingHorizontal: CoreFoundation.CGFloat = 16, itemBackgroundColor: UIKit.UIColor = ShopTheSetConfigColor.imageBackgroundColor.toUIColor, itemCornerRadius: CoreFoundation.CGFloat = 10, imageSize: CoreFoundation.CGFloat = 56, priceFontFamilyAndWeight: Swift.String = "SFProText-Regular", priceFontSize: CoreFoundation.CGFloat = 15, priceFontColor: UIKit.UIColor = ShopTheSetConfigColor.itemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = ShopTheSetConfigColor.salePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = ShopTheSetConfigColor.strikeThroughColor.toUIColor, style: StyliticsUI.ShopTheSetConfigs.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false, priceDecimal: Swift.Int = 2)
+  }
+  public enum PriceStrikethrough {
+    case show
+    case hide
+    public static func == (a: StyliticsUI.ShopTheSetConfigs.PriceStrikethrough, b: StyliticsUI.ShopTheSetConfigs.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
 @_hasMissingDesignatedInitializers final public class StyliticsUIApis : StyliticsUI.IStylitics {
   public static func load(outfits: StyliticsData.Outfits, outfitsTemplate: StyliticsUI.OutfitsTemplate, displayProductListFromSDK: Swift.Bool = true, productListScreenTemplate: StyliticsUI.ProductListScreenTemplate = .standard()) -> UIKit.UIView
   public static func load(outfit: StyliticsData.Outfit, productListTemplate: StyliticsUI.ProductListTemplate) -> UIKit.UIView
-  public static func load(bundleInfo: StyliticsUI.GalleryBundleInfo, galleryProductListInfo: StyliticsUI.DynamicGalleryProductListInfo) -> UIKit.UIView
+  public static func load(bundleInfo: StyliticsUI.OutfitBundleInfo, outfitBundleProductListConfig: StyliticsUI.OutfitBundleProductListConfig = OutfitBundleProductListConfig(), outfitBundleProductListListener: StyliticsUI.OutfitBundleProductListListener? = nil) -> UIKit.UIView
   public static func closeProductListScreen(requestId: Swift.String)
-  public static func load(galleryBundles: StyliticsData.GalleryBundles, dynamicGalleryInfo: StyliticsUI.DynamicGalleryInfo = DynamicGalleryInfo(), displayProductListFromSDK: Swift.Bool = true, galleryProductListScreenConfig: StyliticsUI.GalleryProductListScreenConfig = GalleryProductListScreenConfig()) -> UIKit.UIView
+  public static func load(shopTheSet: StyliticsData.ShopTheSet, shopTheSetInfo: StyliticsUI.ShopTheSetInfo = ShopTheSetInfo()) -> UIKit.UIView
+  public static func load(galleryBundles: StyliticsData.GalleryBundles, dynamicGalleryInfo: StyliticsUI.DynamicGalleryInfo = DynamicGalleryInfo(), displayProductListFromSDK: Swift.Bool = true, outfitBundleProductListScreenConfig: StyliticsUI.OutfitBundleProductListScreenConfig = OutfitBundleProductListScreenConfig()) -> UIKit.UIView
+  public static func load(styledForYouData: StyliticsData.StyledForYou, styledForYouInfo: StyliticsUI.StyledForYouInfo = StyledForYouInfo(), displayProductListFromSDK: Swift.Bool = true, outfitBundleProductListScreenConfig: StyliticsUI.OutfitBundleProductListScreenConfig = OutfitBundleProductListScreenConfig()) -> UIKit.UIView
   @objc deinit
 }
-public struct DynamicGalleryProductListInfo {
-  public init(productListConfig: StyliticsUI.GalleryProductListConfig = GalleryProductListConfig(), productListListener: StyliticsUI.GalleryProductListListener? = nil)
+public struct OutfitBundleProductListInfo {
+  public init(productListConfig: StyliticsUI.OutfitBundleProductListConfig = OutfitBundleProductListConfig(), productListListener: StyliticsUI.OutfitBundleProductListListener? = nil)
 }
 public enum ProductListScreenTemplate {
   case standard(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
@@ -178,7 +199,7 @@ public enum DynamicGalleryConfigColor : Swift.String {
     get
   }
 }
-public enum GalleryProductListConfigColor : Swift.String {
+public enum BundleProductListConfigColor : Swift.String {
   case headerFontColor
   case itemNameFontColor
   case itemPriceFontColor
@@ -197,16 +218,79 @@ public enum GalleryProductListConfigColor : Swift.String {
     get
   }
 }
-public struct GalleryProductListListener {
-  public init(onOutfitItemClick: ((StyliticsUI.GalleryBundleInfo, StyliticsUI.GalleryBundleItemInfo) -> Swift.Void)? = nil, onOutfitItemView: ((StyliticsUI.GalleryBundleInfo, StyliticsUI.GalleryBundleItemInfo) -> Swift.Void)? = nil)
+public enum StyledForYouColor : Swift.String {
+  case contextBackgroundColor
+  case anchorItemBackgroundColor
+  case bulletHighlightedColor
+  case footerBackgroundColor
+  case shopThisLookBackgroundColor
+  case outOfStockBadgeBackgroundColor
+  case similarItemBadgeBackgroundColor
+  public var toUIColor: UIKit.UIColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
-public struct GalleryBundleItemInfo {
-  public let bundleItem: StyliticsData.GalleryBundleItem
+public enum ShopTheSetConfigColor : Swift.String {
+  case itemNameFontColor
+  case itemPriceFontColor
+  case salePriceFontColor
+  case strikeThroughColor
+  case carouselBackgroundColor
+  case itemListBackgroundColor
+  case imageBackgroundColor
+  public var toUIColor: UIKit.UIColor {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DateFormat : Swift.String {
+  case mm_dd_yy
+  case dd_mm_yy
+  case mm_dd_yyyy
+  case dd_mm_yyyy
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct OutfitBundleItemInfo {
+  public let outfitBundleItem: StyliticsData.OutfitBundleItem
   public let position: Swift.Int
 }
-public struct GalleryBundleInfo {
-  public let galleryBundle: StyliticsData.GalleryBundle
+public struct OutfitBundleInfo {
+  public let outfitBundle: StyliticsData.OutfitBundle
   public let position: Swift.Int
+}
+public struct OutfitBundleProductListConfig {
+  public init(itemName: StyliticsUI.OutfitBundleProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.OutfitBundleProductListConfig.ItemPrice = ItemPrice(), backgroundColor: UIKit.UIColor = BundleProductListConfigColor.backgroundColor.toUIColor, imageBackgroundColor: UIKit.UIColor = BundleProductListConfigColor.imageBackgroundColor.toUIColor, imageBorderColor: UIKit.UIColor = BundleProductListConfigColor.imageBorderColor.toUIColor, itemBorderColor: UIKit.UIColor = BundleProductListConfigColor.itemBorderColor.toUIColor, paddingHorizontal: CoreFoundation.CGFloat = 16, paddingVertical: CoreFoundation.CGFloat = 12, productDetailsPadding: CoreFoundation.CGFloat = 16)
+  public struct ItemName {
+    public init(fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 17, fontColor: UIKit.UIColor = BundleProductListConfigColor.itemNameFontColor.toUIColor, verticalSpacing: CoreFoundation.CGFloat = 2)
+  }
+  public struct ItemPrice {
+    public init(fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, priceFontColor: UIKit.UIColor = BundleProductListConfigColor.itemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = BundleProductListConfigColor.salePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = BundleProductListConfigColor.strikeThroughColor.toUIColor, swapPricesPosition: Swift.Bool = false, style: StyliticsUI.OutfitBundleProductListConfig.PriceStrikethrough = .show, priceDecimal: Swift.Int = 2, verticalSpacing: CoreFoundation.CGFloat = 3)
+  }
+  public enum PriceStrikethrough {
+    case show
+    case hide
+    public static func == (a: StyliticsUI.OutfitBundleProductListConfig.PriceStrikethrough, b: StyliticsUI.OutfitBundleProductListConfig.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct OutfitBundleProductListListener {
+  public init(onOutfitItemClick: ((StyliticsUI.OutfitBundleInfo, StyliticsUI.OutfitBundleItemInfo) -> Swift.Void)? = nil, onOutfitItemView: ((StyliticsUI.OutfitBundleInfo, StyliticsUI.OutfitBundleItemInfo) -> Swift.Void)? = nil)
 }
 public struct ReplacementInfo {
   public let replacementItem: StyliticsData.ReplacementItem
@@ -244,13 +328,56 @@ extension StyliticsUI.ProductListContainerView : UIKit.UITableViewDataSource {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
 }
+public struct ShopTheSetListener {
+  public init(onItemClick: ((StyliticsData.ShopTheSetItemsInfo) -> Swift.Void)? = nil, onItemView: ((StyliticsData.ShopTheSetItemsInfo) -> Swift.Void)? = nil)
+}
 public protocol IRefreshView {
   func refreshView(outfits: StyliticsData.Outfits?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
   func refreshView(galleryBundles: StyliticsData.GalleryBundles?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+  func refreshView(styledForYou: StyliticsData.StyledForYou?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+  func refreshView(shopTheSet: StyliticsData.ShopTheSet?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
 }
 extension StyliticsUI.IRefreshView {
   public func refreshView(outfits: StyliticsData.Outfits?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
   public func refreshView(galleryBundles: StyliticsData.GalleryBundles?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+  public func refreshView(styledForYou: StyliticsData.StyledForYou?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+  public func refreshView(shopTheSet: StyliticsData.ShopTheSet?, widgetConfig: (any StyliticsUI.IWidgetConfig)?)
+}
+public struct StyledForYouConfig : StyliticsUI.IWidgetConfig {
+  public init(widget: StyliticsUI.StyledForYouConfig.Widget = Widget(), tabContext: StyliticsUI.StyledForYouConfig.TabContext = TabContext(), anchorItems: StyliticsUI.StyledForYouConfig.AnchorItems = AnchorItems(), outOfStock: StyliticsUI.StyledForYouConfig.OutOfStock = OutOfStock(), similarItems: StyliticsUI.StyledForYouConfig.SimilarItems = SimilarItems(), bottomLabel: StyliticsUI.StyledForYouConfig.BottomLabel = BottomLabel(), bullet: StyliticsUI.StyledForYouConfig.Bullet = Bullet())
+  public struct Widget {
+    public init(cardGutter: CoreFoundation.CGFloat = 12)
+  }
+  public struct TabContext {
+    public init(backgroundColor: UIKit.UIColor = StyledForYouColor.contextBackgroundColor.toUIColor, labelBackgroundColor: UIKit.UIColor = .tertiarySystemFill, labelSelectedBackgroundColor: UIKit.UIColor = .white, labelFontFamilyAndWeight: Swift.String = "SFProText-Semibold", labelFontSize: CoreFoundation.CGFloat = 13, labelFontColor: UIKit.UIColor = .black)
+  }
+  public struct AnchorItems {
+    public init(backgroundColor: UIKit.UIColor = StyledForYouColor.anchorItemBackgroundColor.toUIColor, selectedBorderColor: UIKit.UIColor = .black, itemBackgroundColor: UIKit.UIColor = .white, itemCornerRadius: CoreFoundation.CGFloat = 12, cardGutterWidth: CoreFoundation.CGFloat = 10, cardPaddingVertical: CoreFoundation.CGFloat = 8, cardPaddingHorizontal: CoreFoundation.CGFloat = 13, productNameFontColor: UIKit.UIColor = .black, productNameFontFamilyAndWeight: Swift.String = "SFProText-Regular", productNameFontSize: CoreFoundation.CGFloat = 15, contextNameFontColor: UIKit.UIColor = .black, contextNameFontFamilyAndWeight: Swift.String = "SFProText-Regular", contextNameFontSize: CoreFoundation.CGFloat = 13, contextDateFormat: StyliticsUI.DateFormat = .mm_dd_yy, priceDecimal: Swift.Int = 2, priceFontColor: UIKit.UIColor = .gray, priceFontFamilyAndWeight: Swift.String = "SFProText-Semibold", priceFontSize: CoreFoundation.CGFloat = 13, salePriceFontColor: UIKit.UIColor = .gray, strikeThroughPriceFontColor: UIKit.UIColor = .gray, style: StyliticsUI.StyledForYouConfig.PriceStrikethrough = .show, swapPricesPosition: Swift.Bool = false)
+  }
+  public struct OutOfStock {
+    public init(badgeFontColor: UIKit.UIColor = .black, badgeFontFamilyAndWeight: Swift.String = "SFProText-Medium", badgeFontSize: CoreFoundation.CGFloat = 12, badgeVerticalSpacing: CoreFoundation.CGFloat = 4, badgeHorizontalSpacing: CoreFoundation.CGFloat = 12, badgeBackgroundColor: UIKit.UIColor = StyledForYouColor.outOfStockBadgeBackgroundColor.toUIColor)
+  }
+  public struct SimilarItems {
+    public init(badgeFontColor: UIKit.UIColor = .black, badgeFontFamilyAndWeight: Swift.String = "SFProText-Medium", badgeFontSize: CoreFoundation.CGFloat = 12, badgeVerticalSpacing: CoreFoundation.CGFloat = 4, badgeHorizontalSpacing: CoreFoundation.CGFloat = 12, badgeBackgroundColor: UIKit.UIColor = StyledForYouColor.similarItemBadgeBackgroundColor.toUIColor)
+  }
+  public struct BottomLabel {
+    public init(ctaTitle: Swift.String = Constants.SHOP_THIS_LOOK_TEXT, fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, fontColor: UIKit.UIColor = .white, backgroundColor: UIKit.UIColor = StyledForYouColor.footerBackgroundColor.toUIColor, ctaBackgroundColor: UIKit.UIColor = StyledForYouColor.shopThisLookBackgroundColor.toUIColor, cornerRadius: CoreFoundation.CGFloat = 16, ctaPaddingVertical: CoreFoundation.CGFloat = 7, ctaPaddingHorizontal: CoreFoundation.CGFloat = 14, paddingVertical: CoreFoundation.CGFloat = 16, paddingHorizontal: CoreFoundation.CGFloat = 20)
+  }
+  public struct Bullet {
+    public init(defaultColor: UIKit.UIColor = .gray, highlightedColor: UIKit.UIColor = StyledForYouColor.bulletHighlightedColor.toUIColor, paddingVertical: CoreFoundation.CGFloat = 10)
+  }
+  public enum PriceStrikethrough {
+    case show
+    case hide
+    public static func == (a: StyliticsUI.StyledForYouConfig.PriceStrikethrough, b: StyliticsUI.StyledForYouConfig.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct ShopTheSetInfo {
+  public init(config: StyliticsUI.ShopTheSetConfigs = ShopTheSetConfigs(), listener: StyliticsUI.ShopTheSetListener? = nil)
 }
 @_hasMissingDesignatedInitializers final public class Constants {
   public static let MINIMALIST_TEXT: Swift.String
@@ -266,34 +393,35 @@ extension StyliticsUI.IRefreshView {
   @objc deinit
 }
 public struct DynamicGalleryConfig : StyliticsUI.IWidgetConfig {
-  public init(widget: StyliticsUI.DynamicGalleryConfig.Widget = Widget(), context: StyliticsUI.DynamicGalleryConfig.Context = Context(), bottomLabel: StyliticsUI.DynamicGalleryConfig.BottomLabel = BottomLabel(), bullet: StyliticsUI.DynamicGalleryConfig.Bullet = Bullet())
+  public init(widget: StyliticsUI.DynamicGalleryConfig.Widget = Widget(), headerContext: StyliticsUI.DynamicGalleryConfig.HeaderContext = HeaderContext(), bottomLabel: StyliticsUI.DynamicGalleryConfig.BottomLabel = BottomLabel(), bullet: StyliticsUI.DynamicGalleryConfig.Bullet = Bullet())
   public struct Widget {
-    public init(cornerRadius: CoreFoundation.CGFloat = 14, backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.widgetBackgroundColor.toUIColor, cardGutter: CoreFoundation.CGFloat = 12)
+    public init(cornerRadius: CoreFoundation.CGFloat = 14, backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.widgetBackgroundColor.toUIColor, cardGutter: CoreFoundation.CGFloat = 12, cardPeek: CoreFoundation.CGFloat = 16)
   }
-  public struct Context {
+  public struct HeaderContext {
     public init(backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.headerBackgroundColor.toUIColor, imageBackgroundColor: UIKit.UIColor = .white, paddingHorizontal: CoreFoundation.CGFloat = 20, paddingVertical: CoreFoundation.CGFloat = 16, productNameFontFamilyAndWeight: Swift.String = "SFProText-Semibold", productNameFontSize: CoreFoundation.CGFloat = 15, productNameFontColor: UIKit.UIColor = .black, titleFontFamilyAndWeight: Swift.String = "SFProText-Regular", titleFontSize: CoreFoundation.CGFloat = 13, titleFontColor: UIKit.UIColor = .black, productNameVerticalSpacing: CoreFoundation.CGFloat = 0)
   }
   public struct BottomLabel {
-    public init(title: Swift.String = Constants.SHOP_THIS_LOOK_TEXT, fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, fontColor: UIKit.UIColor = .white, backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.footerBackgroundColor.toUIColor, titleBackgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.shopThisLookBackgroundColor.toUIColor, cornerRadius: CoreFoundation.CGFloat = 16, titlePaddingVertical: CoreFoundation.CGFloat = 7, titlePaddingHorizontal: CoreFoundation.CGFloat = 14, bottomPadding: CoreFoundation.CGFloat = 16, rightPadding: CoreFoundation.CGFloat = 20)
+    public init(ctaTitle: Swift.String = Constants.SHOP_THIS_LOOK_TEXT, fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, fontColor: UIKit.UIColor = .white, backgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.footerBackgroundColor.toUIColor, ctaBackgroundColor: UIKit.UIColor = DynamicGalleryConfigColor.shopThisLookBackgroundColor.toUIColor, cornerRadius: CoreFoundation.CGFloat = 16, ctaPaddingVertical: CoreFoundation.CGFloat = 7, ctaPaddingHorizontal: CoreFoundation.CGFloat = 14, paddingVertical: CoreFoundation.CGFloat = 16, paddingHorizontal: CoreFoundation.CGFloat = 20)
   }
   public struct Bullet {
     public init(defaultColor: UIKit.UIColor = .gray, highlightedColor: UIKit.UIColor = DynamicGalleryConfigColor.bulletHighlightedColor.toUIColor, paddingVertical: CoreFoundation.CGFloat = 10)
   }
 }
-public struct GalleryProductListScreenConfig {
-  public init(itemListHeader: StyliticsUI.GalleryProductListScreenConfig.ItemListHeader = ItemListHeader(), galleryProductListInfo: StyliticsUI.DynamicGalleryProductListInfo = DynamicGalleryProductListInfo(), presentationStyle: UIKit.UIModalPresentationStyle = .automatic)
-  public enum ProductListScreenHeaderAlign {
-    case top
-    case centre
-    public static func == (a: StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign, b: StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public struct ItemListHeader {
-    public init(title: Swift.String = "Shop this look", productListScreenHeaderAlign: StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign = .top, fontFamilyAndWeight: Swift.String = "SFProText-Semibold", fontSize: CoreFoundation.CGFloat = 17, fontColor: UIKit.UIColor = GalleryProductListConfigColor.headerFontColor.toUIColor)
-  }
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class StyledForYouView : UIKit.UIView, StyliticsUI.IRefreshView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StyliticsUI.StyledForYouView {
+  @_Concurrency.MainActor(unsafe) final public func refreshView(styledForYou: StyliticsData.StyledForYou? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class PaginationEnabledCollectionViewFlowLayout : UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StyliticsUI.PaginationEnabledCollectionViewFlowLayout : UIKit.UICollectionViewDelegate, UIKit.UIScrollViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ClassicDisplayContainerView : UIKit.UIView, StyliticsUI.IRefreshView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -318,10 +446,29 @@ public struct DynamicGalleryInfo {
   public init(config: StyliticsUI.DynamicGalleryConfig = DynamicGalleryConfig(), listener: StyliticsUI.DynamicGalleryListener? = nil)
 }
 public struct DynamicGalleryListener {
-  public init(onClick: ((StyliticsUI.GalleryBundleInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.GalleryBundleInfo) -> Swift.Void)? = nil)
+  public init(onClick: ((StyliticsUI.OutfitBundleInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.OutfitBundleInfo) -> Swift.Void)? = nil)
+}
+public struct StyledForYouListener {
+  public init(onContextClick: ((Swift.String, [StyliticsData.StyledForYouContextItem]) -> Swift.Void)? = nil, onAnchorItemClick: ((StyliticsUI.ContextItemInfo) -> Swift.Void)? = nil, onAnchorItemView: ((StyliticsUI.ContextItemInfo) -> Swift.Void)? = nil, onOutfitClick: ((StyliticsUI.OutfitBundleInfo) -> Swift.Void)? = nil, onOutfitClickCTA: ((StyliticsUI.OutfitBundleInfo) -> Swift.Void)? = nil, onOutfitView: ((StyliticsUI.OutfitBundleInfo) -> Swift.Void)? = nil)
 }
 public struct HotspotListener {
   public init(onClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onView: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onViewDetailsClick: ((StyliticsUI.OutfitInfo) -> Swift.Void)? = nil, onOutfitItemClick: ((StyliticsUI.OutfitInfo, StyliticsUI.OutfitItemInfo) -> Swift.Void)? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class ShopTheSetContainerView : UIKit.UIView, StyliticsUI.IRefreshView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension StyliticsUI.ShopTheSetContainerView : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension StyliticsUI.ShopTheSetContainerView : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc final public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+}
+extension StyliticsUI.ShopTheSetContainerView {
+  @_Concurrency.MainActor(unsafe) final public func refreshView(shopTheSet: StyliticsData.ShopTheSet? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
 }
 public struct TopLabel {
   public init(label1: StyliticsUI.TopLabel.Label1 = Label1(), label2: StyliticsUI.TopLabel.Label2 = Label2(), label3: StyliticsUI.TopLabel.Label3 = Label3(), label4: StyliticsUI.TopLabel.Label4 = Label4(), label5: StyliticsUI.TopLabel.Label5 = Label5(), label6: StyliticsUI.TopLabel.Label6 = Label6(), label7: StyliticsUI.TopLabel.Label7 = Label7())
@@ -386,11 +533,18 @@ public protocol IStylitics {
 extension StyliticsUI.IStylitics {
   public static func refreshTemplate(view: UIKit.UIView, outfits: StyliticsData.Outfits? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
   public static func refreshTemplate(view: UIKit.UIView, galleryBundles: StyliticsData.GalleryBundles? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+  public static func refreshTemplate(view: UIKit.UIView, styledForYou: StyliticsData.StyledForYou? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
+  public static func refreshTemplate(view: UIKit.UIView, shopTheSet: StyliticsData.ShopTheSet? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
   public static func clearData(for requestId: Swift.String)
 }
 public enum ProductListScreenState {
   case disable
   case enable(productListScreenConfig: StyliticsUI.ProductListScreenConfig = ProductListScreenConfig())
+}
+public struct ContextItemInfo {
+  public let position: Swift.Int
+  public let contextType: Swift.String
+  public let contextItem: StyliticsData.StyledForYouContextItem
 }
 public struct HotspotConfig : StyliticsUI.IWidgetConfig {
   public init(widget: StyliticsUI.HotspotConfig.Widget = Widget(), infoLabel: StyliticsUI.HotspotConfig.InfoLabel = InfoLabel(), shopTheLook: StyliticsUI.HotspotConfig.ShopTheLook = ShopTheLook(), topLabel: StyliticsUI.TopLabel = TopLabel())
@@ -413,19 +567,9 @@ public enum OutfitsTemplate {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
-extension StyliticsUI.DynamicGalleryContainerView : UIKit.UICollectionViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
-}
 extension StyliticsUI.DynamicGalleryContainerView : UIKit.UICollectionViewDataSource {
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-}
-extension StyliticsUI.DynamicGalleryContainerView : UIKit.UICollectionViewDelegateFlowLayout {
-  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
-  @_Concurrency.MainActor(unsafe) @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreFoundation.CGFloat
-}
-extension StyliticsUI.DynamicGalleryContainerView : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
 }
 extension StyliticsUI.DynamicGalleryContainerView {
   @_Concurrency.MainActor(unsafe) final public func refreshView(galleryBundles: StyliticsData.GalleryBundles? = nil, widgetConfig: (any StyliticsUI.IWidgetConfig)? = nil)
@@ -441,33 +585,47 @@ final public class ClassicListener {
 public enum ProductListTemplate {
   case standard(productListConfig: StyliticsUI.ProductListConfig = ProductListConfig(), productListListener: StyliticsUI.ProductListListener? = nil, showScrollBar: Swift.Bool = false)
 }
-public struct GalleryProductListConfig {
-  public init(itemName: StyliticsUI.GalleryProductListConfig.ItemName = ItemName(), itemPrice: StyliticsUI.GalleryProductListConfig.ItemPrice = ItemPrice(), backgroundColor: UIKit.UIColor = GalleryProductListConfigColor.backgroundColor.toUIColor, imageBackgroundColor: UIKit.UIColor = GalleryProductListConfigColor.imageBackgroundColor.toUIColor, imageBorderColor: UIKit.UIColor = GalleryProductListConfigColor.imageBorderColor.toUIColor, itemBorderColor: UIKit.UIColor = GalleryProductListConfigColor.itemBorderColor.toUIColor, paddingHorizontal: CoreFoundation.CGFloat = 16, paddingVertical: CoreFoundation.CGFloat = 12, productDetailsPadding: CoreFoundation.CGFloat = 16)
-  public struct ItemName {
-    public init(fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 17, fontColor: UIKit.UIColor = GalleryProductListConfigColor.itemNameFontColor.toUIColor, productNameVerticalSpacing: CoreFoundation.CGFloat = 2)
-  }
-  public struct ItemPrice {
-    public init(fontFamilyAndWeight: Swift.String = "SFProText-Regular", fontSize: CoreFoundation.CGFloat = 15, priceFontColor: UIKit.UIColor = GalleryProductListConfigColor.itemPriceFontColor.toUIColor, salePriceFontColor: UIKit.UIColor = GalleryProductListConfigColor.salePriceFontColor.toUIColor, strikeThroughPriceFontColor: UIKit.UIColor = GalleryProductListConfigColor.strikeThroughColor.toUIColor, swapPricePosion: Swift.Bool = false, style: StyliticsUI.GalleryProductListConfig.PriceStrikethrough = .show, decimal: Swift.Int = 2, priceVerticalSpacing: CoreFoundation.CGFloat = 3)
-  }
-  public enum PriceStrikethrough {
-    case show
-    case hide
-    public static func == (a: StyliticsUI.GalleryProductListConfig.PriceStrikethrough, b: StyliticsUI.GalleryProductListConfig.PriceStrikethrough) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-}
 public protocol IWidgetConfig {
 }
 public struct OutfitInfo {
   public let outfit: StyliticsData.Outfit
   public let position: Swift.Int
 }
+public struct StyledForYouInfo {
+  public init(config: StyliticsUI.StyledForYouConfig = StyledForYouConfig(), listener: StyliticsUI.StyledForYouListener? = nil)
+}
 public struct ShopTheModel {
   public init(name: Swift.String = "", position: StyliticsUI.ShopTheModelPosition = .topLeft, width: CoreFoundation.CGFloat = 60, height: CoreFoundation.CGFloat = 60)
 }
+public struct OutfitBundleProductListScreenConfig {
+  public init(itemListHeader: StyliticsUI.OutfitBundleProductListScreenConfig.ItemListHeader = ItemListHeader(), outfitBundleProductListConfig: StyliticsUI.OutfitBundleProductListConfig = OutfitBundleProductListConfig(), outfitBundleProductListListener: StyliticsUI.OutfitBundleProductListListener? = nil, presentationStyle: UIKit.UIModalPresentationStyle = .automatic)
+  public enum ProductListScreenHeaderAlign {
+    case top
+    case centre
+    public static func == (a: StyliticsUI.OutfitBundleProductListScreenConfig.ProductListScreenHeaderAlign, b: StyliticsUI.OutfitBundleProductListScreenConfig.ProductListScreenHeaderAlign) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct ItemListHeader {
+    public init(title: Swift.String = "Shop this look", productListScreenHeaderAlign: StyliticsUI.OutfitBundleProductListScreenConfig.ProductListScreenHeaderAlign = .top, fontFamilyAndWeight: Swift.String = "SFProText-Semibold", fontSize: CoreFoundation.CGFloat = 17, fontColor: UIKit.UIColor = BundleProductListConfigColor.headerFontColor.toUIColor)
+  }
+}
+public struct PriceConfig {
+  public init(fontFamilyAndWeight: Swift.String, fontSize: CoreFoundation.CGFloat, priceFontColor: UIKit.UIColor, salePriceFontColor: UIKit.UIColor, strikeThroughPriceFontColor: UIKit.UIColor, style: StyliticsUI.PriceConfig.PriceStrikethrough, swapPricesPosition: Swift.Bool, decimal: Swift.Int)
+  public enum PriceStrikethrough {
+    case show
+    case hide
+    public static func == (a: StyliticsUI.PriceConfig.PriceStrikethrough, b: StyliticsUI.PriceConfig.PriceStrikethrough) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension StyliticsUI.ShopTheSetConfigs.PriceStrikethrough : Swift.Equatable {}
+extension StyliticsUI.ShopTheSetConfigs.PriceStrikethrough : Swift.Hashable {}
 extension StyliticsUI.TopLabelPosition : Swift.Equatable {}
 extension StyliticsUI.TopLabelPosition : Swift.Hashable {}
 extension StyliticsUI.ProductListConfig.ShopViewPosition : Swift.Equatable {}
@@ -490,12 +648,25 @@ extension StyliticsUI.HotspotConfigColor : Swift.RawRepresentable {}
 extension StyliticsUI.DynamicGalleryConfigColor : Swift.Equatable {}
 extension StyliticsUI.DynamicGalleryConfigColor : Swift.Hashable {}
 extension StyliticsUI.DynamicGalleryConfigColor : Swift.RawRepresentable {}
-extension StyliticsUI.GalleryProductListConfigColor : Swift.Equatable {}
-extension StyliticsUI.GalleryProductListConfigColor : Swift.Hashable {}
-extension StyliticsUI.GalleryProductListConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.BundleProductListConfigColor : Swift.Equatable {}
+extension StyliticsUI.BundleProductListConfigColor : Swift.Hashable {}
+extension StyliticsUI.BundleProductListConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.StyledForYouColor : Swift.Equatable {}
+extension StyliticsUI.StyledForYouColor : Swift.Hashable {}
+extension StyliticsUI.StyledForYouColor : Swift.RawRepresentable {}
+extension StyliticsUI.ShopTheSetConfigColor : Swift.Equatable {}
+extension StyliticsUI.ShopTheSetConfigColor : Swift.Hashable {}
+extension StyliticsUI.ShopTheSetConfigColor : Swift.RawRepresentable {}
+extension StyliticsUI.DateFormat : Swift.Equatable {}
+extension StyliticsUI.DateFormat : Swift.Hashable {}
+extension StyliticsUI.DateFormat : Swift.RawRepresentable {}
+extension StyliticsUI.OutfitBundleProductListConfig.PriceStrikethrough : Swift.Equatable {}
+extension StyliticsUI.OutfitBundleProductListConfig.PriceStrikethrough : Swift.Hashable {}
 extension StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Equatable {}
 extension StyliticsUI.ProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Hashable {}
-extension StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Equatable {}
-extension StyliticsUI.GalleryProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Hashable {}
-extension StyliticsUI.GalleryProductListConfig.PriceStrikethrough : Swift.Equatable {}
-extension StyliticsUI.GalleryProductListConfig.PriceStrikethrough : Swift.Hashable {}
+extension StyliticsUI.StyledForYouConfig.PriceStrikethrough : Swift.Equatable {}
+extension StyliticsUI.StyledForYouConfig.PriceStrikethrough : Swift.Hashable {}
+extension StyliticsUI.OutfitBundleProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Equatable {}
+extension StyliticsUI.OutfitBundleProductListScreenConfig.ProductListScreenHeaderAlign : Swift.Hashable {}
+extension StyliticsUI.PriceConfig.PriceStrikethrough : Swift.Equatable {}
+extension StyliticsUI.PriceConfig.PriceStrikethrough : Swift.Hashable {}
