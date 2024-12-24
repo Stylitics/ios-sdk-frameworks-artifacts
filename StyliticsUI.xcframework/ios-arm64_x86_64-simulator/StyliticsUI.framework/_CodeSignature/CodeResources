@@ -10,59 +10,63 @@
 		</data>
 		<key>AdditionalBundleHeaderTableViewCell.nib</key>
 		<data>
-		6xEcQx8pJBQq2uFO1ApiuqSDxTg=
+		UQ9pZsdAxR9gYn25ysI520rnwUM=
 		</data>
 		<key>AdditionalBundleTableViewCell.nib</key>
 		<data>
-		+8g1teamZWqIBpsaUJowl7SXqIo=
+		vkqoMsC2NBxFgKtKUXor8iftiA0=
 		</data>
 		<key>AnchorItemCollectionViewCell.nib</key>
 		<data>
-		JrNXbCc2gL4k0K3Koz8XNxaYBZ4=
+		ZdhRs1xgIlcNdFoYR7YCoRpopMQ=
 		</data>
 		<key>AnchorItemContainerView.nib</key>
 		<data>
-		iV1NXMH6801YuS8rQRz0ncZQ/QA=
+		WQCipf7ayg8glliZDBIhSt6tsOE=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		LQENaJ58O+W1Tee+5lgIqPn7qB4=
+		uXchIVe5tA98joJjTBpXzsYpXz8=
 		</data>
 		<key>BottomWidgetCollectionViewCell.nib</key>
 		<data>
-		Xyji1eKjMpxR2EPJV8946qNmk0s=
+		D1xMkdLvPbPQHj/FCpU+rK93GFk=
 		</data>
 		<key>BulletView.nib</key>
 		<data>
-		sOQ7Zw5TA/bbltsUICyouoCkKDo=
+		n2Z9hkbk7xN/BVIY5wvWY0cnuvU=
 		</data>
 		<key>ClassicCollectionViewCell.nib</key>
 		<data>
-		ANa1uN7sWGbkgbAVwQHkjpMLhow=
+		CBpvFLj/ZYefvcsDb4/54bh1pFw=
 		</data>
 		<key>ClassicDisplayContainerView.nib</key>
 		<data>
-		KmipD/u2Ezt5G+H2WMKPq8SzAsQ=
+		35AIWRYdxh83LB3qlP0B7sgNWB0=
+		</data>
+		<key>CloseView.nib</key>
+		<data>
+		aZGLTBQQINgsdoWc0cSVe3okrj0=
 		</data>
 		<key>CustomBullets.nib</key>
 		<data>
-		GK2z7yYXj6sn37AQt+n6YCRpPTU=
+		b31qt8z0j0zKFRip14RgtFr7dyc=
 		</data>
 		<key>CustomLabelView.nib</key>
 		<data>
-		L4TeVyc7QpXun75+5/8R0eV/BbE=
+		EMRx0VMz0oBLn6Zozhr/EqtYDHU=
 		</data>
 		<key>DisplayedItemTableViewCell.nib</key>
 		<data>
-		6hXs8gjKoG0nUnkGdNlyNIrmT5I=
+		ob5phuTMBzqGMhEWFo/3nvlykOE=
 		</data>
 		<key>DynamicCollectionViewCell.nib</key>
 		<data>
-		P7LvkGFBZbETGx7jn71VRQnxPRM=
+		2qgTsEfgXj1aSYq4tF2KkFu683w=
 		</data>
 		<key>DynamicGalleryContainerView.nib</key>
 		<data>
-		Ld9jvWzTi3HFbu1IyLiHag6yT60=
+		Bulii0fxZn3FoS+IKJ/QElMStYA=
 		</data>
 		<key>EmptyViewTableViewCell.nib</key>
 		<data>
@@ -70,19 +74,19 @@
 		</data>
 		<key>FiveItemsGridCollectionViewCell.nib</key>
 		<data>
-		ASuI/x8EfSHWrFSwDCn7vX6rGHE=
+		M4F49DC/3s+2gaTPorxRM/UPJBM=
 		</data>
 		<key>FourItemsGridCollectionViewCell.nib</key>
 		<data>
-		fWWMuK+qvGSuCuZg4CfgWbdP0cY=
+		VOEgJMnvZUpFhlE6NjjXwDIkYXI=
 		</data>
 		<key>GalleryProductListContainerView.nib</key>
 		<data>
-		IErpxPMzpVvOEedUCK11NhYuHOc=
+		+3Vr8OLrmv/7/cGI7g2rgglZpF4=
 		</data>
 		<key>GalleryProductListController.storyboardc/GalleryProductListScreen.nib</key>
 		<data>
-		vbZ7sTfgln1lFojM3x1v3BLMLfo=
+		MclR5e7Q8UHnbc+Vg/RM0iV8Nm8=
 		</data>
 		<key>GalleryProductListController.storyboardc/Info.plist</key>
 		<data>
@@ -90,23 +94,31 @@
 		</data>
 		<key>GalleryProductListController.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		1GFPFO9dwkcePXa1I+XCZBL8VWA=
+		kuV067yQDJlKVZyq9MdCaDS4rxQ=
 		</data>
 		<key>GalleryProductListTableViewCell.nib</key>
 		<data>
-		tjSQ4YeiDrCYR8rCxg8Cltyq1s0=
+		7IV6hEvehxZhv3avfL7S5RJnv18=
 		</data>
 		<key>GridContainerView.nib</key>
 		<data>
-		6vnkpOs83tB2MBu1MD72kthTbd4=
+		FikbOlBvCwlFRcGQ0rFFXuxjZ08=
+		</data>
+		<key>HeaderTableViewCell.nib</key>
+		<data>
+		6wcv2YZ1oOcI970DdBalMqP5FA4=
+		</data>
+		<key>HeaderView.nib</key>
+		<data>
+		dLSg7BQsxOJaAcc+dlCsd44P/bM=
 		</data>
 		<key>Headers/StyliticsData-Swift.h</key>
 		<data>
-		C6tSoCfc6BZKcCN3YGhC1LJFAME=
+		LUsUggHsSnF2vOicxQBFDnqLPw4=
 		</data>
 		<key>Headers/StyliticsUI-Swift.h</key>
 		<data>
-		jn2qadO9g4ACCwwX7RJ4bTZJK5M=
+		Gm6Ts9dya9lm4xZJPUwnD5E56R8=
 		</data>
 		<key>Headers/StyliticsUI.h</key>
 		<data>
@@ -114,79 +126,79 @@
 		</data>
 		<key>HotspotCollectionViewCell.nib</key>
 		<data>
-		Ji3IIbYGGVX4pHg4wKgbqDnKThw=
+		weuRfs+CUVLdrx+Kk44OQRWehag=
 		</data>
 		<key>HotspotContainerView.nib</key>
 		<data>
-		OOeA8M2ZZY142FJtT+uF0qSISKY=
+		jRBwE7f/TWRbtjgGujc8Ee8Z8oY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8Vr2m1j3PoBJFmQeM9WWr6w0duA=
+		ikOiKLD2igS7DmidDmujQdjd+1s=
 		</data>
 		<key>InfoLabelView.nib</key>
 		<data>
-		OhM6D69seOQKnnWn29lkcC80A2o=
+		rH7PdpDvdtn5U9vRwoe3De4ym3E=
 		</data>
 		<key>ItemRowTableViewCell.nib</key>
 		<data>
-		rBzK1ecaf9lxXk8rgS3B8Rwcxic=
+		c3JIy5FfhErCHQCks0c0SII//w0=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		6uvsaHDDz31NUn6JAFPr9EIiEXQ=
+		ekrzWtQTqsnXM8l4RgMeTvME9SE=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		YQqU9OgRYcGiufPRkOOwt8ALfTY=
+		XAn+KOEc7YYtpgRFn7Gffg4ZTXU=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lVT8xAbrm1Vm7ge+RSBufFeq1vI=
+		WQ7HQHBEdcyz/t5zXI9fKpeL4iQ=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YQqU9OgRYcGiufPRkOOwt8ALfTY=
+		XAn+KOEc7YYtpgRFn7Gffg4ZTXU=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2D6oyDwHtvhBCuV5kl1RlO8ELJ8=
+		zLKWAg89oev+nLBiuvNU6AoiRsA=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		6uvsaHDDz31NUn6JAFPr9EIiEXQ=
+		ekrzWtQTqsnXM8l4RgMeTvME9SE=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		css432Evj5K8fQ3Jx0sv/LRL1d0=
+		2sAEfd358WMIzRS+QdQMOV9HBLg=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		z9RwkLgZvqxNpVo/frnGYWgN0H8=
+		CKqPytfSoBE0PaX6JbJh4zWKFXw=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		css432Evj5K8fQ3Jx0sv/LRL1d0=
+		2sAEfd358WMIzRS+QdQMOV9HBLg=
 		</data>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VvqTB4rnwF1xFmCaORYBujh276c=
+		PrLKHdLcxSFSEeBog5vBno8hvA0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		5pUAzMN7nMVHmLKyT3DlubKUX+o=
+		1mOqVWrCibr2BW67yffZA3uqMwI=
 		</data>
 		<key>OutfitDescriptionTableViewCell.nib</key>
 		<data>
-		t5eN86K3Zm76AW2cFssYHwN2m2U=
+		6FaIU/GQcn0puabJ7MtVz5J3PO4=
 		</data>
 		<key>OutfitLandingPageContainerView.nib</key>
 		<data>
-		E1Uosh2MN7UVdPZ33A34UO6SBjc=
+		jtXs0YYEKkLY8uyaL6/hvAowujI=
 		</data>
 		<key>OutfitViewTableViewCell.nib</key>
 		<data>
-		z2q+tE9RFrra8gLV/dPUeU2aIvM=
+		VfQeRSyZ3rBmembLorfvVrYoBkY=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -194,31 +206,43 @@
 		</data>
 		<key>ProductListContainerView.nib</key>
 		<data>
-		ujTkNurUGw0cSwJfu+il7yITmIc=
+		ItwSE4Zjn2wdKyVQF0Nxr1SWnpU=
 		</data>
 		<key>ProductListScreen.storyboardc/Info.plist</key>
 		<data>
-		KasnnDUZnjFzxP+Lx6uCLdRH+Hw=
+		5cQZaz7l+mAnc7kYkChfQcBaefY=
 		</data>
 		<key>ProductListScreen.storyboardc/ProductListScreen.nib</key>
 		<data>
-		lmunodcziKsSNviob3MdY+Mx6sk=
+		CkY0rKijvSRQOYn8wBR5PE5PfFE=
+		</data>
+		<key>ProductListScreen.storyboardc/ReplacementListScreen.nib</key>
+		<data>
+		tdXI6pgkMO+CatXp2oTPb9nZd0Q=
 		</data>
 		<key>ProductListScreen.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<data>
-		7QeXMLnB6SaOBdBDAIA2p8rOevA=
+		+AhfLFNVw4ANwXOQsnmQoUeEfbE=
+		</data>
+		<key>ProductListScreen.storyboardc/ZWN-KN-FPs-view-gW9-DL-DJQ.nib</key>
+		<data>
+		UvwhyGmDt05xGQOVvrUFPvcGtZ4=
+		</data>
+		<key>ReplacementContainerView.nib</key>
+		<data>
+		LDGkaXvPeYG9XTIFjuSv8qCiHxA=
 		</data>
 		<key>ReplacementHorizontalCollectionViewCell.nib</key>
 		<data>
-		B0hznPkRj6s4qJyLRIKgLIHa2x4=
+		Nwm9BUDVAOKepjr7/Adi8czNLvE=
 		</data>
 		<key>ReplacementHorizontalContainerView.nib</key>
 		<data>
-		k+Zr0pzP6K1C5I0amZ9ga3tCGZA=
+		MMC29fV4ThObvfD+qUl0EkWsw0Y=
 		</data>
-		<key>ReplacementRowTableViewCell.nib</key>
+		<key>ReplacementTableViewCell.nib</key>
 		<data>
-		xgjM2GK+54iHrBGEkX6YWa1+7Mg=
+		luqxBwqFk6Yndi79D0Oj9IhXMq8=
 		</data>
 		<key>SFProText-Bold.ttf</key>
 		<data>
@@ -240,25 +264,33 @@
 		<data>
 		601KoW4jzmN0Znxm/HUFAaNKyaQ=
 		</data>
+		<key>SYFYContentTableViewCell.nib</key>
+		<data>
+		8ueFU+N4MDO0VKB4zNvTprJUmK0=
+		</data>
+		<key>SYFYFullPageContainerView.nib</key>
+		<data>
+		tRvvMkHQEI6swZ1J6CKd4/qBr8E=
+		</data>
 		<key>ShopTheSetCarouselCollectionViewCell.nib</key>
 		<data>
-		mGpUYCUvBZWmq1iX6iQ1Ua9RJQc=
+		w+bryE/BCDdn7lLUMck8tFLqd9E=
 		</data>
 		<key>ShopTheSetCarouselTableViewCell.nib</key>
 		<data>
-		u2HNd+AC376/wYld0+Sfhz6hzHU=
+		Y99DfoA6lmSsN4t6YamIpO/me1Y=
 		</data>
 		<key>ShopTheSetCarouselView.nib</key>
 		<data>
-		am+qRrBtlVAVYi1/KgxPC2j3th0=
+		Hv0BJNuR2u9SGdIUH0BZC0S5Cm4=
 		</data>
 		<key>ShopTheSetContainerView.nib</key>
 		<data>
-		hlHk5ADiVc+7SuKt+BRkkFTxzUE=
+		GnyyAF0yMZmG8Wb2/GY+vxRX42g=
 		</data>
 		<key>ShopTheSetItemListTableViewCell.nib</key>
 		<data>
-		uN2u95CbOJQDqu3zdUNlS9aaH4Y=
+		cY936HJbpZ03iXnhDs1fMDRBHGA=
 		</data>
 		<key>ShopTheSetVerticalSpacingCell.nib</key>
 		<data>
@@ -266,15 +298,35 @@
 		</data>
 		<key>SixItemsGridCollectionViewCell.nib</key>
 		<data>
-		6G2caa3vfaEPKg6wP6tejGnKpiU=
+		aKksL5DtW5WBm0KjSJdka2odVA0=
 		</data>
 		<key>StyledForYouBottomContainerView.nib</key>
 		<data>
-		R2q0U+jfvHpN7U0MS2Cid8BRpco=
+		kdzNvCFryefkXMgNyBFK8uLT8hA=
 		</data>
 		<key>StyledForYouView.nib</key>
 		<data>
-		qvhBxw16syYlKtWUw0jqpcPy8fY=
+		aFKBEsX3VMyapSZHTnf8wL8xW6Q=
+		</data>
+		<key>StyledForYouWithHeaderView.nib</key>
+		<data>
+		q0WEYR7fqmOfyrlFN/ywQk9nhZE=
+		</data>
+		<key>TrendingBundleContentTableViewCell.nib</key>
+		<data>
+		YGIu5fNqKf9fK4YzbfxaKeIrfac=
+		</data>
+		<key>TrendingBundlesContainerView.nib</key>
+		<data>
+		WD1RlDu6d1ssmPGt9cbfagOyBtI=
+		</data>
+		<key>UpsellsContainerView.nib</key>
+		<data>
+		00qbi2Oa2U4Yp/PAKcMp9Y3BnQs=
+		</data>
+		<key>UpsellsItemTableViewCell.nib</key>
+		<data>
+		AuUjsvgyCo8dOt/ijOkPbe9SVxc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -290,98 +342,105 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8qfLzZ5tVJzI3oBimbdQxUVoQCII4res4uVsQaQTtgo=
+			6zuzDSpDq4N3HQdq6p5Q/ibxVE4coHCcTb6nA4KlvOQ=
 			</data>
 		</dict>
 		<key>AdditionalBundleTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+vX/wkmhMt4CzblCBzr/MPQAzaBKApnC4J6B8vZx+mE=
+			CEvErElJNWFZvte+L0gH/uFq19EM3ni5FW7SksA3frQ=
 			</data>
 		</dict>
 		<key>AnchorItemCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PUZCnLgG8lmqADSvlW3LpJQOv7IgMcl4UE70aLmIqL8=
+			vlfO6yABt2xVdEWHjnp96UXQXWK6UmOHnDIVwJmCNXA=
 			</data>
 		</dict>
 		<key>AnchorItemContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2Yd3q8k7V1jvuP/mhMrhdN1Vv+v3rfIZfNuC34wIPb8=
+			Vzn159EmqBGM+yvXzG+lPlhZB31lpyPS8RYoCzS1MJA=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a7CZlTq2/tyro+M9I0IkKQWsAPyp/OcL8g8S18tVXCM=
+			HJUMa2mYsaHmJzOWGzgUqvtNCKL6TkTNd06Yo/Xr2hs=
 			</data>
 		</dict>
 		<key>BottomWidgetCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4A/GOOfOlAb2edeBCX6DaEMJJ8Vi3nlAmkFipUP+c6U=
+			t80femHQAPSP2BUx+feABNo33fPbOlfXtNk0Mi2iM1s=
 			</data>
 		</dict>
 		<key>BulletView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CiWBlTyw+z3XBFBENSVvG8XTI0i66UlsKPzi68lfBNs=
+			p7l+rwG6pmqX2SRc7kL9d+5kVYAc3M0nABkAGC0NkJo=
 			</data>
 		</dict>
 		<key>ClassicCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/LOVq9Hy/fQECi+nt8LxpECVDhIeZO4vbLJTfFq6CtY=
+			3LpHLH2nXPwfiFrKfm3g+E95pZZpltliFa168xaWvvw=
 			</data>
 		</dict>
 		<key>ClassicDisplayContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CkCW05eUcI8xy1Dh/G0Y6wg8e0yXWBTD2EXT5VYIpcc=
+			6xrxzw6PZnMzOs+DzdvtciFSwGpwqEXpjruYnqxqy+4=
+			</data>
+		</dict>
+		<key>CloseView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bgmiczq2apmYq8tP91y7F11wJ+E3HJpPupBZMa0XWQk=
 			</data>
 		</dict>
 		<key>CustomBullets.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HmUG3cf4LdwmuhIdXjqScFkoMFoqH2ywpStHlPoLfyI=
+			hPLyKHq0sFEEySjURaOe6T12ua4BsFMeKoZtg812F7Q=
 			</data>
 		</dict>
 		<key>CustomLabelView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AP+QJVBUYHeysKdnazhVPY/zAE+cmORPq3M1SGK5L/c=
+			3jGvUFhi+hGLTIgNr2TVr09InCAwgE9ATwHEGDbkZa8=
 			</data>
 		</dict>
 		<key>DisplayedItemTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QKTYUDhn8DlStf2aOcsSnTfSXyUmOld7SRlS1RKov6Q=
+			N8VNpw4dP8zCHaPphQCalW+XJ27l+3h2ywYpsVr780w=
 			</data>
 		</dict>
 		<key>DynamicCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GCgu4wB1XyArx4aII62/KdensQjam73tpN7pxaJK+qk=
+			AjPNueGQg1rWvUtdlPYvSlRLry6qlGO4ny8DwyrbCIA=
 			</data>
 		</dict>
 		<key>DynamicGalleryContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8tuyEOcth2NcvSpOg0SvSNPFs0TW26kIOioyPt6T5jQ=
+			//EQ0rBPAppklNdxDLTxouxkudX3aoFLW2g0d5Bhg2M=
 			</data>
 		</dict>
 		<key>EmptyViewTableViewCell.nib</key>
@@ -395,28 +454,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wz6o8s6Ciw4hiJmGkMqFpgCliWBZ12TtVmZL5adexJA=
+			D1+Uv7uAc9nLfu2im9axzl8MwhJkYCxZKa8CcjqfjzE=
 			</data>
 		</dict>
 		<key>FourItemsGridCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F5Q2cgt0L7tlZ+5GpKZi+64HIfyO1KDGHMEDsp2k8Ms=
+			+pAwI/x9M3TwG5v9SO+0Tgk9xyPYOlxXOPBTMJn6Co4=
 			</data>
 		</dict>
 		<key>GalleryProductListContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zCR04ha8MrQmVzsuBGiipSX/Olmf41CGj84fgLWZAR8=
+			P5SLnt0Aon32t6ZYTjBGU+zXTU/SDyp16oxwUBsfTNc=
 			</data>
 		</dict>
 		<key>GalleryProductListController.storyboardc/GalleryProductListScreen.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/odDK8PEYKyl9ghP32/b0xTn5+jgiKxAY8QsC8cqe80=
+			ZvzpifBe14lsQsCJx62XE8+wyaQkMdrZpBSoWGryGWk=
 			</data>
 		</dict>
 		<key>GalleryProductListController.storyboardc/Info.plist</key>
@@ -430,35 +489,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GDMbIMlPqw7F4u90wf+53rQGDn/5LT0K8rFPk0Xg3jA=
+			YznUbfevgGLINYJYW+wN7idN6xaebzb0rQbPUlwLq3U=
 			</data>
 		</dict>
 		<key>GalleryProductListTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			59X7Lc550AT1iiBqrD3TnLvLIReZ8Wy/eVx/A5D/83A=
+			skLYhh3qoajmpvfilIgt1C3b17ZEK2LNJmsTf1zqSA8=
 			</data>
 		</dict>
 		<key>GridContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5B0jqmGMFCxfxSeDmlXHs61KRp/KQwmtMy8UyHnBJis=
+			+b0GQGrUjf6Nes+QTnhcnLP8LLT/1hMLihFp0kyCCkE=
+			</data>
+		</dict>
+		<key>HeaderTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UNkvXeEyQ/8lQh+8SZtjLlLZRBIDdcitBf7aFNh6um0=
+			</data>
+		</dict>
+		<key>HeaderView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			56/C203p0G9PUakVYYuODvV+hAeSIr6+AdKSy7jfMuo=
 			</data>
 		</dict>
 		<key>Headers/StyliticsData-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4e4CrowNLuGHhrN+dk4vN1/Rntl/R5jUwHmFSvW7fCw=
+			N/LWUcQRzKXZWVPh5TOWLbJPc658WrRbRMmdUcvUr7w=
 			</data>
 		</dict>
 		<key>Headers/StyliticsUI-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9W4Tupivd3uxQQszk/ME4z9i/eaiTGBDG9P6Jl/+J1g=
+			YZ9KbjGXweW8ByaylrFABuTNTIuxaus5Dcj3hA5vrR4=
 			</data>
 		</dict>
 		<key>Headers/StyliticsUI.h</key>
@@ -472,126 +545,126 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DVmcGsRUnGmQ/4Isxic95WENCDn59xwOy1ENtUn4wAk=
+			tBmQayx5lFN3Pr61niQvsajy9A8GW+OEGQSVI61NT5s=
 			</data>
 		</dict>
 		<key>HotspotContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mIbtSK0tUv3rFx1uGu2tw5hdAkPI8QMzWMO3bMwD2Z4=
+			8T/s7rnlaL8Z10QWXM5x3EC8owqi2YGc1nAtv9isqA0=
 			</data>
 		</dict>
 		<key>InfoLabelView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			id6WYjGrTysVs/r8ivHgVgvwaFBCgylrXLrC+hruB+c=
+			KiZb//dNl+xvcxUxZ700BNX5X2/LV5muAXu/qsbSw6Y=
 			</data>
 		</dict>
 		<key>ItemRowTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1b7/dwgClljIG7Xc9+Z+4DmL/EBzDyprSXNECdlg7c8=
+			WUQ5EeaxBKaT3GyO1kPS+BL+JCG4blEwfqCrHrgc/iY=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			caJ+gutG6J9zP4ij+lhmvDtL3db4dEJkjtp4IAdwGAo=
+			4DHmdSyOZdCgDRaz+sH3xneqZNcH7d3w4GwLOP8PK/A=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4120W+KotGemoH2y0MDqWYZ4JewR2keQHybiCYtW6p0=
+			6x/8ZfCQeXw6GSXngoG7lAokrjbAC7p4WBBzInyqD7U=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k8F5LmA7AFBj9of5FnNZKgn8/R+ZkzpLJplj2l7QaMc=
+			JCy0wbogQ2fqKLsgIIpSXJAzY/RNV2NDHcxkb3HxcOM=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4120W+KotGemoH2y0MDqWYZ4JewR2keQHybiCYtW6p0=
+			6x/8ZfCQeXw6GSXngoG7lAokrjbAC7p4WBBzInyqD7U=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mTXFy9ioVAORAAyk/SAOYrwR0zpZx+0uUXDSu23PkaY=
+			cJIty2yxIJS8tmyUkaRhBKNdBh67MNWbmN9hknOCJAo=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			caJ+gutG6J9zP4ij+lhmvDtL3db4dEJkjtp4IAdwGAo=
+			4DHmdSyOZdCgDRaz+sH3xneqZNcH7d3w4GwLOP8PK/A=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VONdTbsHE/CoJfcDgvnP6cpDplC/kPBchpOSuK0EN/k=
+			XtgCumZPF0veiOWk4oSflj+8NVgLXZQyCN5E07elf1s=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xBDi8vSvlVyCCagjrlPJrWIewBQsKYmBD6NvxsDKIEQ=
+			mj4pHrebN/n0nQF7wb0lsl/wfsaqe0Laa766XAgalhc=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VONdTbsHE/CoJfcDgvnP6cpDplC/kPBchpOSuK0EN/k=
+			XtgCumZPF0veiOWk4oSflj+8NVgLXZQyCN5E07elf1s=
 			</data>
 		</dict>
 		<key>Modules/StyliticsUI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JxUnqFGyRVRr81vJaTPom8WIBJq1KPU6kl5RnoXosWM=
+			va9XKXbgHyLTGMb0Qm844l4YkZA0hEJlyYyA224zntc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LY7xnESJTzWS++Fg+iBxQEY8LgxR97ocYnl6hrhQlK0=
+			S+FkNapg8MMcLxwZBUXbf/2hTEmd/TGcdQtQChcCsGI=
 			</data>
 		</dict>
 		<key>OutfitDescriptionTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R6nuPHQZxaqXwNsbj1UHrsqv+ifKkxEdGEFPMUW8Lw4=
+			cB3wybzsDZS1rwV98rNzZJTWaRneAsMn7lq7fI95wF8=
 			</data>
 		</dict>
 		<key>OutfitLandingPageContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B8R93Q2fkPOisgykAb9WgiV1UVWtjFmfUulmc7dVVVY=
+			h3fAY326In0uR2l79FQZQQd3As5YBcpwSMeG8Po8LBw=
 			</data>
 		</dict>
 		<key>OutfitViewTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pA9W6WgI5FCmc1zLyqslOjnRNCkHzzoFO4Sw4+8x8DA=
+			356ADFDYkeInH9crafUowKLXTKY+9iY1t9J7rINsE8I=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
@@ -605,49 +678,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n5c+XZ7GJrsh1KiLjJ1CXJf6IChRcxrXKjbuRhA2ZHU=
+			c3RdSqbIxYLMvlT0CimlJw6P4ZWHqJsCxln/1iTW3Qg=
 			</data>
 		</dict>
 		<key>ProductListScreen.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gh7YB/in3RD2bbIR3BneoB6QcRjQjmFdcGfG4HRZOH0=
+			pevxVRfwBwV/m4ZxYaQOfgRnrNMLSSGvbHr1GLKvuwE=
 			</data>
 		</dict>
 		<key>ProductListScreen.storyboardc/ProductListScreen.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZsuE701QWYJoPOqslwgIt68uVnuMXea2JlgzK1bZJwI=
+			b200AjgmmpkmU5pwLTJwLpwBcTyJVgPvfzNMYwx26Y0=
+			</data>
+		</dict>
+		<key>ProductListScreen.storyboardc/ReplacementListScreen.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uAj14q1dlGEVq9BWnJkJwz8C+rrK5X0A8MIXWQ5yZ1M=
 			</data>
 		</dict>
 		<key>ProductListScreen.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f1CJN8l1P40Tf7+GPcOTOPhohe20siH5doRoY7Jred8=
+			TKXpyfDtkYd6kgeBuMxiqE18zxFnRCo4yQxAF9+WwDM=
+			</data>
+		</dict>
+		<key>ProductListScreen.storyboardc/ZWN-KN-FPs-view-gW9-DL-DJQ.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5IlK03CjhlQTOS8aT2sZmxdHUubbeLX+JhpjIQzC/0U=
+			</data>
+		</dict>
+		<key>ReplacementContainerView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KbrhbCqnUoTHmneo3MT30Tjfqc2kZUX2p3Tf5/yV5M4=
 			</data>
 		</dict>
 		<key>ReplacementHorizontalCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G51MXqV2gz6RgXXjk9XbMEwLDv6oGkCCxUmpmIJ/Rz8=
+			wNVVCCrPUdTBG5nYT7gflj/cMvvuO7jlz+jgrxSmIo0=
 			</data>
 		</dict>
 		<key>ReplacementHorizontalContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WtuYjR48kdLl3M4Kiq8YyHZEL8nplniUs4HFg+2cLgA=
+			Gp4o2s4lGy7DrrG6nvdB4hHMEcNtmRd3taFC4kycIXg=
 			</data>
 		</dict>
-		<key>ReplacementRowTableViewCell.nib</key>
+		<key>ReplacementTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Nt5+F2EMK0jqC3kvgKLSbIZrpjPy0tv0JifB92/ZOrA=
+			kskqWMtNznriAVdDecGmXbtOjpfMQojE3RQ3UYdR8q4=
 			</data>
 		</dict>
 		<key>SFProText-Bold.ttf</key>
@@ -685,39 +779,53 @@
 			ui1NFJMUxtxnpK5HhqHVAO6Euf1jGhtb6p17eM6YBhA=
 			</data>
 		</dict>
+		<key>SYFYContentTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6p9hfseLv04HLbToRLD20nA1XrTpcF8GrErT1OfgeD0=
+			</data>
+		</dict>
+		<key>SYFYFullPageContainerView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qDh/dBlejIm9KS6kkE68mAvHJ85ZZ9hCFQnL6vYvB0Y=
+			</data>
+		</dict>
 		<key>ShopTheSetCarouselCollectionViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lKN8COAC907dqYZk5yFQmFyioUtMqIkh5xeacf4z6JY=
+			9RKo0OhrURItubcWUdaiSN3utFBca5FbRAsqrBzNia0=
 			</data>
 		</dict>
 		<key>ShopTheSetCarouselTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YG+tDdPG1eyaSMe/54QM4PoGlJBKhMGTlukS5240v0o=
+			/3Fn184OVnkUvNfaAV19LcJTTi7wtVmUIWdY06OSui4=
 			</data>
 		</dict>
 		<key>ShopTheSetCarouselView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sxo8Iw152QZyhMGYuqBqPa2rJVOQUtzqzcuOovlAH9o=
+			8hNaiwS/2mriBJQ+hLug3GzQ7APtdU5qaY1CEIytJJw=
 			</data>
 		</dict>
 		<key>ShopTheSetContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jVC5fdgHO/AQUTgo9OvWwLbqH9Irh3IAb0UXr408wXs=
+			ofbzXZtBKSygYmk8DOqUYQlZfHf/erGmp0IEnqH3ZoI=
 			</data>
 		</dict>
 		<key>ShopTheSetItemListTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fj4PyoQg79Jt6lgWhc77+7Pve32xKpCRqM30ZNhYjBg=
+			PaoM0Hif+CXTPJB5snFSJPNDCN8YeGNVJSJbggatYIY=
 			</data>
 		</dict>
 		<key>ShopTheSetVerticalSpacingCell.nib</key>
@@ -731,21 +839,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6zPy3NhG/SE5ruviSNdVASn3yuDWw/KiYRyO4LwSA/k=
+			glSU8XymVpLNc8Qnen74SIJguxQxD7syFDWT3oihIyI=
 			</data>
 		</dict>
 		<key>StyledForYouBottomContainerView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uutEz37ijJHHL0aV4FV1f35yCxGAMq7rBV+3Kl00BpQ=
+			HVHX/pZg3iFxkdL7RkjSLkZj0Hv6ldZXuyVI+rK+/ZA=
 			</data>
 		</dict>
 		<key>StyledForYouView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qr0/cZhnvfcJqWcheP2XmRmr4lvreX8wg9u/b0L5ktw=
+			HsKHrs/VYpI3BB7q0yfpSnPbJ3/06jF45SeGb+EFVWM=
+			</data>
+		</dict>
+		<key>StyledForYouWithHeaderView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c9T1vek2SaLcyNrkVyAzFwX8tob8hFAiNFP3Z/kWoOE=
+			</data>
+		</dict>
+		<key>TrendingBundleContentTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rK9lnYffAPPymp3p7R4P4BWhFByKR75ze+92azTKZUo=
+			</data>
+		</dict>
+		<key>TrendingBundlesContainerView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M2PR9WYZTuNSy5r3LwR0lrHxXzAhVWq/Y+TawxB+wjY=
+			</data>
+		</dict>
+		<key>UpsellsContainerView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+0VvqLYOaVc9s89P5vm70NOwJ5ZElhPqpzMhKtarY5U=
+			</data>
+		</dict>
+		<key>UpsellsItemTableViewCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qw10RfgW7dWwkKYicsNEORHymGO4CZQQpL/gfwxsbIk=
 			</data>
 		</dict>
 	</dict>
